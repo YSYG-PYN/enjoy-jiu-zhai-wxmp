@@ -1,0 +1,226 @@
+/* pages/hotScenic/hotScenic.wxss */
+.topbar {
+  width: 100%;
+  height: 90rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.arrow-box {
+  width: 10%;
+  text-align: center;
+  height: 100%;
+  float: left;
+}
+.arrow-box image {
+  width: 30rpx;
+  height: 34rpx;
+}
+.input-box {
+  margin-top: 14rpx;
+  width:60%;
+  height: 60rpx;
+  float: left;
+  background-color: #f2f2f2;
+  border-radius: 88rpx;
+  margin-left: 20rpx;
+}
+ 
+.input-box input {
+  font-size: 24rpx;
+  color: #333;
+  width: 100%;
+  padding-left: 7%;
+}
+.top-comend{
+  width: 100%;
+  height: 80rpx;
+}
+
+.scroll-container{
+  height: 90%;
+}
+
+.hot_scenic_view {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 28rpx;
+}
+
+.search_input_view {
+	display: flex;
+	align-items: center;
+	border: 1px solid #ccc;
+  margin-left: 50rpx;
+	width: 60%;
+	font-size: 28rpx;
+	line-height: 48rpx;
+	border-radius: 10rpx;
+	background-color: #fff;
+}
+
+.ipt_search_icon {
+  background-color: #f2f2f2;
+   margin-left: 10rpx
+}
+
+.swiperContainer {
+  width: 100%;
+}
+.swiperImgs{
+  position: relative;
+
+}
+.swiperimg {
+  margin-top: 3%;
+  margin-left: 3%;
+  border-radius: 10rpx;
+  width: 94%;
+  height: 100%;
+}
+
+
+.scenic {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 20rpx;
+	overflow: hidden;
+	margin-top: 30rpx;
+}
+
+/* 按钮 */
+.scenic_btn {
+  background: white;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.select_scenic_btn{
+  display: flex;
+  white-space: nowrap;  
+} 
+
+._select {
+  height:60rpx;
+  width:128rpx;
+  text-align: center;
+  padding: 20rpx 10rpx 0 10rpx;
+  display: inline-block; 
+  color:white;
+  margin: 20rpx;
+  background: #0082D7;
+
+}
+._select :nth-child(1){
+ margin-left: 0rpx;
+}
+
+.select{
+  height:60rpx;
+  padding: 20rpx 10rpx 0 10rpx;
+  width:128rpx;
+  text-align: center;
+  background: #f2f2f2;
+  margin: 20rpx;
+  display: inline-block; 
+
+}
+.scenic_btn input {
+	width: 140rpx;
+	text-align: center;
+	height: 32px;
+	border: 1px solid #ccc;
+	border-radius: 5px 5px 0 0;
+}
+
+/* 门票列表 */
+.scenic_content {
+	width: 100%;
+}
+
+.scenic_detail {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20rpx;
+}
+
+.scenic_detail_logo {
+	width: 180rpx;
+	height: 180rpx;
+	background: #aaa;
+	border-radius: 5px;
+}
+
+.scenic_introduce {
+	border-bottom: 1px solid #ccc;
+	width: calc(100% - 100px);
+	overflow: hidden;
+}
+
+.scenic_introduce_tit {
+	display: flex;
+	justify-content: space-between;
+	line-height: 42px;
+}
+
+.scenic_title{
+	color: black;
+	font-size: 30rpx;
+}
+
+.scenic_mark_one{
+	color: rgb(86, 178, 238);
+  font-size: 24rpx;
+	line-height: 20px;
+}
+.mark_one_detail{
+  background-color: rgba(210, 235, 254, 0.473);
+}
+
+.scenic_mark_two{
+  font-size: 24rpx;
+	color: #aaa;
+	line-height: 20px;
+
+}
+
+.mark_detail{
+  color:rgb(245,196,139);
+  background: rgb(255, 245, 232);
+}
+
+.scenic_introduce {
+	font-size: 24rpx;
+ 	color: #aaa;
+	line-height: 20px;
+  width: 480rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+
+.position_logo_view{
+  display: flex;
+  align-items: center;
+}
+
+.position_logo{
+   width: 30rpx;
+   height: 30rpx;
+}

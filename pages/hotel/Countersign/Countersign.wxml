@@ -1,0 +1,57 @@
+<view>
+    <view class="body">
+        <view class="affirm">确认并支付</view>
+        <view class="order">
+            <p class="order_generate">订单已生成，请您尽快完成支付。</p>
+            <p class="save">将为您保存<span style="color: #4B9AED;">30</span>分钟</p>
+        </view>
+        <view class="pic">
+            <view>
+                <text class="pic_tit">维也纳大酒店（标准双人床）</text>
+                <text class="pic_data">10月31日-11月01日 共一晚</text>
+                <text class="pic_room">房间：1</text>
+            </view>
+            <image src="../../../images/hotel/bigHotel.png"></image>
+        </view>
+        <view class="total_price">
+            <p class="total">总额(RMB)</p>
+            <p class="price"><span>￥</span>268</p>
+        </view>
+        <view class="chosePay">
+            <van-radio-group value="{{ we }}" bind:change="Payment">
+                <van-cell-group>
+                    <van-cell clickable data-name="1" bind:click="clickWechat">
+                        <view class="alipay_one">
+                            <van-icon name="alipay" />
+                            <text decode="true" space="true" class="alipay">&nbsp;支付宝</text>
+                        </view>
+                        <van-radio slot="right-icon" name="1" />
+                    </van-cell>
+                    <van-cell clickable data-name="2" bind:click="clickWechat">
+                        <view class="wechart_one">
+                            <van-icon name="wechat" />
+                            <text class="alipay" decode="true" space="true">&nbsp;微信支付</text>
+                        </view>
+                        <van-radio slot="right-icon" name="2" />
+                    </van-cell>
+                </van-cell-group>
+            </van-radio-group>
+        </view>
+        <view class="agreen">
+            <p>我同意<span bindtap="check">入住须知、扣款说明政策</span>和酒店<span bindtap="check">入离时间要求</span>，也同意支付以下所示总金额。</p>
+            <van-dialog use-slot show="{{ tishi }}" show-cancel-button="{{false}}">
+                <view class="tishi">
+                    <p class="bj_data">北京时间2019-11-26 18:00前可免费取消此订单,逾期无法取消或退款;</p>
+                    <p>不接受18岁以下客人单独入住，不接受18岁以下客人在无监护人陪同情况下入住。</p>
+                </view>
+            </van-dialog>
+        </view>
+        <van-dialog id="van-dialog" />
+        <view class="save_pay">
+            <p>确认支付</p>
+            <image src="../../../images/hotel/yuan1.png"></image>
+            <p>￥268</p>
+        </view>
+    </view>
+
+</view>

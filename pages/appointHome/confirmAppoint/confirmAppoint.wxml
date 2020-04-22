@@ -1,0 +1,33 @@
+<view  class="confirmAppoint-container">
+      <picker name="picker_hx" class="cybm_pic_1" value="{{patientData[index].rowId}}"  data-selecthx="{{patientData[index].name}}" range="{{patientData}}" range-key="{{'name'}}"  bindchange="bindPickerChange_hx"  >
+        <view class="patientSelect-container" >
+         就诊人: 
+         <image class="arrowImage" src="../../images/arrow.png"></image>
+         <text class="patientSeletContent">{{patientData[index].name}} </text>    
+        </view>
+      </picker>
+    <view  class="appointDetail-container" >
+      <view class="appointDetailItems"><text class="descriptionText">挂号费 :</text> {{price}} 元</view>
+      <!-- <view class="appointDetailItems"><text class="descriptionText">医院:</text>  四川第一人民医院</view> -->
+      <view class="appointDetailItems"><text class="descriptionText">医生:</text>  {{doctorName}}</view>
+      <view class="appointDetailItems"><text class="descriptionText">就诊日期:</text> {{depTime}}</view>
+      <view class="appointDetailItems"><text class="descriptionText">时间:</text>  {{week}}</view>
+    </view>
+
+    <view  class="confirmAppointbtn" bindtap="confirmAppointTap"> 
+    <text class="confirmAppointtext">确认预约</text>
+    </view>
+    <view class="textReminder">
+     <text> 温馨提示: \n
+      1.去我的挂号记录找到挂号码，凭借挂号码到医院挂号缴费。
+      2.如需取消需提前一天在【我的】-【预约挂号记录】中操作，到接诊当天则需到医院窗口办理。
+      </text>
+    </view>
+    <!-- <view class="round-click">
+    <image  class="backIndexImage" src="../../images/fanhuishouye.png"></image>
+    </view> -->
+    <!--圆形点击框  -->
+     <view class="round-click" bindtap="toIndexPage">
+        <text >回到首页</text >
+     </view>
+</view>

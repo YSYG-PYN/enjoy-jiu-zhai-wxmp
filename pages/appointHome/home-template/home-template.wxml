@@ -1,0 +1,9 @@
+
+<template name="viewTemplate">
+    <view  class="view-container" catchtap="onViewDetailTap" data-movieid="{{viewId}}">
+        <image class="view-img" src="{{coverageUrl}}"></image>
+        <text class="view-title">{{title}}</text>  
+    </view>
+</template>
+
+

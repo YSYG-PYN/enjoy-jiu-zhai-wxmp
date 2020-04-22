@@ -1,0 +1,32 @@
+page{
+  display: block;
+  background-color: #f5f5f5;
+
+}
+.recordDetail-container{
+  margin-top: 20rpx;
+  background: white;
+}
+.appointDetailItems{
+  padding: 10rpx 25rpx 10rpx 20rpx;
+
+
+}
+
+.reservationButton{
+  float: right;
+  height: 40rpx;
+  margin-top: 10rpx;
+  border-radius: 15rpx;
+  padding: 10rpx 10rpx;
+  font: 20rpx;
+  color: white;
+  background: #0082D7;
+}
+
+.descriptionText{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  font-size: 35rpx;
+  color: #939393;
+}

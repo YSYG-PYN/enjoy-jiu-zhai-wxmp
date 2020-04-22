@@ -1,0 +1,28 @@
+<!--pages/featuresProducts/featuresProducts.wxml-->
+<view class="features_products">
+	<!-- 顶部输入框 -->
+	<view solt="ipt" class="index_searchIpt_content">
+		<icon type="search" size="16" class="ipt_search_icon" />
+		<input class="index_searchIpt" bindinput="bindHideKeyboard" placeholder="搜索您想要的商品" />
+	</view>
+  <view class="btn">
+    <button bindtap="showSome" class="px">智能排序</button>
+	<button bindtap="showAll" class="sx">筛选</button>
+  </view>
+  <view class="productsList">
+    <block wx:for="{{productsList}}" wx:key="{{item.id}}">
+    <view class="proDetail" data-productsid="{{item.id}}" bindtap="toFeaturesProducts">
+        <image src="{{item.productImage}}"></image>
+        <view class="productsDetail">
+            <view class="productsName">{{item.productsName}}</view>
+            <view class="proIntroduce">
+                {{item.proIntroduce}}
+            </view>
+            <view style="margin-top: 26rpx"><text class="money">{{item.money}}</text><text class="amount">{{item.amount}}</text></view>
+        </view>
+    </view>
+    </block>
+  </view>
+  <!-- 底部弹框 -->
+  <van-action-sheet show="{{ show }}" bind:click-overlay="clickMask" bind:select="onSelect" actions="{{actions}}" />
+</view>

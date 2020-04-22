@@ -1,0 +1,24 @@
+<template name="reportListTemplate">
+  <block wx:if="{{showLoading}}">
+    <view class="loading">努力加载中...</view>
+  </block>
+  <block wx:else>
+    <view class="film">
+      <view wx:for="{{resData}}" class="appointDetail-container" data-id="{{item.reportId}}" data-index='{{index}}'  bindtap="toReportDetailTap">
+        <view class="appointDetailItems"><text class="descriptionText">就诊人姓名 :</text> {{item.visitPersonName}}</view>
+        <view class="appointDetailItems"><text class="descriptionText">身份证号码 :</text> {{item.cardId}}</view>
+      <view class="appointDetailItems"><text class="descriptionText">就诊医院:</text>  {{item.hospitalNmme}}</view>  
+      <view class="appointDetailItems"><text class="descriptionText">报告时间:</text>  {{item.reportTime}}</view>
+     
+       <!-- <view class="appointDetailItems"><text class="descriptionText">预约挂号码 :</text> XXXXXX </view> -->
+       
+      </view>
+      <block wx:if="{{hasMore}}">
+        <view class="loading-tip">上拉加载更多</view>
+      </block>
+      <block wx:else>
+        <view class="loading-tip">没有更多内容了</view>
+      </block>
+    </view>
+  </block>
+</template>

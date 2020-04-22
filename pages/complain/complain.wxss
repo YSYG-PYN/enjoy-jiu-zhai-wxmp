@@ -1,0 +1,52 @@
+/* pages/complain/complain.wxss */
+.box{
+  padding: 0 20rpx;
+  font-size: 30rpx;
+}
+.Popout{
+  padding: 20rpx;
+  width: 600rpx;
+}
+.Popout view{
+    display: flex;
+    align-items: center;
+    border-bottom: 1rpx solid #ccc;
+    height: 80rpx;
+}
+.suggest{
+  padding: 10rpx 0;
+  height: 300rpx;
+  border: 1rpx solid #ccc;
+  width: 100%;
+}
+.title{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  font-weight: 600rpx;
+}
+.ipt{
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  margin-top: 20rpx;
+}
+.ipt label{
+  width: 150rpx;
+}
+.ipt input{
+    flex: 1;
+    border: 3rpx solid #ccc;
+    height: 80rpx;
+    padding-left: 10rpx;
+}
+.fouter{
+  padding: 0 20rpx;
+  position: absolute;
+  bottom: 30rpx;
+  width: 710rpx;
+
+}
+
+
+

@@ -1,0 +1,62 @@
+/* pages/linerecommend/linerecommend.wxss */
+.line_recommend {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	overflow-x: hidden;
+}
+
+.image_introduce,
+.special_text {
+	font-size: 24rpx;
+	line-height: 32px;
+}
+
+.line_list {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 20rpx;
+}
+
+.line_list_content {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid #ddd;
+	margin-bottom: 20rpx;
+}
+
+.line_detail_image {
+	padding: 10rpx;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 8rpx;
+}
+
+.line_detail_image image {
+	width: 120rpx;
+	height: 120rpx;
+	background: #fff;
+}
+
+.line_detail {
+	flex: 0.96;
+	max-height: 100rpx;
+	word-break: break-all;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	/** 对象作为伸缩盒子模型显示 **/
+	-webkit-box-orient: vertical;
+	/** 设置或检索伸缩盒对象的子元素的排列方式 **/
+	-webkit-line-clamp: 2;
+	/** 显示的行数 **/
+	overflow: hidden;
+	margin-left: 10rpx;
+	font-size: 26rpx;
+}

@@ -1,0 +1,43 @@
+<!--pages/discover/pathsRecommend/pathsRecommend.wxml-->
+<view class="topbar" style="padding-top:{{statusBarHeight}}px">
+   <view class="arrow-box row" bindtap="backToPreviousClick">
+    <image src="../../../images/back.png"></image>
+   </view>
+  <view class="input-box row">
+      <icon type="search" size="16" class="ipt_search_icon" />
+      <input  bindinput="bindHideKeyboard" placeholder="搜索九寨最全旅游攻略" />
+    </view>
+</view>
+<view class="top-comend" style="padding-top:{{statusBarHeight}}px"></view>
+
+ <!-- 导航 -->
+ <view class="box">
+     <view class="strategy">
+        线路推荐
+    </view>
+    <view class="scenic_btn">
+     <scroll-view scroll-x="true" class="select_scenic_btn">
+      <block wx:for="{{dataArray}}">
+         <view class="{{index==idx?'_select':'select'}}"  bindtap="selectDataTab" data-index="{{index}}" data-text="{{item}}">{{item.name}} </view>
+      </block>
+     </scroll-view>
+		</view>
+
+
+    <view class="recommend">
+        <view class="scenicSpot" wx:for="{{pathsRecommend}}" wx:key="{{item.id}}">
+                <image src="{{item.image}}"></image>
+                <view class="detail">
+                    <view class="scenicSpot-title">{{item.title}}</view>
+                    <view>
+                        <van-tag type="success">123</van-tag>
+                        <van-tag type="warning">123</van-tag>
+                    </view>
+                    <view class="ranking">{{item.ranking}}</view>
+                </view>
+        </view>
+    </view>  
+
+
+
+</view>

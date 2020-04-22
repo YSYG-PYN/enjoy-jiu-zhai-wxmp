@@ -1,0 +1,24 @@
+<view class="shopMessage">
+    <view class="shopColumn">
+        <view class="shopPic">
+            <image src="https://wh.easy.echosite.cn/img/shopIcon.png"></image>
+        </view>
+        <view class="shopMsg">
+            <view bindtap="toshopMsg">九寨沟楚国旅游专营店</view>
+            <view>认证商家</view>
+        </view>
+    </view>
+    <view class="shopDetail">
+        <view class="serviceTel">
+            <view>服务电话</view>
+            <view bindtap="tel">
+                <text>464658568769转5567  </text>
+                <image src="https://wh.easy.echosite.cn/img/telIcon.png"></image>
+            </view>
+        </view>
+        <view class="shopQualifications">
+            <view>店铺资质</view>
+            <image src="https://wh.easy.echosite.cn/img/qualificationsIcon.png"></image>
+        </view>
+    </view>
+</view>

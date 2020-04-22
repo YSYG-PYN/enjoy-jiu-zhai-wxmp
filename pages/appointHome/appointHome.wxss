@@ -1,0 +1,360 @@
+
+@import "newscell-template/newscell-template.wxss";
+page{
+  background: #f5f5f5;
+}
+
+.homeContainer{
+   background-color: #efeff4;
+}
+
+.swiperContainer {
+  width: 100%;
+}
+.swiperImgs{
+  position: relative;
+
+}
+.swiperimg {
+  width: 100%;
+  height: 100%;
+}
+
+/*诊疗服务标题头格式  */
+.treatmentService-swiperContainer{
+   /* display: flex; */
+   /* flex-direction: row wrap;
+   align-items: center; */
+   margin-top: 0 rpx;
+   padding: 2px 10px;
+   /* width:100%; */
+   background-color: #fff;
+   border-bottom: 1px solid #ededed;
+   padding-left: 10rpx;
+   font-size: 28rpx;
+  /* border-left: 6rpx solid #32a3d6; */
+
+}
+/* .treatmentService-swiperContainer>view{
+  font-weight:160;
+} */
+
+.treatmentServiceImage{
+   margin-left: 8rpx;
+   margin-right: 6rpx;
+   width: 40rpx;
+   height: 40rpx;
+   align-items: center;
+}
+
+/* 加上更多的标题头 */
+.healthInformation-swiperContainer{
+   display: flex;
+   flex-direction: row wrap;
+   align-items: center;
+   margin-top: 20rpx;
+   padding: 10px;
+   width:100%;
+   background-color: #fff;
+   border-bottom: 1px solid #ededed;
+}
+
+
+.healthInformationImage{
+   float: left;
+   margin-left: 8rpx;
+   margin-right: 6rpx;
+   width: 40rpx;
+   height: 40rpx;
+   align-items: center;
+}
+
+.slogan{
+  float: left;
+  margin-left: 5rpx;
+ font-weight:160;
+}
+.moreContainer{
+  margin-left: 50%;
+  /* float: right; */
+}
+
+.moretext{
+  /* float: right; */
+  vertical-align: middle;
+  margin-right: 10rpx;
+  color: gray;
+  font-size: 30rpx;
+}
+.moreImage{
+  /* float: right; */
+  margin-right: 10rpx;
+  width: 20rpx;
+  height: 16rpx;
+  vertical-align: middle;
+}
+
+
+/* 诊疗服务内容格式 */
+.guideList-Container{
+    background-color: #fff;
+    border-bottom: 1px solid #ededed;
+}
+.guide-detail {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  font-size: 12px;
+  justify-content: space-between;
+}
+
+/* 子项 图片与文字一致 */
+.guide_detail_item {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 160rpx;
+  padding: 20rpx 0;
+}
+
+.logo {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto;
+}
+
+/* 文字样式 */
+
+.guide_detail_item>view {
+  font-size: 30rpx;
+  margin-top: 15rpx;
+}
+
+.healthNews{
+  margin-top: 10rpx;
+  background-color: #fff;
+}
+.newsItem{
+  margin-left: 20rpx;
+  
+}
+
+
+
+.m-body {
+  background-color: #efeff4;
+}
+
+.choice-area {
+  text-align: center;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.choice-area-top {
+  height: 80px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.choice-area-bottom {
+  height: 80px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.hospital {
+  width: 50%;
+  height: 80px;
+  color: #23a2ee;
+  padding-top: 15px;
+  background-size: 100% 100%;
+}
+
+.medical {
+  width: 50%;
+  height: 80px;
+  color: #f7a010;
+  padding-top: 15px;
+  background-size: 100% 100%;
+  float: right;
+  position: relative;
+  bottom: 80px;
+}
+
+.check {
+  width: 50%;
+  height: 80px;
+  color: #51d5dd;
+  padding-top: 15px;
+  background-size: 100% 100%;
+}
+
+.vaccine {
+  width: 50%;
+  height: 80px;
+  color: #69b527;
+  padding-top: 15px;
+  background-size: 100% 100%;
+  float: right;
+  position: relative;
+  bottom: 80px;
+}
+
+.big-logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* padding: 1rpx 20rpx; */
+  margin-bottom: 8px;
+  padding: 33rpx 0 30rpx;
+  background-color: #fff;
+}
+
+.big-logo image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.logoinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*width: 150rpx;
+  height: 150rpx;*/
+}
+
+.logotext {
+  color: #333;
+  font-size: 24rpx;
+ margin:15rpx 0 0;
+}
+
+.index-list-content {
+  margin: 0;
+  padding: 1rpx 20rpx;
+  background-color: #fff;
+}
+.lable-line {
+  padding-left: 10rpx;
+  margin: 22rpx 0;
+  font-size: 28rpx;
+  border-left: 6rpx solid #32a3d6;
+}
+
+.page-margin {
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  margin-top: 10rpx;
+}
+
+.page-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.page-column {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 30rpx 10rpx;
+}
+
+.doctors-scroll-x {
+  width: 100%;
+  margin-top: 20rpx;
+  white-space: nowrap;
+}
+
+.doctors-scroll-x .item {
+  display: inline-block;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  margin: 0 30rpx 0 0;
+}
+
+.btn-quick-book {
+  font-size: 23rpx;
+  color: #32a3d6;
+  line-height: 2;
+  background-color: #fff;
+}
+
+.doctors-scroll-x .page-column image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 150rpx;
+}
+
+.doctors-scroll-x .text {
+  font-size: 30rpx;
+  color: #333;
+  margin-top: 10rpx;
+  display: inline-block;
+}
+
+.doctors-scroll-x .text2 {
+  font-size: 23rpx;
+  color: #999;
+  margin: 10rpx 0 8px 4px;
+  display: inline-block;
+}
+
+.medical-name, .info-time, .news-tag, page wx-text {
+  font-size: 28rpx;
+}
+
+.news-tag {
+  color: #32a3d6;
+  float: left;
+}
+
+.news-info {
+  float: right;
+  color: #999;
+}
+
+
+
+.min-h {
+  min-height: 60rpx;
+}
+
+
+.wa-item-thumbnail-left {
+  padding-left: 10rpx;
+  min-height: 120rpx;
+}
+
+.wa-item {
+  border: 0;
+  margin: 0;
+  /* border-top: 1px solid #dedede; */
+  border-bottom: 1px solid #dedede;
+}
+
+.btn-more {
+  width: 11px;
+  height: 14px;
+  float: right;
+  position: relative;
+  top: 5rpx;
+}
+
+.button-hover {
+  color: #fff;
+  background-color: #32a3d6;
+}
+
+button::after {
+  border: 1px solid #32a3d6;
+}
+
+.icon_author {
+  width: 40rpx;
+  height: 40rpx;
+}

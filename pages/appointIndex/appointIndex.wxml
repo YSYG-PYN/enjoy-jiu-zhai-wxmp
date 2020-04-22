@@ -1,0 +1,23 @@
+<!--pages/appointIndex/appointIndex.wxml-->
+<view style='margin-bottom:130rpx;'>
+<!-- 组件显示，根据自己需求添加 -->
+<view hidden="{{currentTab == 0? false: true}}">
+  <component_home  banner="{{banner}}"  informNews="{{informNews}}"  reportMesage="{{reportMesage}}"/>
+</view>
+<view hidden="{{currentTab == 1? false: true}}">
+  <component_news  resNewsData="{{resNewsData}}"/>
+</view>
+<view hidden="{{currentTab == 2? false: true}}">
+  <component_mine/>
+</view>
+
+</view>
+
+<!-- 自定义 tabbar -->
+<view class="nav-tabs">
+  <view class="tab-list {{currentTab == idx ? 'active' : 'default' }}" wx:for="{{items}}" wx:key="prototype" wx:for-index="idx" wx:for-item="item" data-current="{{idx}}" bindtap="swichNav">
+    <text  class="tab-text {{currentTab == idx ? 'tab-text-active':'tab-text-noactive'}}" wx:for-index="idx" data-current="{{idx}}" src="{{currentTab == idx ? item.selectedIconPath : item.iconPath }}">{{item.text}}</text>
+    <image class="iconPath" wx:for-index="idx" data-current="{{idx}}" src="{{currentTab == idx ? item.selectedIconPath : item.iconPath }}"></image>
+  </view>
+</view>
+

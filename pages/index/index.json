@@ -1,0 +1,9 @@
+{
+	"navigationBarBackgroundColor": "#ffffff",
+	"navigationBarTitleText": "乐享九寨",
+	"usingComponents": {
+		"van-grid": "@vant/weapp/grid/index",
+		"van-grid-item":"@vant/weapp/grid-item/index",
+		"swiper-show":"/pages/index/swiper/swiper"
+	}
+}

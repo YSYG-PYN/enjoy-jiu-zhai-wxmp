@@ -1,0 +1,548 @@
+/* pages/hotel/search/details/details.wxss */
+.topbar {
+    width: 100%;
+    height: 90rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .arrow-box {
+    width: 10%;
+    text-align: center;
+    height: 100%;
+    float: left;
+    margin-top: 2px;
+ 
+  }
+  .arrow-box image {
+    width: 36rpx;
+    height: 36rpx;
+    margin-bottom: 10px;
+  }
+  .xing{
+    width: 10%;
+    text-align: center;
+    height: 100%;
+    float: right;
+    margin-top: 11px;
+    margin-right: 95px;
+  }
+  .xing image{
+    width: 40rpx;
+    height: 40rpx;
+  }
+  /* .xing .van-icon-star-o{
+    font-size: 20px;
+    text-align: right;
+  } */
+  .top-comend{
+    width: 100%;
+    height: 80rpx;
+  }
+
+  /* 头部按钮 */
+  .heade{
+    background-color: #ededed;
+    height: 100rpx;
+    line-height: 50px;
+  }
+  .heade text{
+    margin-left: 30px;
+    color: #696969;
+    font-size: 14px;
+  }
+  .heade text:nth-child(1){
+    margin-left: 15px;
+  }
+  image{
+    width: 100%;
+  }
+  .title{
+    font-size: 18px;
+    margin-top: 10px;
+    height: 50rpx;
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  .title .comfortable{
+    color: #666;
+    font-size: 12px;
+    margin-left: 10px;
+    display: block;
+    margin-top: 4px;
+  }
+  .tag{
+    margin-left: 10px;
+  }
+  .van-tag--warning,.van-tag--success{
+    margin-left: 10px;
+  }
+  .tag .circle{
+    width: 6rpx;
+    height: 6rpx;
+    display: block;
+    border-radius: 50%;
+    background: #4B9AED;
+    margin: 0 3px;
+  }
+  .addres{
+    font-size: 12px;
+    color: #333;
+    margin-top: 12px;
+    display: flex;
+    margin-left: 10px;
+  }
+  .location{
+    border-right: 1px solid #F4F4F4;
+    padding-right: 10px;
+    line-height: 22px;
+  }
+  .addres .van-icon-location-o{
+    color: #4B9AED;
+    font-size: 14px;
+    display: inline;
+    margin-left: 5px;
+    position: relative;
+    top: 0px;
+  }
+  .addres .map{
+    margin-top: 3px;
+    color: #4B9AED;
+  }
+  .content{
+    
+    width: 750rpx;
+    background: #F7F7F9;
+    padding-top: 10px;
+    /* height: 1935px; */
+  }
+  .data{
+    width: 702rpx;
+    height: 60rpx;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+  }
+  .left{
+    display: flex;
+    align-items: center;
+  }
+  .left .now,.left .future{
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+  }
+  .taday,.enter{
+    font-size: 12px;
+    color: #333;
+    margin-left: 10rpx;
+    margin-top: 6rpx;
+  }
+  .left .striping{
+    width: 20rpx;
+    height: 2rpx;
+    display: block;
+    margin: 0 5px;
+    background: #333;
+  }
+  .right .van-icon-arrow{
+    display: block;
+    margin-top: 18rpx;
+    color: #EEEEEE;
+  }
+  .home{
+    width: 702rpx;
+    height: 216rpx;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .home image{
+    width: 120rpx;
+    height: 120rpx;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .bed{
+    margin-right: 35px;
+  }
+  .bed .two_bed{
+    margin-top: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  .size{
+    display: flex;
+    font-size: 12px;
+    color: #333;
+    margin-left: 2px;
+    margin-top: 5px;
+  }
+  .window{
+    margin-left: 5px;
+  }
+  .two_mi{
+    margin-left: 15px;
+  }
+  .check{
+    font-size: 12px;
+    color: #6CBE73;
+    margin-top: 10px;
+
+  }
+  .home_right{
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  .money{
+    color: #FF3C3C;
+    font-size: 20px;
+  }
+  .order{
+    width: 80rpx;
+    height: 40rpx;
+    background-color: #F7B500;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px 3px 0 0px;
+    margin-left: 15px;
+  }
+  .line_pay{
+    width: 76rpx;
+    height: 36rpx;
+    border:1px solid #F7B500;
+    color: #F7B500;
+    font-size: 11px;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 0 0 3px 3px;
+    margin-left: 15px;
+  }
+  .floor{
+    width: 702rpx;
+    margin: 0 auto;
+    margin-top: 20rpx;
+  }
+  .hour{
+    width: 702rpx;
+    height: 60rpx;
+    background-color: #fff;
+  }
+  .hour_home{
+    font-size: 14px;
+    margin: 10rpx 0 10rpx 20rpx;
+    line-height: 60rpx;
+  
+  }
+  .hour_container{
+    width: 702rpx;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20rpx;
+    background: #fff;
+    height: 226rpx;
+    /* border: 1px solid; */
+  }
+  .hour_container image{
+    height: 120rpx;
+    width: 120rpx;
+    border-radius: 3px;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    margin-top: 20rpx;
+  }
+  .time_quantum{
+    font-size: 12px;
+    width: 380rpx;
+    height: 30rpx;
+    color: #333;
+    margin-top: 10rpx;
+  }
+  .floor_hour{
+    width: 380rpx;
+  }
+  .floor_hour .two_bed{
+    margin-top: 20rpx;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .floor_hour .size{
+    margin-top: 20rpx;
+  }
+  .floor_top{
+    display: flex;
+  }
+  .rmb{
+    margin-top: 44rpx;
+    color: #FF3C3C;
+    font-size: 16px;
+  }
+  .floor_money{
+    margin-top: 40rpx;
+    margin-right: 56rpx;
+    color: #FF3C3C;
+    font-size: 20px;
+  
+  }
+  .floor_order{
+    width: 80rpx;
+    height: 40rpx;
+    background-color: #F7B500;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px 3px 0 0px; 
+    margin-left: 5px;
+  }
+  .floor_pay{
+    width: 76rpx;
+    height: 36rpx; 
+    border:1px solid #F7B500;
+    color: #F7B500;
+     font-size: 11px;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 0 0 3px 3px;
+    margin-left: 5px;
+  }
+
+
+  .flexible{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100rpx;
+    line-height: 100rpx;
+  }
+/* 折叠面板 */
+  .collapse_items{
+    /* height: 660rpx; */
+    background: #fff;
+    border: 1px solid transparent;
+  }
+  .pack_up{
+    font-size: 14px;
+    color: #4B9AED;
+    margin-right: 6rpx;
+  }
+  .flexible .van-icon-arrow-up{
+    color: #4B9AED;
+    transform: rotate(180deg);
+  }
+  .check_in,.facilities{
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 40rpx;
+    margin-left: 20rpx;
+  }
+  .jion,.children,.additional,.additional,.pet,.home_serve,.home_facilities,.common{
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 20rpx;
+    margin-bottom: 10rpx;
+    margin-left: 20rpx;
+  }
+  .jion_time,.jion_leave,.disallow,.breakfast,.no_pet{
+    font-size: 14px;
+    color: #666;
+    margin-left: 20rpx;
+  }
+  .no_pet{
+    margin-bottom: 40rpx;
+  }
+  .hotel_facilities{
+    background: #fff;
+    /* height: 728rpx; */
+    border: 1px solid transparent;
+    margin-top: 20rpx;
+  }
+  .hotel_facilities image{
+    width: 24rpx;
+    height: 24rpx;
+  }
+  .wifi{
+    font-size: 11px;
+    color: #666;
+    margin-left: 8rpx;
+  }
+  .home_facilities{
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    color: #333;
+    font-size: 14px;
+  }
+  .facilities_icon{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20rpx;
+    margin-top: 10rpx;
+    margin-bottom: 40rpx;
+  }
+  .wifi_icon{
+    width: 32%;
+  }
+  .tel{
+    background: #fff;
+    margin-top: 20rpx;
+    height: 60rpx;
+    display: flex;
+    justify-content: space-between;
+  }
+  .phone{
+    font-size: 14px;
+    color: #333;
+    margin-left: 20rpx;
+    line-height: 60rpx;
+  }
+  .van-icon-phone-o{
+    color: #4B9AED;
+    margin-right: 14rpx;
+  }
+
+
+
+  .comment{
+    background: #fff;
+    border: 1px solid transparent;
+    margin-top: 20rpx;
+  }
+  .user{
+    color: #333;
+    font-size: 18px;
+    margin-left: 20rpx;
+    margin-top: 42rpx;
+  }
+  .graded{
+    display: flex;
+    margin-top: 20rpx;
+  }
+  .score{
+    color: #4B9AED;
+    /* margin-top: 10rpx; */
+    margin-left: 20rpx;
+    border-right: 1px solid #F4F4F4;
+  }
+  .graded_score{
+    width: 100rpx;
+    height: 60rpx;
+    font-size: 22px;
+    /* margin-top: 10rpx; */
+  }
+  .ultrabar{
+    font-size: 14px;
+    margin-right: 10rpx;
+    /* margin-top: 20rpx; */
+  }
+  .overtop{
+    font-size: 11px;
+    color: #666;
+  }
+  .overtop_hotel,.overtop_score{
+    margin-left: 10rpx;
+    
+  }
+  .overtop_score{
+    margin-top: 5rpx;
+  }
+  .van-button--default{
+    width: 174rpx;
+    height: 50rpx !important;
+    margin-left: 20rpx;
+    font-size: 11px;
+    border-radius: 4px !important;
+  }
+  .van-button--normal{
+    padding: 0 0 !important;
+  }
+  button:nth-last-child(1){
+    margin-top: 20rpx;
+  }
+  .give_mark{
+    margin-top: 20rpx;
+  }
+  .van-button__text{
+    color: #799CAE;
+  }
+  .comment-title{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30rpx;
+    margin-left: 20rpx;
+    margin-bottom: 20rpx;
+  }
+  .van-icon-friends-o{
+    width: 44rpx;
+    height: 44rpx;
+    
+  }
+  .comment_travel{
+    font-size: 12px;
+    color: #333;
+  }
+  .comment_data{
+    font-size: 12px;
+    color: #666;
+    margin-right: 20rpx;
+  }
+  .comment_article{
+    height: 136rpx;
+    font-size: 12px;
+    color: #666;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+  }
+  .comment_sincerity{
+    display: flex;
+    justify-content: space-between;
+  }
+  .comment_sincerity .van-icon-arrow,.company .van-icon-arrow{
+    margin-right: 20rpx;
+    color: #EEEEEE;
+  }
+  .comment_all{
+    margin-left: 20rpx;
+    color: #4B9AED;
+    font-size: 14px;
+  }
+  .company{
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    margin-top: 20rpx;
+  }
+  .aptitude{
+    font-size: 14px;
+    color: #333;
+    margin-left: 20rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+  }
+  .btn_block{
+    height: 100rpx;
+    background-color: #fff;
+    margin-top: 40rpx;
+    border: 1px solid transparent;
+  }
+  .van-button--block{
+    border-radius: 22px !important;
+    width: 702rpx !important;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+  }
+  .van-button--block .van-button__text{
+    color: #fff !important;
+    font-size: 18px;
+  }

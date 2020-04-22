@@ -1,0 +1,113 @@
+<!--pages/stroke/stroke.wxml-->
+<view class="stroke_content">
+	<view class="stroke_list" hidden="{{showList}}">
+		<view class="stroke_tit">
+			<text>酒店</text>
+			<text>预定成功></text>
+		</view>
+		<block wx:for="{{strokeList}}" wx:id="{{item.id}}">
+			<block wx:if="{{item.flag==1}}">
+				<view class="stroke_detail">
+					<image src="{{item.image}}"></image>
+					<view class="stroke_introduce">
+						<view class="detail_tit">
+							<text>{{item.hotelTit}}（{{item.hotelAddress}}）</text>
+							<text>￥{{item.hotelPrice}}</text>
+						</view>
+						<view class="detail_time">
+							<text>{{item.lastTime}}</text>
+							<text>{{item.roomNum}}间</text>
+							<text>{{item.roomStandard}}</text>
+						</view>
+						<view class="time">
+							<view class="startTime">
+								<text>入住</text>
+								<view>{{item.startTime}}</view>
+							</view>
+							<view class="endTime">
+								<text>离开</text>
+								<view>{{item.endTime}}</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</block>
+		</block>
+	</view>
+	<view class="stroke_list" hidden="{{showList}}">
+		<view class="stroke_tit">
+			<text>门票</text>
+			<text>预定成功></text>
+		</view>
+		<block wx:for="{{strokeList}}" wx:id="{{item.id}}">
+			<block wx:if="{{item.flag==0}}">
+				<view class="stroke_detail">
+					<image src="{{item.image}}"></image>
+					<view class="stroke_introduce">
+						<view class="ticket_tit">
+							{{item.ticketTit}}（{{item.ticketSort}}）
+						</view>
+						<view class="ticket_price_content">
+							<text class="ticket_num">张数：{{item.ticketNum}}张</text>
+							<view class="ticket_price">
+								<view>￥{{item.ticketPrice}}</view>
+								<view>{{item.ticketTime}}</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</block>
+		</block>
+	</view>
+
+
+	<view class="stroke_list_none" hidden="{{!showList}}">
+		<view class="show_none">
+			<image src="../../images/show.png"></image>
+			<text class="none_strokelist">暂无待出行信息</text>
+		</view>
+		<view class="show_active">
+			<view class="active_tit">热门活动</view>
+			<scroll-view scroll-x="true">
+				<view class="line" scroll-x="true">
+					<block wx:for="{{hotActive}}" wx:key="{{item.id}}">
+						<view class="line_content_detail" class="line_Item">
+							<view class="line_content_image">
+								<image src="{{item.image}}"></image>
+								<view class="active_label">{{item.activeLabel}}</view>
+							</view>
+							
+							<text class="image_introduce">{{item.activeName}}</text>
+							<view class="samll_title">
+								<text class="special_text">{{item.sctiveAddress}}</text>
+								<text class="special_text">{{item.activeTime}}</text>
+							</view>
+						</view>
+					</block>
+				</view>
+			</scroll-view>
+			<view class="special_recommend">
+				<view class="recommend">精彩推荐</view>
+				<block wx:for="{{specialRecommend}}">
+					<view class="recommend_content">
+						<view class="recommend_detail">
+							<view class="recommend_tit">{{item.recommendTit}}</view>
+							<view class="recommend_intro">
+								<text class="intro_left">{{item.estimate}}</text>
+								<text class="intro_right">{{item.reDis}}km</text>
+							</view>
+							<view class="recommend_detail_content">
+								<view>
+									<text>{{item.reScore}}分</text>
+									<text>{{item.estimateNum}}条评论</text>
+								</view>
+								<text class="recommend_price">￥{{item.price}}起</text>
+							</view>
+						</view>
+						<image src="{{item.image}}"></image>
+					</view>
+				</block>
+			</view>
+		</view>
+	</view>
+</view>

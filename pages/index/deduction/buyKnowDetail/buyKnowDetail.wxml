@@ -1,0 +1,43 @@
+<!--pages/index/deduction/buyKnowDetail/buyKnowDetail.wxml-->
+<!-- 购买须知 -->
+<view class="purchase-notes">
+  <view class="notes-title">门票详情</view>
+  <view class="notes-content">
+    <view>预订时间：18:00之前可订今日</view>
+    <view>生效时间：出票后立即生效</view>
+    <view>有效期：指定出行时间1天内有效</view>
+    <view>演出时间：18:30 -- 21:00</view>
+    <view>咨询电话：180XXXXXXXX</view>
+  </view>
+  <view class="notes-title">温馨提示</view>
+  <view class="notes-content">
+    <view>1.园区禁止吸烟，禁止携带危险物品、宠物等。</view>
+    <view>2.园区禁止大声喧哗，拍摄请勿使用闪光灯。</view>
+    <view>3.演出结束后，游客按照指定线路回到住宿。</view>
+    <view>4.演出地址：四川省九寨沟县xxxxxxxxx</view>
+  </view>
+  <view class="notes-title">费用说明</view>
+  <view class="notes-content">
+    <view>费用包含：《千古九寨情演绎活动》夜场门票一张。</view>
+    <view>费用不含：一切个人消费及费用包含中未提及的任何费用。</view>
+  </view>
+  <view class="notes-title">退票规则</view>
+  <view class="notes-content">
+    <view>支付成功的订单，须在当日内提出退票申请。</view>
+    <view>工作人员将于1-3个工作日内处理您的退票申请。</view>
+    <view>微信门票一经领取或者刷码(身份证)不予退票，遗失不补票，敬请谅解。</view>
+  </view>
+  <view class="notes-title  detail">产品详情</view>
+  <view class="notes-title">千古九寨情演绎</view>
+  <view class="notes-content">
+    <view>千古九寨情演出，呈现的是九寨沟的民俗风情，雅俗共赏，
+呈现的是九寨沟的民俗风情，雅俗共赏呈现的是九寨沟的
+民俗风情，雅俗共赏呈现的是九寨沟的民俗风情，雅俗共
+赏呈现的是九寨沟的民俗风情，雅俗共赏呈现的是九寨沟
+的民俗风情，雅俗共赏呈现的是九寨沟的民俗风情，雅俗
+共赏呈现的是九寨沟的民俗风情，雅俗共赏。</view>  
+  </view>
+  <view class="notes-prompt">以上信息仅供参考，具体以当日信息为准</view>
+
+
+</view>

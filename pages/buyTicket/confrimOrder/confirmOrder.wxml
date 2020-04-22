@@ -1,0 +1,55 @@
+<!-- pages/buyTicket/confrimOrder/confirmOrder.wxml -->
+<view class="confrim_order">
+    <view class="confirm_tit">确认并支付</view>
+    <view class="confirm_prompt">
+        <text class="prompt_tit">订单已生成，请您尽快完成支付</text>
+        <view class="prompt_time">
+            将为您保存
+            <text>30</text>
+            分钟
+        </view>
+    </view>
+    <view class="confrim_detail">
+        <view class="detail_left">
+            <text class="de_address">九寨沟风景区</text>
+            <text class="de_time">10月31日</text>
+            <view class="de_num">
+                数量：
+                <text class="num">1</text>
+            </view>
+        </view>
+        <image src="https://ns-strategy.cdn.bcebos.com/ns-strategy/upload/fc_big_pic/part-00724-2903.jpg" />
+    </view>
+    <view class="total_price">
+        <text>总额（RMB）</text>
+        <view class="rmb">
+            ￥
+            <text>268</text>
+        </view>
+    </view>
+    <view class="pay">
+        <view>
+            <image src="./../../../images/ticketdetail/apay.jpg" />
+            支付宝
+        </view>
+        <van-checkbox value="{{ pchecked }}" bind:change="ponChange"></van-checkbox>
+    </view>
+    <view class="pay">
+        <view>
+            <image src="./../../../images/wx.png" />
+            微信
+        </view>
+        <van-checkbox value="{{ wchecked }}" bind:change="wonChange"></van-checkbox>
+    </view>
+    <view class="agree">
+        我同意
+        <text>预定条款</text>
+        和
+        <text>网签协议</text>
+        ，
+        也同意支付一下所示总金额。
+    </view>
+    <view class="btn_content">
+        <button class="confrim_time_btn" bindtap="choose_present_time">确认支付￥268</button>
+    </view>
+</view>

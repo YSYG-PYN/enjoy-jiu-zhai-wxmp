@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<view  class="box">
+     
+      <image src="../../images/img001.jpeg"></image>
+     
+      <!-- <view bindtap="wechatLogin">微信快捷登录</view> -->
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="wxLogin">微信授权登录</button>
+<view wx:else>请升级微信版本</view>
+
+
+
+
+      <view bindtap="phoneLogin">手机验证码登录</view>
+</view> 

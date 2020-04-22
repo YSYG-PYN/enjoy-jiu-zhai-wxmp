@@ -1,0 +1,337 @@
+/* pages/weather/weather.wxss */
+page{
+    background-color: #F4F8FB;
+}
+.weather_top {
+    width: 100%;
+    height: 600rpx;
+    position: relative;
+    margin-bottom: 40rpx;
+}
+.weather_top>image{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.weather_address {
+    width: 100%;
+    font-size: 24rpx;
+    color: #fff;
+    padding: 40rpx 24rpx 20rpx;
+
+}
+.airQuality{
+    width:141rpx;
+    height:56rpx;
+    background:rgba(62,136,215,1);
+    border-radius:8rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+    font-size:24rpx;
+    padding: 0 17rpx;
+    box-sizing: border-box;
+    margin-left: 24rpx;
+}
+.airQuality image{
+    width: 31rpx;
+    height: 31rpx;
+}
+.weather_content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24rpx;
+    box-sizing: border-box;
+}
+
+.weather_content_left {
+    display: flex;
+    /*flex-direction: column;
+    vertical-align: text-top;*/
+    align-items: flex-end;
+    margin: 0 auto;
+}
+
+.weather_temperature {
+    font-size: 150rpx;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    /* line-height: 0; */
+}
+.weather_detail{
+    color: #fff;
+    font-size:30rpx;
+    line-height: 114rpx;
+}
+.temperature_unit {
+    font-size: 37rpx;
+    line-height: 120rpx;
+}
+
+.weather_detail view {
+    color: rgba(102, 102, 102, 1);
+    font-size: 32rpx;
+}
+
+.weather_content_right {
+    display: flex;
+    flex-direction: column;
+    padding-right: 80rpx;
+    padding-top: 40rpx;
+}
+
+.weather_content_right image {
+    width: 146rpx;
+    height: 134rpx;
+    margin-bottom: 40rpx;
+}
+
+.airquality {
+    background: rgba(84, 189, 97, 1);
+    width: 80rpx;
+    height: 44rpx;
+    font-size: 20rpx;
+    color: #fff;
+    text-align: center;
+    line-height: 44rpx;
+    border-radius: 3px;
+    margin-left: 20rpx;
+}
+.weather_day{
+    background-color: #fff;
+    margin-bottom: 40rpx;
+}
+.weather_day_content{
+    width: 100%;
+    height: 177rpx;
+    display: flex;
+    align-items: center;
+}
+
+.weather_middle {
+    background: #fff;
+    margin-bottom: 40rpx;
+}
+
+.weather_middle_content {
+    width: 100%;
+    height: 268rpx;
+    display: flex;
+    align-items: center;
+    padding-top: 30rpx;
+    padding-left: 24rpx;
+}
+.weather_middle_list{
+    width: 100rpx;
+    margin-right: 50rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.day{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10rpx;
+}
+.day view:nth-child(1){
+    font-size:24rpx;
+    color: #333333;
+    margin-right: 10rpx;
+    width: 48rpx;
+}
+.day view:nth-child(2){
+    width:45rpx;
+    height:23rpx;
+    background-color: #53BDA5;
+    font-size: 18rpx;
+    text-align: center;
+    line-height: 23rpx;
+    color: #fff;
+}
+.green{
+    background-color: #53BDA5!important;
+}
+.yellow{
+    background-color: #F0C553!important;
+}
+.black{
+    background-color: #6D7278!important;
+}
+.date{
+    font-size:22rpx;
+    color: #999999;
+    text-align: center;
+    margin-bottom: 15rpx;
+}
+.weather_middle_list image{
+    width: 53rpx;
+    height: 53rpx;
+    margin-bottom: 15rpx;
+}
+.weather_middle_temperature{
+    font-size: 22rpx;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 7rpx;
+    width:125rpx;
+}
+.weathers{
+    font-size:22rpx;
+    color:rgba(153,153,153,1);
+}
+
+.weather_day_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 42rpx;
+}
+.weather_day_list view:first-child{
+    font-size:24rpx;
+    color: #999999;
+    margin-bottom: 10rpx;
+}
+.weather_day_list image{
+    width: 34rpx;
+    height: 34rpx;
+    margin-bottom: 10rpx;
+}
+.weather_day_list view:last-child{
+    font-size:22rpx;
+    color: #333333;
+}
+
+.weather_middle_per {
+    width: 176rpx;
+    height: 288rpx;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 34rpx 36rpx 30rpx;
+    box-sizing: border-box;
+    justify-content: space-between;
+    font-size: 24rpx;
+    color: rgba(153, 153, 153, 1);
+    margin: 0 12rpx;
+}
+
+.weather_middle_per image {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.livingIndex, .airquality_bottom {
+    width: 100%;
+    font-size: 32rpx;
+    color: rgba(51, 51, 51, 1);
+    padding: 24rpx;
+}
+
+.living_content{
+    background-color: #fff;
+}
+
+.living_content_per {
+    width: 100%;
+    padding: 30rpx 24rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    /*margin-bottom: 20rpx;*/
+}
+
+.living_content_per .image_view {
+    width: 80rpx !important;
+    height: 80rpx !important;
+}
+
+.image_view image {
+    width: 100%;
+    height: 100%;
+}
+
+.living_detail {
+    width: calc(100% - 100rpx);
+    margin-left: 20rpx;
+    /*box-sizing: border-box;*/
+    font-size: 24rpx;
+    color: rgba(153, 153, 153, 1);
+    /*border-bottom: 1px solid #ccc;*/
+    /*padding-bottom: 10rpx;*/
+}
+
+.living_detail_title {
+    font-size:28rpx;
+    margin-bottom: 11rpx;
+    color: #000;
+}
+.living_advice{
+    font-size:24rpx;
+    color: #9B9B9B;
+}
+
+.airquality_bottom_content {
+    padding: 0 24rpx;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.airquality_bottom_per,.airquality_bottom_address {
+    width: 100%;
+    color: rgba(153, 153, 153, 1);
+    font-size: 24rpx;
+}
+.airquality_bottom_address{
+    width: 100%;
+    text-align: center;
+    line-height: 64rpx;
+}
+.weather_bottom{
+    width: 100%;
+    padding: 0 46rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.weatherDetail{
+    color: #C8E0FA;
+    font-size:22rpx;
+}
+.weatherDetail>view:first-child{
+    margin-bottom: 5rpx;
+    display: flex;
+    align-items: center;
+}
+.weatherDetail>view:last-child{
+    text-align: center;
+}
+.weatherDetail>view:first-child image{
+    width:38rpx;
+    height:38rpx;
+    margin-right: 5rpx;
+}
+.weatherChart{
+    height: 180rpx;
+    color: #fff;
+    font-weight: bold;
+    font-size: 32rpx;
+    text-align: center;
+    line-height: 141rpx;
+}
+.clothes_level, .clothes_command {
+    font-size: 32rpx;
+    font-weight: 400;
+    color: rgba(102, 102, 102, 1);
+    line-height: 44rpx;
+}
+ec-canvas {
+    width: 100%;
+    height: 100%;
+}

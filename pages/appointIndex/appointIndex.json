@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "component_home": "/pages/appointHome/appointHome",
+    "component_news": "/pages/appointNew/appointNew",
+    "component_mine": "/pages/appointMy/appointMy"
+  }
+}

@@ -1,0 +1,254 @@
+/* pages/buyTicket/ticketDetail/fillOrder/flillOrder.wxss */
+page{
+    background: #F8F8F8;
+}
+.fill_order{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    overflow-x: hidden;
+}
+.msg_tit,.commit_btn,
+.order_num,.order_content .order_detail,.order_tit,.mustkonw,.order_time{
+    width: 100%;
+    box-sizing: border-box;
+}
+.order_content{
+    padding: 30rpx;
+    padding-bottom: 0;
+}
+.order_detail{
+    background: #fff;
+    width: 100%;
+    padding: 10rpx 0;
+    padding-top: 20rpx;
+}
+.order_tit{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20rpx;
+    padding-right: 40rpx;
+}
+.order_tit .order_tit_address{
+    font-size: 32rpx;
+    font-weight: 600;
+}
+.order_tit .order_tit_price{
+    font-size: 32rpx;
+    color: red;
+    font-weight: 600;
+}
+.order_tit_price .price{
+    font-size: 22rpx;
+    font-weight: normal;
+}
+.order_tit_price .price_per{
+    color: #aaa;
+    font-weight: normal;
+    font-size: 24rpx;
+}
+.mustkonw,.order_time{
+    color: #9EC2E8;
+    text-align: right;
+    line-height: 32px;
+    font-size: 24rpx;
+    padding-right: 40rpx;
+    padding-left: 20rpx;
+}
+.order_time{
+    color: #666;
+    text-align: left;
+}
+.order_num{
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 26rpx;
+    color:#666;
+    padding: 20rpx;
+    padding-right: 35rpx;
+}
+.reduce,.add{
+    width: 40rpx;
+    height: 40rpx;
+    text-align: center;
+    background: #ECF4F5;
+    color:#A4D0FF;
+}
+.num_btn{
+    display: flex;
+}
+.num{
+    width: 40rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+}
+.fill_visitor_msg{
+    width: 100%;
+    margin-top: 12rpx;
+    background: #fff;
+}
+.msg_tit{
+    padding-left: 20rpx;
+    background: #F4F4F4;
+    color: #333333;
+    line-height: 46px;
+    font-weight: 600;
+    font-size: 30rpx;
+}
+.msg_content{
+    width: 100%;
+    padding: 25rpx;
+}
+.msg_content view{
+    display: flex;
+    font-size: 28rpx;
+    align-items: center;
+}
+.vname input,.vphone input,.vcard input{
+    line-height: 40rpx;
+    border-bottom: 1px solid #eee;
+    margin-left: 40rpx;
+    height: 60rpx;
+    margin-top: 16rpx;
+    padding-bottom: 10rpx;
+}
+.accident{
+    margin: 10rpx 0;
+}
+.accident_price .price_a{
+    color: #4B9AED;
+    margin-left: 60rpx;
+}
+.accident_price{
+    color: #aaa;
+}
+.van-checkbox__label {
+    color: #aaa !important;
+    font-size: 24rpx !important;
+}
+.commit_btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 108rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.order_total_price{
+    font-size: 24rpx;
+    color: #3333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20rpx;
+}
+.price{
+    font-size: 22rpx;
+    color:  red;
+}
+.price_total{
+    font-size: 36rpx;
+    color:  red;
+    font-weight: 600;
+}
+.price_btn{
+    color: #4B9AED;
+    font-size: 22rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub_btn{
+    width: 200rpx;
+    height: 80rpx;
+    background: #4B9AED;
+    color: #fff;
+    border-radius: 50rpx;
+    text-align: center;
+    line-height: 80rpx;
+    font-size: 30rpx;
+    margin-left: 40rpx;
+}
+
+.van-action-sheet__header {
+	text-align: left !important;
+	font-size: 16px  !important;
+	font-weight: 600  !important;
+	padding-left: 26rpx  !important;
+}
+.btn_content{
+	padding-right: 30rpx;
+}
+.confrim_time_btn{
+	width: 100%;
+	border-radius: 25px;
+	background: #4B9AED;
+	box-sizing: border-box;
+	color: #fff;
+	height: 80rpx;
+line-height: 80rpx;
+    font-size: 32rpx;
+}
+.detail{
+    width: 80rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+.detail_tit,.detail_price,.detail_total_price{
+    font-size: 26rpx;
+    width: 100%;
+box-sizing: border-box;
+padding: 0 30rpx;
+margin-bottom: 30rpx;
+margin-top: 20rpx;
+}
+.detail_price{
+    display: flex;
+justify-content: space-between;
+}
+.detail_total_price{
+    text-align: right;
+    line-height: 42px;
+    border-top: 1px solid #ccc;
+    margin-bottom: 180rpx;
+}
+.dprice{
+    font-size: 38rpx;
+    font-weight: 600;
+}
+.picon{
+    color: red;
+}
+
+.rule{
+    width: 100%;
+box-sizing: border-box;
+padding: 0 30rpx;
+font-size: 24rpx;
+color: #aaa;
+}
+.rule_tit{
+    font-size: 30rpx;
+    color: #333;
+    line-height: 32px;
+}
+.rule_content view {
+    display: flex;
+}
+.rule_content view text:first-of-type{
+    width: 100rpx;
+    margin-right: 40rpx;
+    display: inline-block;
+    line-height: 24px;
+}    

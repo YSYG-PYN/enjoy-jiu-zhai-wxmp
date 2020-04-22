@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText": "景点门票",
+  "usingComponents": {
+		"van-action-sheet":"@vant/weapp/action-sheet/index"
+	}
+}

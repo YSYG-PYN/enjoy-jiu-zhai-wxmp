@@ -1,0 +1,48 @@
+<!--pages/complain/complain.wxml-->
+<view class="box">
+    <van-cell title="选择项目" is-link bind:click="showPopup" />
+    <van-popup show="{{ show }}" bind:close="onClose">
+        <view class="Popout">
+              <view>
+                <checkbox></checkbox>
+                <input placeholder="景点门票"></input>
+              </view>
+               <view>
+                <checkbox></checkbox>
+                <input placeholder="住宿"></input>
+              </view>
+               <view>
+                <checkbox></checkbox>
+                <input placeholder="电商"></input>
+              </view>
+               <view>
+                <checkbox></checkbox>
+                <input placeholder="交通"></input>
+              </view>
+               <view>
+                <checkbox></checkbox>
+                <input placeholder="其他"></input>
+              </view>
+        </view>
+    </van-popup>
+   
+    <textarea class="suggest" placeholder="您留下的每一个字都将帮助我们改善我们的服务，期待您的反馈！"></textarea>
+
+    <view>
+        <view class="title">上传凭证</view>
+        <view class="uploading">
+             <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
+        </view>
+    </view>
+    <view class="ipt">
+        <label>投诉人</label>
+        <input placeholder="请输入您的姓名"></input>
+    </view>
+     <view class="ipt">
+        <label>联系电话</label>
+        <input placeholder="请输入您的手机号码"></input>
+    </view>
+</view>
+ <view class="fouter">
+        <van-button type="primary" block>提交</van-button>
+   </view>

@@ -1,0 +1,41 @@
+/* pages/foodBeverage/specialFood/specialFood.wxss */
+
+.special_food {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24rpx;
+    box-sizing: border-box;
+}
+
+.special_food_title {
+    width: 100%;
+    font-size: 28rpx;
+    color: rgba(51, 51, 51, 1);
+    line-height: 64rpx;
+    font-weight: 600;
+}
+
+.special_food_per {
+    width: 100%;
+    display: flex;
+    margin-bottom: 44rpx;
+}
+
+.special_food_per image {
+    width: 320rpx;
+    height: 176rpx;
+    margin-right: 40rpx;
+}
+.special_food_per .special_food_per_right{
+    width: calc(100% - 360rpx);
+    font-size: 30rpx;
+    font-weight: 600;
+}
+.special_food_per_right .special_food_detail{
+    font-size: 28rpx;
+    color: rgba(102, 102, 102, 1);
+    margin-bottom: 50rpx;
+    margin-top: 12rpx;
+    font-weight: normal;
+}

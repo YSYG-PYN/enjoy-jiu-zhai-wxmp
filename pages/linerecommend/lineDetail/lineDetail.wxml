@@ -1,0 +1,68 @@
+<!--pages/linerecommend/lineDetail/lineDetail.wxml-->
+<view class="line_detail">
+	<view class="line_detail_img">
+		<image src="{{lineDetailObj.image}}"></image>
+	</view>
+	<text class="detail_introduce">{{lineDetailObj.lineListDetail}}</text>
+	<view class="detail_content">
+		<text class="tourism_line_tit">旅游线路</text>
+		<view class="detail_line">
+			<text>五花海</text>——
+			<text>珍珠滩瀑布</text>——
+			<text>神仙池</text>——
+			<text>黄龙山</text>
+		</view>
+		<view class="tourism_introduce">
+			{{lineDetailObj.lineIntroduce}}
+		</view>
+
+		<block wx:for-item="val" wx:for="{{lineDetailObj.wayTit}}">
+			<block wx:for="{{val.wayDetail}}">
+				<view class="tourism_line">
+					<text class="time">{{val.wayTitTime}}</text>
+					<text class="address">{{item.wayTitle}}</text>
+					<view class="tourism_image">
+						<image src="{{item.wayImage}}"></image>
+					</view>
+					<view class="tourism_detail">
+						{{item.wayIntroduce}}
+					</view>
+				</view>
+			</block>
+		</block>
+	</view>
+
+	<view class="tourism_guide">
+		<view class="tourism_guide_content">
+			<view class="guide_tit">旅游指南</view>
+			<view>地址：
+				<text class="guide_address">九寨沟县黄龙景区</text>
+			</view>
+			<view class="openTime">
+				<view>开放时间：</view>
+				<view>
+					<text class="guide_hotTime">旺季4月1日-11月15日 07：00-19：00</text>
+					<text class="guide_coldTime">淡季11月16日-3月31日08：00-18：00</text>
+				</view>
+			</view>
+			<view class="toast">
+				（门票信息仅供参考，详情请资讯景区官方)
+			</view>
+		</view>
+	</view>
+	
+	<!-- 其他路线 -->
+	<view class="other_line">
+		其他路线
+	</view>
+	<scroll-view scroll-x="true" class="tourism_bottom">
+		<view class="hot_spots" scroll-x="true">
+			<block wx:for="{{lineList}}" wx:key="{{item.id}}">
+				<view class="hot">
+					<image class="hot_image" src="{{item.image}}"></image>
+				</view>
+			</block>
+		</view>
+	</scroll-view>
+	
+</view>

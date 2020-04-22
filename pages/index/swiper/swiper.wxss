@@ -1,0 +1,32 @@
+/* pages/index/swiper/swiper.wxss */
+/* .hot_spots {
+	width: 100%;
+	display: flex;
+	display: -webkit-box;
+	flex-direction: column;
+	margin-left: 20rpx;
+	box-sizing: border-box;
+}
+.hot{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-right: 20rpx;
+	border: 1px solid #ccc;
+}
+.hot .hot_image{
+	width: 260rpx;
+	height: 230rpx;
+	
+}
+.hot .hot_spots_introduce{
+	font-size: 28rpx;
+	margin-left: 16rpx;
+	margin-top: 6rpx;
+}
+.hot .introduce_second{
+	color: #888;
+	font-size: 24rpx;
+	margin-bottom: 10rpx;
+}
+ */

@@ -1,0 +1,8 @@
+
+<view class="m-content"><view class="medicalName">{{title}}</view>
+<view class="info">时间:{{createTime}}</view>
+<view class="newsDetail-img">
+<image  src="{{imgUrl}}"></image>
+</view>
+<view class="newsDetail-text"><text>{{content}}</text></view>
+</view>

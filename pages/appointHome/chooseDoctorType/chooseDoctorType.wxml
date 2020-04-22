@@ -1,0 +1,44 @@
+<view class="doctor-container">
+  <view class="doctorInformation">
+    <view>
+      <image class="imageAvatar" src="{{icon}}"/>
+    </view>
+    <view class="doctor-text" >
+       <view style="font-size:30rpx">{{doctorName}}</view>
+       <view style="color:#939393;">{{depName}}</view>
+       <view style="color:#939393">{{gradeDesc}}</view>
+    </view>
+  </view>
+
+  <view class="weui-tab">
+   <view class="weui-navbar" style="position:fixed;background:#fff">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);">
+        </view>
+    </view>
+     <view class="weui-tab__panel">
+       <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <view class="weui-tab__transportation">
+         <!-- <text> 医生值班详情 </text> -->
+         <view class="weui-tab_appointDataItems" bindtap="appointDoctorTap">
+         <text class="weui-tab_appointData">{{depTime}} {{week}}</text><text class="appointMark">预约</text>
+         </view>
+        </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view class="weui-tab__transportation">
+          <text wx:if="{{doctorDesc}}"> {{doctorDesc}}</text>
+          <text wx:else>暂无。</text>
+          </view>
+        </view>
+     </view>
+
+     </view>
+
+
+
+</view>

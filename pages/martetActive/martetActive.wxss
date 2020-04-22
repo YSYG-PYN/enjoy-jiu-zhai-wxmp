@@ -1,0 +1,125 @@
+/* pages/martetActive/martetActive.wxss */
+page{
+    height: 100%;
+}
+#box{
+    height: 100%;
+}
+.foript_position {
+    /* position: relative; */
+    width: 100%;
+    height: auto;
+}
+.swiperContainer {
+    width: 100%;
+    height: 400rpx;
+}
+.swiperImgs{
+    position: relative;
+
+}
+.swiperimg {
+    border-radius: 10rpx;
+    width: 100%;
+    height: 100%;
+}
+.content{
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+.title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30rpx;
+}
+.title text:nth-child(1){
+    font-size: 30rpx;
+    font-weight: bold;
+    margin-right: 10rpx;
+}
+
+.title text:nth-child(2){
+    font-size: 24rpx;
+    font-weight: bold;
+    margin-right: 10rpx;
+    border: 1px solid #999;
+    padding: 10rpx 20rpx;
+}
+.title button{
+    padding: 0;
+    margin: 0;
+    font-size: 24rpx;
+    float: right;
+}
+.times{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30rpx;
+}
+.times text:first-child{
+    font-size: 30rpx;
+    font-weight: bold;
+}
+.times text:last-child{
+    font-size: 30rpx;
+    color: #ccc;
+}
+.data{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30rpx;
+}
+.data>view view:first-child{
+    font-size: 30rpx;
+    color: #999999;
+    margin-bottom: 20rpx;
+}
+.data>view view:last-child{
+    font-size: 30rpx;
+    font-weight: bold;
+    text-align: center;
+}
+.query{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20rpx;
+}
+.query input{
+    border: 1px solid #ccc;
+    padding: 5px 2px;
+    border-radius: 5px;
+}
+.query button{
+    margin: 0;
+    font-size: 30rpx;
+}
+#lookRank{
+    margin-bottom: 20rpx;
+}
+.rank{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.rank .rankDetail{
+    margin-bottom: 40rpx;
+}
+.rank .rankDetail image{
+    width: 123px;
+    height: 154px;
+}
+.rank .rankDetail view{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+

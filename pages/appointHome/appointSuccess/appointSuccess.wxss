@@ -1,0 +1,45 @@
+
+page{
+  display: block;
+  background-color: #efeff4;
+  font-family: "微软雅黑";
+
+}
+
+
+.appointResult-container{
+  margin-top: 20rpx;
+  
+
+}
+
+.successiImage-container{
+  padding: 30rpx  40rpx;
+  background: white;
+  text-align: center;
+
+}
+
+.success-img{
+   width: 60rpx;
+   height: 60rpx;
+}
+.successText{
+  padding: 0rpx  20rpx;
+  text-align: center;
+  background: white;
+  color:#939393;
+  font-size: 35rpx;
+}
+.confirmCode{
+  text-align: center;
+  background: white;
+  padding: 20rpx 20rpx;
+}
+
+.reminderText{
+  margin-top: 40rpx;
+  padding: 20rpx 20rpx;
+  background: white;
+  /* color: #f7a010; */
+}

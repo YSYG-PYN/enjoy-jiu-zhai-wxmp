@@ -1,0 +1,5 @@
+<view class="box">
+    <view>票码：1234 1234 1234</view>
+    <view>请扫码入园</view>
+    <image src="../../images/img001.jpeg" class="thinkChange" ></image>
+</view> 

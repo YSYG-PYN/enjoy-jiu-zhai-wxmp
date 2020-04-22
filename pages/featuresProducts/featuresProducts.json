@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "特色产品",
+  "usingComponents": {
+    "van-action-sheet":"@vant/weapp/action-sheet/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index"
+  }
+}

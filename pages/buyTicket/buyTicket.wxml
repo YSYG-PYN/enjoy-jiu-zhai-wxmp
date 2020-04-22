@@ -1,0 +1,66 @@
+<!--pages/buyTicket/buyTicket.wxml-->
+<view class="buy_ticket">
+	<!-- 顶部输入框 -->
+	<view solt="ipt" class="index_searchIpt_content">
+		<icon type="search" size="16" class="ipt_search_icon" />
+		<input class="index_searchIpt" bindinput="bindHideKeyboard" placeholder="搜索目的地/景点/酒店" />
+	</view>
+	<!-- 景点门票 -->
+	<view class="ticket">
+		<view class="ticket_btn">
+			<view bindtap="showAll" class="btn">全部</view>
+			<view bindtap="showSome" class="btn">智能排序</view>
+		</view>
+		<view class="ticket_content">
+			<!-- <block wx:for="{{ticketList}}" wx:key="{{item.id}}">
+				<view class="ticket_detail" data-ticketid="{{item.id}}" bindtap="toTicketDetail">
+					<image src="{{item.ticketImage[0].image}}"></image>
+					<view class="ticket_introduce">
+						<view class="ticket_introduce_tit">
+							<view class="ticket_spots">
+								<text>{{item.address}}</text>
+								<text>{{item.ticketLabel}}</text>
+							</view>
+							<text class="ticket_price">￥{{item.ticketPrice}}起</text>
+						</view>
+						<view class="ticket_address">
+							<text class="address_dis">{{item.ticketDis}}km</text><text class="address_name">{{item.ticketAddress}}</text>
+						</view>
+						<view class="ticket_score">
+							<text class="score_num">{{item.ticketScore}}分</text><text class="score_num">月售{{item.ticketNum}}万</text>
+						</view>
+						<view class="ticket_spots_detail">{{item.ticketDetail}}</view>
+					</view>
+				</view>
+			</block> -->
+			<block wx:for="{{ticketList}}">
+				<view class="ticket_detail" data-ticketid="{{item.id}}" bindtap="toTicketDetail">
+					<image src="{{item.ticketImage[0].image}}"></image>
+					<view class="ticket_introduce">
+						<view class="ticket_introduce_tit">{{item.address}}</view>
+						<view class="ticket_address">
+							<view class="ticket_time">
+								<text class="ticket_time_tit">使用时间</text>
+								<text class="ticket_time_con">今日可用</text>
+							</view>
+							<view class="ticket_dis">
+								<text class="ticket_time_tit">距您</text>
+								<text class="ticket_time_con">{{item.ticketDis}}km</text>
+							</view>
+						</view>
+						<view class="ticket_price_content">
+							<view class="price_">￥<text>{{item.ticketPrice}}</text><text>起</text></view>
+							<view class="score_content">
+								<view class="score_num">{{item.ticketScore}}分</view>
+								<view class="score_amount">月售{{item.ticketNum}}万</view>
+							</view>
+						</view>
+						<view class="ticket_introduce_con">{{item.ticketDetail}}</view>
+					</view>
+				</view>
+			</block>
+		</view>
+	</view>
+	<!-- 底部弹框 -->
+	<van-action-sheet show="{{ show }}" bind:click-overlay="clickMask" bind:select="onSelect" actions="{{actions}}" />
+</view>

@@ -1,0 +1,29 @@
+/* pages/login/login.wxss */
+.box{
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150rpx;
+}
+image{
+  width: 300rpx;
+  height:200rpx
+}
+.box view{
+  width: 100%;
+  height: 90rpx;
+  background: #ccc;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10rpx solid #ccc;
+  text-align: center;
+  line-height: 90rpx;
+  margin-top: 50rpx;
+}
+.wxLogin{
+  width: 100%;
+  color: #fff;
+  background: #ccc;
+  margin-top: 50rpx;
+}

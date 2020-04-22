@@ -1,0 +1,87 @@
+<!--pages/featuresProducts/featuresProductsDetail/payment/payment.wxml-->
+<view id="box">
+    <view class="title">确认并支付</view>
+    <view class="orderMsg">
+        <view>订单已生成，请您尽快完成支付。</view>
+        <view>将为您保存<text>30</text>分钟</view>
+    </view>
+    <view class="content">
+        <view class="commodity">
+            <view>藏式风情饰品</view>
+            <view>戒指+吊坠卡其色</view>
+            <view>数量：1</view>
+        </view>
+        <view class="commodityPic">
+            <image src="http://img0.imgtn.bdimg.com/it/u"></image>
+        </view>
+    </view>
+    <view class="commodityMoney">
+        <view>总额(RMB)</view>
+        <view>
+            <text>￥</text>
+            <text>268</text>
+        </view>
+    </view>
+    <van-radio-group value="{{ radio }}" bind:change="onChange">
+        <van-cell-group>
+            <van-cell
+                    title="支付宝"
+                    clickable
+                    data-name="1"
+                    bind:click="onClick"
+                    icon="http://img3.imgtn.bdimg.com/it/u=436937017,337546424&fm=26&gp=0.jpg"
+            >
+                <van-radio slot="right-icon" name="1" />
+            </van-cell>
+            <van-cell
+                    title="微信支付"
+                    clickable
+                    data-name="2"
+                    bind:click="onClick"
+                    icon="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2145677754,3630634650&fm=26&gp=0.jpg"
+            >
+                <van-radio slot="right-icon" name="2" />
+            </van-cell>
+        </van-cell-group>
+    </van-radio-group>
+    <button id="pay" bindtap="toSuccessfulPayment">确认支付 · ¥268</button>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

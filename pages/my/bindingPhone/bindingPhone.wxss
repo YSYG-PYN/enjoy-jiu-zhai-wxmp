@@ -1,0 +1,5 @@
+/* pages/my/bindingPhone/bindingPhone.wxss */
+.save{
+  padding: 0 20rpx;
+  margin-top: 200rpx;
+}

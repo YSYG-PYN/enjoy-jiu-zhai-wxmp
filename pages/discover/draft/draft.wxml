@@ -1,0 +1,18 @@
+<!--pages/discover/draft/draft.wxml-->
+<view class="box">
+    <view class="title">草稿箱({{number}})</view>
+    <view class="section" >
+        <view class="draft" wx:for="{{draft}}" wx:key="{{item.id}}">
+           <image src="{{item.image}}" class="img"></image>
+            <view class="detail">
+                <view>保存时间：{{item.date}}</view>
+                <view>拍摄地：{{item.site}}</view>
+                <view>{{item.type}}</view>
+            </view>
+            <view class="compile" bindtap="compile">
+                继续编辑
+            </view>
+        </view>  
+    </view>
+    
+</view>  

@@ -1,0 +1,34 @@
+<view class="topbar" style="padding-top:{{statusBarHeight}}px">
+    <view class="arrow-box row" bindtap="backToPreviousClick">
+        <image src="/images/back.png"></image>
+        <p>酒店收藏</p>
+    </view>
+</view>
+<view class="top-comend" style="padding-top:{{statusBarHeight}}px"></view>
+<view class="iconusecont-div {{state==index?'active-tag':''}}" bindtap="select_use" wx:for="{{use}}"
+    data-key='{{index}}'>
+    <view class="flex-item">
+        <rich-text class='use_name'>{{item.name}}</rich-text>
+    </view>
+</view>
+<van-swipe-cell right-width="{{ 90 }}" bind:close="onClose" async-close>
+    <van-cell-group>
+        <view class="collect">
+            <view class="pic">
+                <image src="../../../images/hotel/bigHotel.png"></image>
+            </view>
+            <p class="collect_tit">成都银河王朝大酒店【 春熙路/太古里商业区 天府广场/盐市口商业区 】</p>
+            <view class="collect_head">
+                <text class="dol">￥</text><text class="price">312</text><text class="wan">/晚</text>
+            </view>
+            <p class="fen">4.9分</p>
+        </view>
+    </van-cell-group>
+    <view slot="right" bindtap="">
+        <view class="delete">
+            <image src="../../../images/hotel/del.png"></image>
+        </view>
+        <p class="del">删除</p>
+    </view>
+    
+</van-swipe-cell>

@@ -1,0 +1,30 @@
+<!--pages/foodBeverage/specialFood/specialFood.wxml-->
+<view class="special_food" >
+    <view class="special_food_title">推荐菜（23）</view>
+    <view class="special_food_content">
+        <view class="special_food_per">
+            <image src="http://img4.imgtn.bdimg.com/it/u=3549928759,1656906133&fm=26&gp=0.jpg"></image>
+            <view class="special_food_per_right">
+                <text class="special_food_tit">自制酸奶</text>
+                <view class="special_food_detail">"不但可以解辣还有营养"</view>
+                <view class="special_food_tit">￥<text>60</text></view>
+            </view>
+        </view>
+         <view class="special_food_per">
+            <image src="http://img4.imgtn.bdimg.com/it/u=3549928759,1656906133&fm=26&gp=0.jpg"></image>
+            <view class="special_food_per_right">
+                <text class="special_food_tit">自制酸奶</text>
+                <view class="special_food_detail">"不但可以解辣还有营养"</view>
+                <view class="special_food_tit">￥<text>60</text></view>
+            </view>
+        </view>
+         <view class="special_food_per">
+            <image src="http://img4.imgtn.bdimg.com/it/u=3549928759,1656906133&fm=26&gp=0.jpg"></image>
+            <view class="special_food_per_right">
+                <text class="special_food_tit">自制酸奶</text>
+                <view class="special_food_detail">"不但可以解辣还有营养"</view>
+                <view class="special_food_tit">￥<text>60</text></view>
+            </view>
+        </view>
+    </view>
+</view>

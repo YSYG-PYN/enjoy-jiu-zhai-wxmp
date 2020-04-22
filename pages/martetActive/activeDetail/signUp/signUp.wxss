@@ -1,0 +1,33 @@
+/* pages/martetActive/activeDetail/signUp/signUp.wxss */
+page{
+    height: 100%;
+}
+#box{
+    height: 100%;
+}
+.content{
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+.top{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 100rpx;
+}
+.top image{
+    width: 210rpx;
+    height: 210rpx;
+    border-radius: 5px;
+}
+.top view{
+    height: 100%;
+    width: calc(100% - 250rpx);
+    font-size: 32rpx;
+    display: flex;
+    flex-direction: column;
+}
+.top view text:first-child{
+    margin-bottom: 117rpx;
+}

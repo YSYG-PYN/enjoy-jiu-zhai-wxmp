@@ -1,0 +1,220 @@
+<!--index.wxml-->
+<view class="container">
+	
+
+
+	<view class="ipt_content">
+		<view class="index_weather"  bindtap="toWeather">
+			<image src="./../../images/change/weather.png"></image>
+			<text>26</text> ℃
+		</view>
+		<!-- 输入框 -->
+		<view solt="ipt" class="index_searchIpt_content">
+			<image src="./../../images/change/search.png"></image>
+			<input class="index_searchIpt" bindinput="bindHideKeyboard" placeholder="搜索目的地/景点/酒店" />
+		</view>
+	</view>
+	<!-- 轮播图 -->
+	<view class="foript_position">
+		<swiper class="swiperContainer" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" interval="{{interval}}" duration="{{duration}}" vertical="{{vertical}}">
+			<block wx:for="{{banner}}" wx:key="{{item.id}}">
+				<swiper-item class='swiperImgs' bindtap="toMarketActive">
+					<image class="swiperimg" src="{{item.image}}"  data-id='{{item.id}}' data-index='{{index}}'></image>
+				</swiper-item>
+			</block>
+    	</swiper>
+	
+		
+	</view>
+	
+	<!-- 导航 -->
+	<view class="nav">
+		<view class="nav_content" bindtap="toBuyTicket">
+			<image src="./../../images/change/ticket.png"></image>
+			<text>景点门票</text>
+		</view>
+		<view class="nav_content" bindtap="toBuyHotel">
+			<image src="../../images/change/hotel.png"></image>
+			<text>民宿酒店</text>
+		</view>
+		<view class="nav_content" bindtap="toFeaturesProducts">
+			<image src="../../images/change/special-food.png"></image>
+			<text>特色产品</text>
+		</view>
+		<view class="nav_content" bindtap="toRestaurant">
+			<image src="../../images/change/food.png"></image>
+			<text>餐饮美食</text>
+		</view>
+		<view class="nav_content" bindtap="toDeductionActivity">
+			<image src="../../images//change/active.png"></image>
+			<text>演艺活动</text>
+		</view>
+		<view class="nav_content" bindtap="toAppointmentRegist">
+			<image src="../../images/change/hospital.png"></image>
+			<text>预约挂号</text>
+		</view>
+	</view>
+
+	<!-- 线路推荐标题 -->
+	<view class="line_title" >
+		<text>线路推荐</text>
+		<image src="./../../images/change/back.png" bindtap="toLineRecommend"></image>
+	</view>
+	<!-- 线路推荐内容 -->
+	<scroll-view scroll-x="true" class="backgroung_color_hot">
+		<view class="line" scroll-x="true">
+			<block wx:for="{{lineCommandData}}" wx:key="{{item.id}}">
+				<view class="line_content_detail" class="line_Item">
+					<view class="line_content_image">
+						<image src="{{item.image}}" bindtap="toLineDetail" data-linedetail="{{item.id}}"></image>
+					</view>
+					<text class="image_introduce">{{item.imageIntroduce}}</text>
+					<view class="samll_title">
+						<!-- <block class="image_special" wx:for="{{item.imageSpecial}}" wx:key="{{item.sid}}"> -->
+							<view class="special_text {{item.imageSpecial[0].scontent=='自然风光'?'otherColor':''}}">
+								<text>{{item.imageSpecial[0].scontent}}</text>
+								<image class="special_decoration" wx:if="{{item.imageSpecial[0].scontent=='网红打卡地'}}" src="./../../images/change/line-decoration.png"></image>
+								<image class="special_decoration" wx:if="{{item.imageSpecial[0].scontent=='自然风光'}}" src="./../../images/change/line-decoration2.png"></image>
+							</view>
+						<!-- </block> -->
+					</view>
+
+				</view>
+			</block>
+			<view class="line_Item" bindtap="toLineRecommend">
+				<view class="line_content_image">
+					<image src="{{lineCommandData[lineCommandData.length-1].image}}"></image>
+					<view class="mask"><text>More+</text></view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+	<!-- 热门景点 -->
+	<view class="hot_title">
+		<text>热门景点</text>
+		<image src="./../../images/change/back.png" bindtap="toLineRecommend"></image>
+	</view>
+	<!-- 热门景点内容 -->
+	<scroll-view scroll-x="true" class="backgroung_color_hot">
+		<view class="hot_spots" scroll-x="true">
+			<block wx:for="{{hotSpotsData}}" wx:key="{{item.hid}}">
+				<view class="hot" bindtap="toHotScenicDetail">
+					<image class="hot_image" src="{{item.hotImage}}"></image>
+					<text class="hot_spots_introduce"> {{item.firstIntroduce}}</text>
+					<van-rate allow-half value="{{ item.score }}"></van-rate>
+				</view>
+			</block>
+			<view class="hot">
+				<view class="last_hot" bindtap="toHotScenicList">
+					<image class="hot_image" src="{{hotSpotsData[hotSpotsData.length-1].hotImage}}"></image>
+					<view class="mask"><text>More+</text></view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+
+
+	<!-- 人气美食 -->
+	<view class="hot_title">
+		<text>人气美食</text>
+		<image src="./../../images/change/back.png" bindtap="toLineRecommend"></image>
+	</view>
+	<!-- 人气美食内容 -->
+	<scroll-view scroll-x="true" class="backgroung_color_hot">
+		<view class="hot_spots" scroll-x="true">
+			<block wx:for="{{hotFoodData}}" wx:key="{{item.fid}}">
+				<view class="hot">
+					<image class="hot_image" src="{{item.foodImage}}"></image>
+					<text class="hot_spots_introduce"> {{item.firstFood}}</text>
+					<text class="hot_spots_introduce introduce_second"> {{item.secondFood}}</text>
+				</view>
+			</block>
+			<view class="hot">
+				<view class="last_hot">
+					<image class="hot_image" src="{{hotFoodData[hotFoodData.length-1].foodImage}}"></image>
+					<view class="mask"><text>More+</text></view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+
+
+
+	<!-- 精选推荐标题 -->
+	<view class="select_title">
+		精选推荐
+		<text></text>
+	</view>
+	<!-- 精选推荐 -->
+	<view class="select">
+		<view class="left_select">
+			<block wx:for="{{selectData}}"  wx:key="index" wx:if="{{index%2 == 0}}">
+				<view class="select_command">
+					<view class="select_image">
+						<image  mode="widthFix"  src="{{item.selectImage}}"></image>
+					</view>
+
+					<view class="select_introduce">
+						<text class="select_stit">{{item.selectTit}}</text>
+					</view>
+					<view class="select_introduce_detail">
+						<view class="select_price"><text class="pricxe_unit">￥</text><text>{{item.selectPrice}}</text>起</view>
+						<text class="select_num">{{item.selectPrice}}月售</text>
+					</view>
+				</view>
+			</block>
+		</view>
+		<view class="right_select">
+			<block wx:for="{{selectData}}"  wx:key="index" wx:if="{{index%2 != 0}}">
+				<view class="select_command">
+					<view class="select_image">
+						<image  mode="widthFix"  src="{{item.selectImage}}"></image>
+					</view>
+					<view class="select_introduce">
+						<text class="select_stit">{{item.selectTit}}</text>
+					</view>
+					<view class="select_introduce_detail">
+						<view class="select_price"><text class="pricxe_unit">￥</text><text>{{item.selectPrice}}</text>起</view>
+						<text class="select_num">{{item.selectPrice}}月售</text>
+					</view>
+				</view>
+			</block>
+		</view>
+	</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+

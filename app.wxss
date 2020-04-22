@@ -1,0 +1,131 @@
+/**app.wxss**/
+page{
+  /* font-family: "微软雅黑" */
+}
+.container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow-x: hidden;
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+	color: transparent;
+	display: none;
+}
+
+/* 线路推荐 */
+.line {
+	width: 100%;
+	display: flex;
+	display: -webkit-box;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding-left: 20rpx;
+}
+
+.line_Item {
+  padding-right: 20rpx
+}
+
+.line_content {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.line_content_detail {
+	display: inline-block;
+	width: 670rpx;
+	height: auto;
+}
+
+.line_content_image image {
+	width: 630rpx;
+	height: 300rpx;
+  border-radius: 10px;
+}
+.line_title {
+	font-weight: 600;
+	line-height: 32px;
+	margin-top: 20rpx;
+}
+
+.line view:last-of-type .line_content_image{
+	position: relative;
+}
+
+
+
+/* 滑动轮播图 */
+
+.hot_spots {
+	width: 100%;
+	display: flex;
+	display: -webkit-box;
+	flex-direction: column;
+	margin-left: 20rpx;
+	box-sizing: border-box;
+}
+.hot{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  padding-right: 20rpx
+}
+.hot .hot_image{
+	width: 260rpx;
+	height: 230rpx;
+	border-radius: 10px;
+}
+.hot .hot_spots_introduce{
+	font-size: 28rpx;
+	margin-left: 16rpx;
+	margin-top: 6rpx;
+}
+.hot .introduce_second{
+	color: #888;
+	font-size: 24rpx;
+	margin-bottom: 10rpx;
+}
+.hot_spots view:last-of-type{
+	justify-content: flex-start;
+}
+.hot_spots view:last-of-type .last_hot{
+	position: relative;
+}
+
+/* 最后一张图有阴影覆盖 */
+.mask{
+	position: absolute;
+	width: 100%;
+	height: 98%;
+	background: rgba(51,51,51,0.8);
+	left: 0;
+	top: 0;
+	color: #fff;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 48rpx;
+}
+.hot_spots .last_hot .mask{
+	justify-content: center;
+}
+
+
+
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+	color: transparent;
+	display: none;
+	}
+

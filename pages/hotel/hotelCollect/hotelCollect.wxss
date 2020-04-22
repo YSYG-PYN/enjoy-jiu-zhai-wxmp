@@ -1,0 +1,119 @@
+/* pages/hotel/hotelCollect/hotelCollect.wxss */
+.topbar {
+  width: 100%;
+  height: 90rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.row {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.arrow-box {
+  width: 65%;
+  text-align: left;
+  height: 100%;
+  float: left;
+  margin-top: 2px;
+}
+.arrow-box image {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 152px;
+  margin-left: 5px;
+}
+.top-comend {
+  width: 100%;
+  height: 80rpx;
+}
+.iconusecont-div {
+  display: inline-block;
+  width: 104rpx;
+  height: 60rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.active-tag .flex-item {
+  background: #4b9aed;
+  color: #fff;
+}
+.flex-item {
+  display: inline-block;
+  width: 104rpx;
+  height: 60rpx;
+  font-size: 24rpx;
+  border: 1rpx solid #ededed;
+  text-align: center;
+  border-radius: 10rpx;
+  color: #000;
+  cursor: pointer;
+  line-height: 30rpx;
+}
+.use_name {
+  font-size: 24rpx;
+  line-height: 60rpx;
+}
+.van-swipe-cell__left,.van-swipe-cell__right{
+    width: 100% !important;
+    height: 70% !important;
+    /* text-align: center; */
+    /* line-height: 70%; */
+}
+.collect{
+    width: 702rpx;
+    margin: 20px auto;
+    text-align: left;
+}
+.pic image{
+    width: 100%;
+}
+.collect_head{
+    color: #333;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.collect_tit{
+    font-size: 14px;
+}
+.dol,.wan{
+    font-size: 10px;
+}
+.price{
+    font-size: 16px;
+    font-weight: bold;
+}
+.fen{
+    font-size: 12px;
+    color: #999;
+}
+.van-hairline--bottom:after,.van-hairline--left:after,.van-hairline--right:after,.van-hairline--surround:after,.van-hairline--top-bottom:after,.van-hairline--top:after,.van-hairline:after {
+    border: none  !important;
+}
+.delete{
+    width: 120rpx;
+    height: 120rpx;
+    background: #fff;
+    box-shadow:0px 0px 4px 1px rgba(0,0,0,0.1);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 136rpx;
+    margin-left: 12px;
+    margin-top: 20%;
+}
+.delete image{
+    width: 40rpx;
+    height: 40rpx;
+}
+.del{
+    margin-left: 31px;
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #333;
+}

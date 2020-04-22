@@ -1,0 +1,74 @@
+<!--pages/discover/issue/issue.wxml-->
+<view class="topbar" style="padding-top:{{statusBarHeight}}px">
+  <view class="arrow-box row" bindtap="goBack">
+    <image src="../../../images/back.png"></image>
+  </view>
+  <view class="row">
+    <view class="btn">
+      <view bindtap="draft">存草稿</view>
+      <view class="issue">发布</view>
+    </view>
+  </view>
+</view>
+<view class="top-comend" style="padding-top:{{statusBarHeight}}px"></view>
+
+<view class="box" style="margin-top:{{statusBarHeight}}px">
+  <view class="heard">
+    <van-cell-group>
+      <van-field value="{{ value }}" placeholder="添加标题更容易被推荐哦(选填)" border="{{ false }}" bind:change="onChange" />
+    </van-cell-group>
+  </view>
+
+  <textarea id="message" placeholder="你的分享越真实越详细与人容易让人种草，也容易推荐哦"></textarea>
+
+  <view class="uploading">
+    <van-uploader file-list="{{ fileList }}" max-count="2" bind:after-read="afterRead" />
+  </view>
+
+  <!--  <view class="site">
+        <view class="site-left">
+             <label><image src="../../../images/weizhi.png"></image></label>
+              <text>你在哪里</text>
+              <input placeholder="(必填)"></input>
+        </view>
+        <label><image src="../../../images/back-right.png"></image></label>
+    </view> -->
+
+  <view class="addTopic">
+    <label>
+      <van-icon name="location" size="40rpx" color="#75C1FF" />
+    </label>
+    <van-cell title="你在哪里" is-link>(必填)</van-cell>
+  </view>
+  <view class="addTopic" bindtap="myTopic">
+    <label>
+      <van-icon name="chat" size="40rpx" color="#75C1FF" />
+    </label>
+    <van-cell title="添加话题" is-link />
+  </view>
+  <view class="fouter">
+    <!-- <view>#周末怎么玩儿</view>
+        <view>#国庆九寨开园了</view>
+        <view>#经典景区</view>
+        <view bindtap="more">+更多</view> -->
+    <view wx:for="{{dataArray}}">
+      <view class="{{index==idx?'_fouterView':'fouterView'}}" bindtap="{{index=='3'?'more':'selectDataTab'}}" data-index="{{index}}" data-text="{{item}}">{{item.name}} </view>
+    </view>
+  </view>
+  <!-- <view class="scenic_btn">
+		<scroll-view scroll-x="true" class="select_scenic_btn">
+			<block wx:for="{{dataArray}}">
+				<view class="{{index==idx?'_select':'select'}}" bindtap="{{index=='3'?'more':'selectDataTab'}}"  data-index="{{index}}">{{item.name}}
+				</view>
+			</block>
+		</scroll-view>
+	</view> -->
+
+
+
+
+
+
+  <van-toast id="van-toast" />
+
+</view>

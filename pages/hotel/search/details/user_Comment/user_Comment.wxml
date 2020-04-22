@@ -1,0 +1,48 @@
+<view class="topbar" style="padding-top:{{statusBarHeight}}px">
+    <view class="arrow-box row" bindtap="backToPreviousClick">
+        <image src="/images/back.png"></image>
+    </view>
+    <view class="xing" bindtap="Collect">
+        用户点评
+    </view>
+</view>
+<view class="top-comend" style="padding-top:{{statusBarHeight}}px"></view>
+<view class="grade">
+    <view class="grade_head">
+        <p class="num">5.0</p>
+        <p class="then">分</p>
+        <p class="then">162人已评</p>
+    </view>
+    <van-rate readonly value="{{ value }}" bind:change="onChange" gutter="5px" size="20px" />
+</view>
+<view class="all">
+    <button class="btn">全部1345</button>
+    <button class="btn">好评1345</button>
+    <button class="btn">优质评论1221</button>
+    <button class="btn">酒店干净1232</button>
+</view>
+<view class="user">
+    <view class="user_head">
+        <van-image round width="10rem" height="10rem" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+        <view class="user_tit">
+            <p class="travl">旅游达人</p>
+            <p class="data">2019年10月1日</p>
+        </view>
+    </view>
+    <p class="hotel">酒店干净，交通也方便，出地铁站就能看见，周边也有 很多饭店，吃住行都很便捷。</p>
+</view>
+<view class="user">
+    <view class="user_head">
+        <van-image round width="10rem" height="10rem" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+        <view class="user_tit">
+            <p class="travl">旅游达人</p>
+            <p class="data">2019年10月1日</p>
+        </view>
+    </view>
+    <view class="img">
+        <image class="imges" src="../../../../../pages/images/banner1.jpg" alt=""></image>
+        <image class="imges" src="../../../../../pages/images/banner2.jpg" alt=""></image>
+        <image class="imges" src="../../../../../pages/images/banner3.jpg" alt=""></image>
+    </view>
+    <p class="hotel">酒店干净，交通也方便，出地铁站就能看见，周边也有 很多饭店，吃住行都很便捷。</p>
+</view>

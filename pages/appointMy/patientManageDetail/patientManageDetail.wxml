@@ -1,0 +1,59 @@
+<view class="patientManage-container">
+
+   <!-- <view class="patientMessage-container">
+      <block wx:for="{{patientItems}}" wx:key="menu_for">
+        <navigator url="../addPatientManage/addPatientManage" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__patientmessage">
+            <text class="weui-cell__patientname">{{item.name}}</text>
+            <text class="weui-cell__patientidcard">{{item.idcard}}</text>
+          </view>
+        </navigator>
+      </block>
+   </view> -->
+   <view class="patientMessage-container">
+     <view wx:for="{{resData}}" style='position: relative;'>
+  <!-- 列表层 -->
+  <view class='list'  data-index='{{index}}'>
+    <!-- patient信息 -->
+    <view class='info' bindtap='select_addr' data-id="{{item.rowId}}">
+      <view>
+        {{item.name}} 
+        <span class="phone">{{item.cardId}}</span>
+        <span wx:if="{{item.default == 1}}" class='def'>默认</span>
+      </view>
+    
+    </view>
+    <!-- 编辑图标 -->
+    <view class='edit'  >
+      <image bindtap='edit' data-id='{{item.rowId}}' data-index='{{index}}' src='../../images/edit.png'></image>
+      <image bindtap="delItem" data-id='{{item.rowId}}' data-index='{{index}}' src='../../images/delete.png'></image>
+    </view>
+    <!-- <view class="deleteBtn" bindtap="delItem" data-id='{{item.id}}'>
+     <image src='../../images/edit.png'></image>
+    </view> -->
+  </view>
+  <!-- 删除按钮 -->
+  <view class="delete" data-id="{{item.id}}" data-index='{{index}}' bindtap="delItem" >删除</view>
+</view>
+
+  </view>
+
+   <view class="weui-cells weui-cells_after-title">
+        <navigator url="../addPatientManage/addPatientManage" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/add.png"></image>
+            <text class="weui-cell__bd">添加就诊人</text>
+            <text class="weui-cell__remarktext">最多添加5人</text>
+          </view>
+          <!-- <view class="weui-cell__ft weui-cell__ft_in-access">{{item.tips}}</view> -->
+        </navigator>
+    </view>
+    <view class="patientMessage-bottom">
+      <text class="patientBottom-remarktext">
+       温馨提示：
+      </text>
+      <text class="patientBottom-remarkdetail">
+        务必保证证件信息的真实性和准确性，以获得更好的诊疗服务。
+      </text>
+    </view>
+</view>

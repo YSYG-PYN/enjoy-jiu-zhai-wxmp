@@ -1,0 +1,57 @@
+/* pages/phoneLogin/phoneLogin.wxss */
+.box{
+  padding: 20rpx;
+
+}
+.img{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150rpx;
+}
+image{
+  width: 300rpx;
+  height:200rpx
+}
+.active{
+  padding: 30rpx;
+}
+.region{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ccc;
+  border-bottom: 1rpx solid #ccc;
+  height: 80rpx;
+  
+}
+.phone,
+.code
+{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   border-bottom: 1rpx solid #ccc;
+}
+.phone label{
+ width: 60rpx;
+ height: 60rpx;
+}
+.input{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.active image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.active input{
+  margin-left: 30rpx;
+}
+
+.login{
+  margin-top: 50rpx;
+}

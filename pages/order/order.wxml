@@ -1,0 +1,172 @@
+<!--pages/order/order.wxml-->
+<view>
+	<van-tabs swipeable active="{{ active }}" class="aa">
+		<van-tab title="全部">
+			<view class="all">
+				<view class="commodity">
+				<view class="title">
+					<van-button size="small" class="btn">去付款</van-button>
+				</view>
+				<view class="active">
+					<view class="ticket">
+						<text>九寨沟风景区门票+观光车+沟区酒店至景区专车(成人票)</text>
+						<text class="rates">￥200.00</text>
+					</view>
+					<view class="quantity">
+						<text>张数：2张</text>
+						<text>2020/01/02</text>
+					</view>
+				</view>
+				</view>
+				
+				<view class="commodity">
+					<view class="title">
+						<van-button type="default" size="small" class="btn">出票完成</van-button>
+					</view>
+					<view class="active">
+						<view class="ticket">
+							<text>九寨沟风景区门票+观光车+沟区酒店至景区专车(成人票)</text>
+							<text class="rates">￥200.00</text>
+						</view>
+						<view class="quantity">
+							<text>张数：2张</text>
+							<text>2020/01/02</text>
+						</view>
+					</view>
+					<view class="title">
+						<van-button size="small" color="#ccc" class="useTickets" bindtap="useTickets">使用门票</van-button>
+					</view>
+				</view>
+				
+				<view class="commodity">
+					<view class="title">
+						<van-button type="default" size="small" class="btn">出票完成</van-button>
+					</view>
+					<view class="active">
+						<view class="ticket">
+							<text>九寨沟风景区门票+观光车+沟区酒店至景区专车(成人票)</text>
+							<text class="rates">￥200.00</text>
+						</view>
+						<view class="quantity">
+							<text>张数：2张</text>
+							<text>2020/01/02</text>
+						</view>
+					</view>
+					<view class="title">
+						<van-button size="small" class="useTickets">评价</van-button>
+						<van-button size="small" class="useTickets">再次预定</van-button>
+					</view>
+				</view>
+				
+				
+			</view>	
+		</van-tab>
+		
+		<van-tab title="待付款">
+			<view class="all">
+				<view class="commodity">
+				<view class="title">
+					<van-button  size="small" class="btn">去付款</van-button>
+				</view>
+				<view class="active">
+					<view class="ticket">
+						<text>九寨沟风景区门票+观光车+沟区酒店至景区专车(成人票)</text>
+						<text class="rates">￥200.00</text>
+					</view>
+					<view class="quantity">
+						<text>张数：2张</text>
+						<text>2020/01/02</text>
+					</view>
+				</view>
+			</view>
+			</view>
+		</van-tab>
+		<van-tab title="待出行">
+			<view class="all">
+				<view class="commodity">
+					<view class="title">
+						<van-button type="default" size="small" class="btn">出票完成</van-button>
+					</view>
+					<view class="active">
+						<view class="ticket">
+							<text>九寨沟风景区门票+观光车+沟区酒店至景区专车(成人票)</text>
+							<text class="rates">￥200.00</text>
+						</view>
+						<view class="quantity">
+							<text>张数：2张</text>
+							<text>2020/01/02</text>
+						</view>
+					</view>
+					<view class="title">
+						<van-button size="small" class="useTickets" color="#ccc" bindtap="useTickets">使用门票</van-button>
+					</view>
+				</view>
+			</view>
+
+		</van-tab>
+		<van-tab title="待点评">
+			<view class="all">
+				<view class="commodity">
+					<view class="title">
+						<van-button type="default" size="small" class="btn">已使用</van-button>
+					</view>
+					<view class="active">
+						<view class="ticket">
+							<text>九寨沟风景区门票+观光车+沟区酒店至景区专车(成人票)</text>
+							<text class="rates">￥200.00</text>
+						</view>
+						<view class="quantity">
+							<text>张数：2张</text>
+							<text>2020/01/02</text>
+						</view>
+					</view>
+					<view class="title">
+						<van-button size="small" class="useTickets">评价</van-button>
+						<van-button size="small" class="useTickets">再次预定</van-button>
+					</view>
+				</view>
+			</view>
+		</van-tab>
+		<van-tab title="退货/售后">
+			<view class="all">
+				<view class="commodity">
+					<view class="title">
+						<van-button type="default" size="small" class="btn">退款中</van-button>
+					</view>
+					<view class="active">
+						<view class="ticket">
+							<text>九寨沟风景区门票+观光车+沟区酒店至景区专车(成人票)</text>
+							<text class="rates">￥200.00</text>
+						</view>
+						<view class="quantity">
+							<text>张数：2张</text>
+							<text>2020/01/02</text>
+						</view>
+					</view>
+					<view class="title">
+						<van-button size="small" class="useTickets" color="#ccc" bindtap="refundDetail">退款进度</van-button>
+					</view>
+				</view>
+				<view class="commodity">
+					<view class="title">
+						<van-button type="default" size="small" class="btn">已退款</van-button>
+					</view>
+					<view class="active">
+						<view class="ticket">
+							<text>九寨沟风景区门票+观光车+沟区酒店至景区专车(成人票)</text>
+							<text class="rates">￥200.00</text>
+						</view>
+						<view class="quantity">
+							<text>张数：2张</text>
+							<text>2020/01/02</text>
+						</view>
+					</view>
+					<view class="title">
+						<van-button size="small" color="#ccc" class="useTickets" bindtap="refundDetail">退款详情</van-button>
+						<van-button size="small" class="useTickets">删除订单</van-button>
+					</view>
+				</view>
+			</view>
+		</van-tab>
+	</van-tabs>
+</view>

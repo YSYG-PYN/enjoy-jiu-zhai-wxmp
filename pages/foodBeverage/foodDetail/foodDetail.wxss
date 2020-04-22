@@ -1,0 +1,152 @@
+/* pages/foodBeverage/foodDetail/foodDetail.wxss */
+page{
+    background: #F6F7F8;
+    position: relative;
+}
+.food_detail_content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 146rpx;
+}
+.top_ipt{
+    width: 100%;
+    height: 100rpx;
+    background: #fff;
+    padding-top:44rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.top_ipt image{
+    width: 40rpx;
+    height:40rpx;
+    margin-right: 20rpx;
+    margin-left: 20rpx;
+}
+.icon_collect{
+    margin-right: 26%;
+}
+.restaurant_detail_content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.detail_image{
+    width: 100%;
+    height: 400rpx;
+}
+.restaurant_title,.onBusiness,.guide,.business_Consultation,.food_ranking,.special_food_title{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30rpx 20rpx;
+    font-size: 30rpx;
+}
+.restaurant_title .restaurant_name{
+    color: #333;
+    font-size: 44rpx;
+    font-weight: bold;
+    line-height: 32px;
+    margin-bottom: 16rpx;    
+}
+.restaurant_title .restaurant_recommend{
+    color: #999;
+    font-size: 26rpx;
+}
+.interval,.biginterval{
+    width: 100%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+}
+.biginterval{
+    height: 20rpx;
+}
+.restaurant_recommend text{
+    margin-right: 20rpx;
+}
+.onBusiness{
+    color: #333;
+}
+.onBusiness text:first-of-type{
+    margin-right: 50rpx;
+}
+.guide{
+    display: flex;
+    justify-content: space-between;
+}
+.guide_icon{
+    display: flex;
+    font-size: 24rpx;
+    color: #666666;
+}
+.business_Consultation image,.guide_icon image{
+    width: 40rpx;
+    height: 40rpx;
+}
+.business_Consultation{
+    display: flex;
+    justify-content: space-between;
+}
+.food_ranking text:first-of-type{
+    margin-left: -12rpx;
+    margin-right: 28rpx;
+}
+.special_food_title{
+    display: flex;
+    justify-content: space-between;
+    font-size: 36rpx;
+    font-weight: 400;
+    /* padding: 20rpx 0; */
+}
+.food_title_text text{
+    margin-left: 20rpx;
+    font-weight: 600;
+}
+.more{
+    color:#999;
+    font-weight: normal;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+	color: transparent;
+	display: none;
+    }
+    
+.special_food_content{
+    padding-bottom: 40rpx;
+}
+.special_food_content .hot_spots_introduce{
+    margin-left: 0;
+    text-align: center;
+    margin-top: 20rpx;
+}
+.checkList{
+    width: 100%;
+}
+.checkPerContent{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn_content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.confrim_time_btn{
+	width: 95%;
+	border-radius: 25px;
+	background: #4B9AED;
+	box-sizing: border-box;
+	color: #fff;
+    height: 80rpx;
+    line-height: 80rpx;
+}

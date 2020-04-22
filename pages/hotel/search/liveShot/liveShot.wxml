@@ -1,0 +1,148 @@
+<!--pages/hotel/search/liveShot/liveShot.wxml-->
+<view class="iconusecont-div {{state==index?'active-tag':''}}" bindtap="select_use" wx:for="{{use}}" data-key='{{index}}'>
+	<view class="flex-item">
+		<rich-text class='use_name'>{{item.name}}</rich-text>
+	</view>
+</view>
+<view>
+	<view style="display: {{hideAll?'none':''}};">
+		<view class="exterior">
+			<text class="exterior_outside" decode="{{true}}" space="{{true}}">外景&nbsp;</text>
+			<text class="four">(4)</text>
+		</view>
+		<view class="hotel_pic">
+			<image src="http://img2.imgtn.bdimg.com/it/u=2636935200,3996858078&fm=26&gp=0.jpg" bindtap="onClickShow">
+			</image>
+			<image src="http://img0.imgtn.bdimg.com/it/u=4053443723,695555357&fm=26&gp=0.jpg" bindtap="onClickShow">
+			</image>
+			<view class="hotel_img">
+				<image src="http://pic1.cxtuku.com/00/00/28/b5948958beef.jpg"></image>
+				<view class="shade" bindtap="ExteriorMore" style="display:{{hide?'none':''}}">
+					展开更多
+				</view>
+			</view>
+		</view>
+		
+		<van-overlay show="{{ show }}" bind:click="onClickHide">
+			<view class="wrapper">
+				<van-icon name="cross" bindtap="closeHide" />
+				<swiper class="wrapperContainer" iindicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="#dc5687">
+					<swiper-item wx:for="{{pic}}" data-index="{{index}}">
+						<image src="{{item.img}}" data-url="{{item.img}}" bindlongtap='saveImg'></image>
+						<view class="wrapper_detail">
+							<view>
+								<text class="guest_room">{{item.guestRoom}}</text>
+								<text class="double_bed">{{item.doubleBed}}</text>
+							</view>
+							<image src="{{item.imgs}}" bindtap="downloadImg" data-url="{{item.img}}"></image>
+						</view>
+					</swiper-item>
+				</swiper>
+			</view>
+		</van-overlay>
+		
+		<view class="more_pic" hidden="{{show1}}">
+			<image src="http://img2.imgtn.bdimg.com/it/u=2636935200,3996858078&fm=26&gp=0.jpg" bindtap="onClickShow">
+			</image>
+			<image src="http://img0.imgtn.bdimg.com/it/u=4053443723,695555357&fm=26&gp=0.jpg" bindtap="onClickShow">
+			</image>
+			<image src="http://img2.imgtn.bdimg.com/it/u=2636935200,3996858078&fm=26&gp=0.jpg" bindtap="onClickShow">
+			</image>
+		</view>
+		<view class="xian"></view>
+	</view>
+	<view style="display: {{hideBusines?'none':''}}">
+		<view class="exterior">
+			<text class="exterior_outside" decode="{{true}}" space="{{true}}">客房&nbsp;</text>
+			<text class="four">(80)</text>
+		</view>
+		<view class="business">
+			<text decode="{{true}}" space="{{true}}">商务大床房&nbsp;</text>
+			<text class="">(32)</text>
+		</view>
+		<view class="hotel_pic">
+			<image src="http://img2.imgtn.bdimg.com/it/u=2636935200,3996858078&fm=26&gp=0.jpg"></image>
+			<image src="http://img0.imgtn.bdimg.com/it/u=4053443723,695555357&fm=26&gp=0.jpg"></image>
+			<view class="hotel_img">
+				<image src="http://img1.imgtn.bdimg.com/it/u=328142126,739252757&fm=26&gp=0.jpg"></image>
+				<view class="busines_shade" bindtap="businessMore" style="display:{{hideTwo?'none':''}}">
+					展开更多
+				</view>
+			</view>
+		</view>
+		<view class="more_pic" hidden="{{show2}}">
+			<image src="http://img2.imgtn.bdimg.com/it/u=2636935200,3996858078&fm=26&gp=0.jpg"></image>
+			<image src="http://img0.imgtn.bdimg.com/it/u=4053443723,695555357&fm=26&gp=0.jpg"></image>
+			<image src="http://img2.imgtn.bdimg.com/it/u=2636935200,3996858078&fm=26&gp=0.jpg"></image>
+		</view>
+		<view class="xian"></view>
+	</view>
+
+	<view style="display:{{hideBusin?'none':''}}">
+		<view class="business2">
+			<text decode="{{true}}" space="{{true}}">商务大床房&nbsp;</text>
+			<text class="">(32)</text>
+		</view>
+		<view class="hotel_pic">
+			<image src="http://img2.imgtn.bdimg.com/it/u=2636935200,3996858078&fm=26&gp=0.jpg"></image>
+			<image src="http://img0.imgtn.bdimg.com/it/u=4053443723,695555357&fm=26&gp=0.jpg"></image>
+			<view class="hotel_img">
+				<image src="http://img1.imgtn.bdimg.com/it/u=328142126,739252757&fm=26&gp=0.jpg"></image>
+				<view class="shade">
+					展开更多
+				</view>
+			</view>
+		</view>
+		<view class="xian"></view>
+	</view>
+	<view style="display: {{hideBusin2?'none':''}}">
+		<view class="business2">
+			<text decode="{{true}}" space="{{true}}">网友上传&nbsp;</text>
+			<text class="">(34)</text>
+		</view>
+		<view class="uploading_img">
+			<image src="http://img2.imgtn.bdimg.com/it/u=2636935200,3996858078&fm=26&gp=0.jpg"></image>
+			<image src="http://img0.imgtn.bdimg.com/it/u=4053443723,695555357&fm=26&gp=0.jpg"></image>
+			<image src="http://img2.imgtn.bdimg.com/it/u=2636935200,3996858078&fm=26&gp=0.jpg"></image>
+			<image src="http://img0.imgtn.bdimg.com/it/u=4053443723,695555357&fm=26&gp=0.jpg"></image>
+			<image src="http://img2.imgtn.bdimg.com/it/u=2636935200,3996858078&fm=26&gp=0.jpg"></image>
+			<view class="hotel_img">
+				<image src="http://img1.imgtn.bdimg.com/it/u=328142126,739252757&fm=26&gp=0.jpg"></image>
+				<view class="shade">
+					展开更多
+				</view>
+			</view>
+		</view>
+		<view class="xian"></view>
+	</view>
+
+	<view style="display: {{hideExterior?'none':''}}">
+		<view class="exterior">
+			<text class="exterior_outside" decode="{{true}}" space="{{true}}">设施&nbsp;</text>
+			<text class="four">(15)</text>
+		</view>
+		<view class="hotel_pic">
+			<image src="http://img2.imgtn.bdimg.com/it/u=2636935200,3996858078&fm=26&gp=0.jpg"></image>
+			<image src="http://img0.imgtn.bdimg.com/it/u=4053443723,695555357&fm=26&gp=0.jpg"></image>
+			<view class="hotel_img">
+				<image src="http://img1.imgtn.bdimg.com/it/u=328142126,739252757&fm=26&gp=0.jpg"></image>
+				<view class="shade">
+					展开更多
+				</view>
+			</view>
+
+		</view>
+	</view>
+	<view class="reference">
+		<view class="reference_content">
+			以上图片仅供参考，实际情况以门店为准。
+		</view>
+	</view>
+	<view class="hotel_interest">
+		<text class="interest">
+			对酒店感兴趣？
+		</text>
+		<van-dialog id="van-dialog" />
+		<van-button type="info" bindtap="Reservation">去预订</van-button>
+	</view>
+</view>

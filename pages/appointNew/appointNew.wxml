@@ -1,0 +1,5 @@
+<import src="../../component/newsList/newsList.wxml"/>
+<!-- <template is="newsList" data="{{resData: resData, hasMore: hasMore, showLoading: showLoading,imgServer:imgServer}}"/> -->
+<template is="newsList" data="{{resNewsData: resNewsData}}"/>
+<import src="../../component/message/message.wxml"/>
+<template is="message" data="{{message: message}}"/>

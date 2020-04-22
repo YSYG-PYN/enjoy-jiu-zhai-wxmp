@@ -1,0 +1,16 @@
+<view class="recordDetail-container">
+      <view class="appointDetailItems" wx:if="{{reserveStatus==1}}">
+      <text class="descriptionText">挂号状态 :</text> 预约成功
+      <view class="reservationButton" bindtap="cancelReservationTap">取消预约</view>
+      </view>
+        <view class="appointDetailItems" wx:if="{{reserveStatus==2}}"><text class="descriptionText">挂号状态 :</text> 会诊完成</view>
+        <view class="appointDetailItems" wx:if="{{reserveStatus==3}}"><text class="descriptionText">挂号状态 :</text> 取消预约</view>
+        <view class="appointDetailItems"><text class="descriptionText">就诊科室 :</text> {{depName}}</view>
+      <view class="appointDetailItems"><text class="descriptionText">医院:</text>  {{hospitalName}}</view>  
+      <view class="appointDetailItems"><text class="descriptionText">医生:</text>  {{doctorName}}</view>
+       <view class="appointDetailItems"><text class="descriptionText">预约时间:</text>  {{createTime}}</view>
+      <view class="appointDetailItems"><text class="descriptionText">就诊日期:</text> {{reserverTime}}-{{week}}</view>
+       <view class="appointDetailItems"><text class="descriptionText">就诊人: </text>{{visitPersonName}}</view>
+      <view class="appointDetailItems"><text class="descriptionText">挂号费 :</text> {{price}} 元</view>
+       <view class="appointDetailItems"><text class="descriptionText">预约挂号码 :</text> {{reserveNumber}} </view>
+</view>

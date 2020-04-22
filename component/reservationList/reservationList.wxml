@@ -1,0 +1,31 @@
+<template name="reservationList">
+  <block wx:if="{{showLoading}}">
+    <view class="loading">努力加载中...</view>
+  </block>
+  <block wx:else>
+    <view class="film">
+      <view wx:for="{{resData}}" class="appointDetail-container" data-id="{{item.reserveId}}" data-index='{{index}}' bindtap="toReservationDetailTap">
+        
+         <view class="appointDetailItem_name_time"> 
+         <view class="patient_name">姓名:{{item.visitPersonName}}</view>  
+         <view class="appointDetailItems" wx:if="{{item.reserveStatus==1}}"> <text style="color:#0082D7; ">预约成功</text></view>
+        <view class="appointDetailItems" wx:if="{{item.reserveStatus==2}}"><text style="color:goldenrod;">会诊完成</text></view>
+        <view class="appointDetailItems" wx:if="{{item.reserveStatus==3}}"> <text style="color:gray;">取消预约</text></view>
+           
+         <view class="patient_name">医院:{{item.hospitalName}}</view> 
+         <view class="patient_name">科室:{{item.depName}}</view> 
+          <view class="patient_name">就诊时间:{{item.reserverTime}}</view>  
+         <view class="patient_name">挂号时间:{{item.createTime}}</view> 
+         </view> 
+        <view class="grayLine"></view>
+        <view class="detailButton">详情</view>
+      </view>
+      <block wx:if="{{hasMore}}">
+        <view class="loading-tip">上拉加载更多</view>
+      </block>
+      <block wx:else>
+        <view class="loading-tip">没有更多内容了</view>
+      </block>
+    </view>
+  </block>
+</template>

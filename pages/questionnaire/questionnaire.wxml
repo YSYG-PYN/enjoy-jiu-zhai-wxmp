@@ -1,0 +1,162 @@
+<!--pages/questionnaire/questionnaire.wxml-->
+<view class="box">
+<view class="heard">欢迎参加本次问卷调查，您的选择对我们很重要！</view>
+
+<view>
+    <label>1.您所在的城市是</label>
+<Select prop-array='{{selectArray}}'></Select>
+
+</view> 
+<view>
+    <label>2.您的性别是</label>
+    <view class="gender">
+        <checkbox>男</checkbox>
+        <checkbox>女</checkbox>
+    </view>
+</view> 
+
+<view>
+    <label>3.您的年龄是</label>
+    <view class="age">
+        <checkbox>25岁以下</checkbox>
+        <checkbox>25-40岁</checkbox>
+         <checkbox>40-60岁</checkbox>
+           <checkbox>20岁以下</checkbox>
+    </view>
+</view>
+
+<view>
+    <label>4.您的学历是</label>
+    <view class="age">
+        <checkbox>初中及以下</checkbox>
+        <checkbox>高中</checkbox>
+         <checkbox>大专</checkbox>
+           <checkbox>本科</checkbox>
+            <checkbox>硕士及以上</checkbox>
+    </view>
+</view> 
+
+<view>
+    <label>5.您的职业是</label>
+    <view class="age">
+        <checkbox>公务员</checkbox>
+        <checkbox>私人企业</checkbox>
+         <checkbox>自由职业者</checkbox>
+           <checkbox>学生</checkbox>
+            <checkbox>退休人员</checkbox>
+            <checkbox>其它</checkbox>
+    </view>
+</view> 
+
+<view>
+    <label>6.您的个人收入是</label>
+    <view class="age">
+        <checkbox>2000元以下</checkbox>
+        <checkbox>2001-3000元</checkbox>
+         <checkbox>3001-5000元</checkbox>
+           <checkbox>5001-8000元</checkbox>
+            <checkbox>8001-10000元</checkbox>
+            <checkbox>10001-15000元</checkbox>
+             <checkbox>15001-20000元</checkbox>
+              <checkbox>20000元以上</checkbox>
+    </view>
+</view> 
+
+<view>
+    <label>7.您外出旅游的频率是</label>
+    <view class="age">
+        <checkbox>一年1-2次</checkbox>
+         <checkbox>一年3-5次</checkbox>
+          <checkbox>一年5次以上</checkbox>
+    </view>
+</view> 
+
+<view>
+    <label>8.您去旅游最在乎的是什么</label>
+    <view class="around">
+        A<checkbox>时间</checkbox>
+         B<checkbox>费用</checkbox>
+           C<checkbox>风景</checkbox>
+             D<checkbox>其它</checkbox>
+    </view>
+</view> 
+
+<view>
+    <label>9.您去旅游的时间主要是什么时候</label>
+    <view class="around">
+        A<checkbox>五一</checkbox>
+         B<checkbox>国庆</checkbox>
+           C<checkbox>周末</checkbox>
+             D<checkbox>其它</checkbox>
+    </view>
+</view> 
+
+
+<view>
+    <label>10.您去选择该景区的主要因素是什么</label>
+    <view class="age">
+        <checkbox>人文因素</checkbox>
+         <checkbox>自然因素</checkbox>
+           <checkbox>科技因素</checkbox>
+             <checkbox>其它</checkbox>
+    </view>
+</view>
+
+
+<view>
+    <label>11.您是通过什么渠道了解到该景区的</label>
+    <view class="age">
+        <checkbox>广告</checkbox>
+         <checkbox>朋友</checkbox>
+           <checkbox>旅行社</checkbox>
+             <checkbox>网络</checkbox>
+           <checkbox>旅行社</checkbox>
+            <checkbox>其它</checkbox>
+    </view>
+</view>
+
+<view>
+    <label>12.您准备游玩的天数是</label>
+    <view class="age">
+        <checkbox>1天</checkbox>
+         <checkbox>2天</checkbox>
+           <checkbox>3天</checkbox>
+             <checkbox>4天</checkbox>
+           <checkbox>5天</checkbox>
+            <checkbox>5天以上</checkbox>
+    </view>
+</view>
+
+<view>
+    <label>13.您是同谁一起出游的</label>
+    <view class="age">
+        <checkbox>家人或亲戚</checkbox>
+         <checkbox>朋友</checkbox>
+           <checkbox>旅行社</checkbox>
+             <checkbox>个人</checkbox>
+    </view>
+</view>
+
+<view>
+    <label>14.您是通过何种交通工具到达景区的</label>
+    <view class="age">
+        <checkbox>自驾车</checkbox>
+         <checkbox>汽车</checkbox>
+           <checkbox>火车</checkbox>
+             <checkbox>飞机</checkbox>
+           <checkbox>高铁</checkbox>
+            <checkbox>其它</checkbox>
+    </view>
+</view>
+
+<view>
+    <label>15.您认为该景区有那些方面还需要加强改进？</label>
+     <textarea class="suggest"></textarea>
+
+</view>
+
+
+  <van-button class="submit" type="primary" block size="normal">提交</van-button>
+
+
+</view>

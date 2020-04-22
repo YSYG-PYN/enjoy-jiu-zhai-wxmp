@@ -1,0 +1,69 @@
+<!--pages/martetActive/activeDetail/activeDetail.wxml-->
+<view id="box">
+    <!-- 轮播图 -->
+    <view class="foript_position">
+        <swiper class="swiperContainer" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}"
+                interval="{{interval}}" duration="{{duration}}" vertical="{{vertical}}">
+            <block wx:for="{{banner}}" wx:key="{{item.id}}">
+                <swiper-item class='swiperImgs' bindtap="toMarketActive">
+                    <image class="swiperimg" src="{{item.image}}" data-id='{{item.id}}' data-index='{{index}}' />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <view class="content">
+        <view class="title">九寨沟大峡谷滑雪比赛</view>
+        <view class="money">￥100.00</view>
+        <view class="count">剩余50张</view>
+        <view class="produceDetail">
+            <view class="titles">活动报名</view>
+            <view>时间:2019.12.12  24：00—2019.12.20  24：00</view>
+            <view>地点:四川省成都市九寨沟县xxxxxxxx</view>
+            <view>限报名前100人，欲购从速</view>
+            <view>主办方：九寨沟县XXXXXX</view>
+        </view>
+        <view class="produceDetail">
+            <view class="titles">参赛条件</view>
+            <view>18—50岁 有一定的滑雪经验</view>
+        </view>
+        <view class="produceDetail">
+            <view class="titles">比赛时间</view>
+            <view>2019.12.30 上午9：00</view>
+        </view>
+        <view class="produceDetail">
+            <view class="titles">比赛地点</view>
+            <view>九寨沟县阿坝大峡谷</view>
+        </view>
+        <view class="produceDetail">
+            <view class="titles">活动描述</view>
+            <view>描述个鸡儿描述个鸡儿描述个鸡儿描述个鸡儿描述个鸡儿描述个鸡儿描述个鸡儿描述个鸡儿描述个鸡儿描述个鸡儿描述个鸡儿</view>
+        </view>
+        <view class="produceDetail">
+            <view class="titles">比赛规则</view>
+            <view>1.天下第一</view>
+            <view>2.贱人无敌</view>
+            <view>3.帅的被人砍</view>
+        </view>
+        <view class="produceDetail">
+            <view class="titles">联系电话</view>
+            <view>18326598475</view>
+        </view>
+    </view>
+
+    <view class="signUp">
+        <view class="look">
+            <text>已报名10人</text>
+            <text>查看全部</text>
+        </view>
+        <view class="people">
+            <block wx:for="{{peopleList}}" wx:key="{{item.id}}">
+                <view class="peopleList">
+                    <image src="https://bkimg.cdn.bcebos.com/pic/eaf81a4c510fd9f98eb187b12b2dd42a2934a440?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg"></image>
+                    <view>夏明</view>
+                </view>
+            </block>
+        </view>
+        <button class="signUpBtn" bindtap="toSignUp">我要报名</button>
+    </view>
+</view>

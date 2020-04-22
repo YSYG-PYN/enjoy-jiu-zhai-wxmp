@@ -1,0 +1,39 @@
+  <import src="../../../component/doctorList/doctorList.wxml"/>
+
+<view class="chooseDoctor-container">
+   <scroll-view scroll-y class="scroll-container">
+   <view class="reservatiomDate-container">
+     <scroll-view scroll-x  class="selectDate">
+      <block wx:for="{{dataArray}}">
+         <view class="{{index==idx?'_left':'left'}}"  bindtap="selectDataTab" data-index="{{index}}" data-text="{{item}}">
+         <view class="ui-docdata">{{item.month}}-{{item.day}}</view>
+          <view class="ui-weektime">{{item.week}}</view>
+        </view>
+      </block>
+     </scroll-view>
+   </view>
+   <view class="doctorContent-container">
+     <view class="doctorTitleText"> 门诊医生</view>
+    
+    <view class="blankbackground" wx:if="{{doctorList.length==0}}">暂无医生</view>
+    <view wx:if="{{doctorList.length!=0}}">
+  <scroll-view scroll-y style="height: 100%;" scroll-top="300">
+      
+      <view  wx:for="{{doctorList}}" class="wa-item wa-item-thumbnail-left" data-id="{{item.attendanceId}}" data-index="{{index}}" bindtap="toDoctorDetailTap">
+        <image class="item-img" src="{{item.icon}}"></image>
+        <view class="doctorName"> {{item.doctorName}}
+        <text class="doctorGrade">{{item.gradeDesc}}</text>
+        <text class="reserveCount">剩余{{item.reserveCount-item.alreadyReserveCount}}号</text> 
+        </view>
+        <view>
+        <text  wx:if="{{!item.doctorDesc}}">简介: 暂无。 </text>
+        <text wx:else>简介:{{item.doctorDesc}}</text>
+        </view> 
+      </view>
+    </scroll-view>
+    </view>
+
+   </view> 
+   </scroll-view>
+
+</view>

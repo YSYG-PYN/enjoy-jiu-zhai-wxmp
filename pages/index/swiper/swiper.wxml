@@ -1,0 +1,11 @@
+<scroll-view scroll-x="true">
+	<view class="hot_spots" scroll-x="true">
+		<block wx:for="{{hotFoodData||hotFoodData}}" wx:key="{{item.hid}}">
+			<view class="hot">
+				<image class="hot_image" src="{{item.hotImage}}"></image>
+				<text class="hot_spots_introduce"> {{item.hotFirst}}</text>
+				<text class="hot_spots_introduce introduce_second"> {{item.hotSecond}}</text>
+			</view>
+		</block>
+	</view>
+</scroll-view>

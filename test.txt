@@ -1,0 +1,372 @@
+{
+  "pages": [
+
+
+
+    "pages/index/index",
+
+
+
+    "pages/hotel/search/search",
+
+
+
+
+
+
+
+    "pages/index/data/data",
+    "pages/appointIndex/appointIndex",
+    "pages/appointHome/appointHome",
+    "pages/appointHome/appointmentRegister/appointmentRegister",
+    "pages/appointHome/chooseHospital/chooseHospital",
+    "pages/appointHome/chooseDoctor/chooseDoctor",
+    "pages/appointHome/chooseDoctorType/chooseDoctorType",
+    "pages/appointHome/confirmAppoint/confirmAppoint",
+    "pages/appointHome/appointSuccess/appointSuccess",
+    "pages/appointHome/emergencyGuide/emergencyGuide",
+    "pages/appointHome/patientFlow/patientFlow",
+    "pages/appointHome/hospitalIntroduceDetail/hospitalIntroduceDetail",
+    "pages/appointNew/appointNew",
+    "pages/appointNew/newsDetail/newsDetail",
+    "pages/appointMy/appointMy",
+    "pages/appointMy/patientManageDetail/patientManageDetail",
+    "pages/appointMy/addPatientManage/addPatientManage",
+    "pages/appointMy/reservationRecord/reservationRecord",
+    "pages/appointMy/reservationRecordDetail/reservationRecordDetail",
+    "pages/appointMy/reportQuery/reportQuery",
+    "pages/appointMy/reportDetail/reportDetail",
+    "pages/appointMy/personInfoManage/personInfoManage",
+    "pages/index/swiper/swiper",
+    "pages/buyTicket/buyTicket",
+    "pages/buyTicket/ticketDetail/ticketDetail",
+    "pages/buyTicket/ticketDetail/temporaryTicket/temporaryTicket",
+    "pages/buyTicket/ticketDetail/orderTicket/orderTicket",
+    "pages/buyTicket/ticketDetail/fillOrder/flillOrder",
+    "pages/buyTicket/ticketDetail/userEvaluate/userEvaluate",
+    "pages/buyTicket/confrimOrder/confirmOrder",
+    "pages/featuresProducts/featuresProducts",
+    "pages/featuresProducts/featuresProductsDetail/featuresProductsDetail",
+    "pages/featuresProducts/featuresProductsDetail/shop/shop",
+    "pages/featuresProducts/featuresProductsDetail/shop/shopMsg/shopMsg",
+    "pages/featuresProducts/featuresProductsDetail/shopCar/shopCar",
+    "pages/featuresProducts/featuresProductsDetail/shopCar/placeOrder/placeOrder",
+"pages/featuresProducts/featuresProductsDetail/shopCar/placeOrder/addressList/addressList",
+    "pages/featuresProducts/featuresProductsDetail/successfulPayment/successfulPayment",
+    "pages/featuresProducts/featuresProductsDetail/shopCar/placeOrder/addressList/createAddress/createAddress",
+    "pages/featuresProducts/featuresProductsDetail/shopCar/placeOrder/addressList/modifyAddress/modifyAddress",
+    "pages/featuresProducts/featuresProductsDetail/payment/payment",
+    "pages/martetActive/martetActive",
+    "pages/martetActive/activeDetail/activeDetail",
+    "pages/martetActive/activeDetail/signUp/signUp",
+    "pages/hotScenic/hotScenic",
+    "pages/hotScenic/hotScenicDetail/hotScenicDetail",
+    "pages/stroke/stroke",
+    "pages/map/map",
+    "pages/foodBeverage/foodBeverage",
+    "pages/foodBeverage/foodDetail/foodDetail",
+    "pages/shopping/shoppingCart",
+    "pages/discover/discover",
+    "pages/discover/travelNotes/travelNotes",
+    "pages/discover/travelAgency/travelAgency",
+    "pages/discover/travelAgency/travelDetails/travelDetails",
+    "pages/discover/pathsRecommend/pathsRecommend",
+    "pages/discover/paths/paths",
+    "pages/discover/tourGuide/tourGuide",
+    "pages/discover/issue/issue",
+    "pages/discover/draft/draft",
+    "pages/discover/more/more",
+    "pages/discover/myTopic/myTopic",
+    "pages/login/login",
+    "pages/my/data/data",
+    "pages/my/my",
+    "pages/my/personal/personal",
+    "pages/my/bindingPhone/bindingPhone",
+    "pages/logs/logs",
+    "pages/linerecommend/linerecommend",
+    "pages/linerecommend/lineDetail/lineDetail",
+    "pages/collect/collect",
+    "pages/refundDetail/refundDetail",
+    "pages/thinkChange/thinkChange",
+    "pages/topContacts/topContacts",
+    "pages/addLinkman/addLinkman",
+    "pages/site/site",
+    "common/calendar/calendar",
+    "pages/addSite/addSite",
+    "pages/complain/complain",
+    "pages/record/record",
+    "pages/course/course",
+    "pages/service/service",
+    "pages/questionnaire/questionnaire",
+    "common/select/select",
+    "pages/iconfont/iconfont",
+    "pages/hotel/search/liveShot/liveShot",
+    "pages/hotel/search/details/details",
+    "pages/hotel/search/userComment/userComment",
+    "pages/hotel/hotel",
+    "pages/weather/weather"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#1b82d1",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index-active.png"
+      },
+      {
+        "pagePath": "pages/stroke/stroke",
+        "text": "行程",
+        "iconPath": "images/stroke.png",
+        "selectedIconPath": "images/stroke-active.png"
+      },
+      {
+        "pagePath": "pages/discover/discover",
+        "text": "发现",
+        "iconPath": "images/faxian.png",
+        "selectedIconPath": "images/faxian-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button",
+    "van-card": "@vant/weapp/card",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-steps": "@vant/weapp/steps/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-switch": "@vant/weapp/switch/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-tree-select": "@vant/weapp/tree-select/index",
+    "van-slider": "@vant/weapp/slider/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index",
+	"van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  }
+}
+{
+  "pages": [
+
+
+
+    "pages/index/index",
+
+
+
+    "pages/hotel/search/search",
+
+
+
+
+
+
+
+    "pages/index/data/data",
+    "pages/appointIndex/appointIndex",
+    "pages/appointHome/appointHome",
+    "pages/appointHome/appointmentRegister/appointmentRegister",
+    "pages/appointHome/chooseHospital/chooseHospital",
+    "pages/appointHome/chooseDoctor/chooseDoctor",
+    "pages/appointHome/chooseDoctorType/chooseDoctorType",
+    "pages/appointHome/confirmAppoint/confirmAppoint",
+    "pages/appointHome/appointSuccess/appointSuccess",
+    "pages/appointHome/emergencyGuide/emergencyGuide",
+    "pages/appointHome/patientFlow/patientFlow",
+    "pages/appointHome/hospitalIntroduceDetail/hospitalIntroduceDetail",
+    "pages/appointNew/appointNew",
+    "pages/appointNew/newsDetail/newsDetail",
+    "pages/appointMy/appointMy",
+    "pages/appointMy/patientManageDetail/patientManageDetail",
+    "pages/appointMy/addPatientManage/addPatientManage",
+    "pages/appointMy/reservationRecord/reservationRecord",
+    "pages/appointMy/reservationRecordDetail/reservationRecordDetail",
+    "pages/appointMy/reportQuery/reportQuery",
+    "pages/appointMy/reportDetail/reportDetail",
+    "pages/appointMy/personInfoManage/personInfoManage",
+    "pages/index/swiper/swiper",
+    "pages/buyTicket/buyTicket",
+    "pages/buyTicket/ticketDetail/ticketDetail",
+    "pages/buyTicket/ticketDetail/temporaryTicket/temporaryTicket",
+    "pages/buyTicket/ticketDetail/orderTicket/orderTicket",
+    "pages/buyTicket/ticketDetail/fillOrder/flillOrder",
+    "pages/buyTicket/ticketDetail/userEvaluate/userEvaluate",
+    "pages/buyTicket/confrimOrder/confirmOrder",
+    "pages/featuresProducts/featuresProducts",
+    "pages/featuresProducts/featuresProductsDetail/featuresProductsDetail",
+    "pages/featuresProducts/featuresProductsDetail/shop/shop",
+    "pages/featuresProducts/featuresProductsDetail/shop/shopMsg/shopMsg",
+    "pages/featuresProducts/featuresProductsDetail/shopCar/shopCar",
+    "pages/featuresProducts/featuresProductsDetail/shopCar/placeOrder/placeOrder",
+"pages/featuresProducts/featuresProductsDetail/shopCar/placeOrder/addressList/addressList",
+    "pages/featuresProducts/featuresProductsDetail/successfulPayment/successfulPayment",
+    "pages/featuresProducts/featuresProductsDetail/shopCar/placeOrder/addressList/createAddress/createAddress",
+    "pages/featuresProducts/featuresProductsDetail/shopCar/placeOrder/addressList/modifyAddress/modifyAddress",
+    "pages/featuresProducts/featuresProductsDetail/payment/payment",
+    "pages/martetActive/martetActive",
+    "pages/martetActive/activeDetail/activeDetail",
+    "pages/martetActive/activeDetail/signUp/signUp",
+    "pages/hotScenic/hotScenic",
+    "pages/hotScenic/hotScenicDetail/hotScenicDetail",
+    "pages/stroke/stroke",
+    "pages/map/map",
+    "pages/foodBeverage/foodBeverage",
+    "pages/foodBeverage/foodDetail/foodDetail",
+    "pages/shopping/shoppingCart",
+    "pages/discover/discover",
+    "pages/discover/travelNotes/travelNotes",
+    "pages/discover/travelAgency/travelAgency",
+    "pages/discover/travelAgency/travelDetails/travelDetails",
+    "pages/discover/pathsRecommend/pathsRecommend",
+    "pages/discover/paths/paths",
+    "pages/discover/tourGuide/tourGuide",
+    "pages/discover/issue/issue",
+    "pages/discover/draft/draft",
+    "pages/discover/more/more",
+    "pages/discover/myTopic/myTopic",
+    "pages/login/login",
+    "pages/my/data/data",
+    "pages/my/my",
+    "pages/my/personal/personal",
+    "pages/my/bindingPhone/bindingPhone",
+    "pages/logs/logs",
+    "pages/linerecommend/linerecommend",
+    "pages/linerecommend/lineDetail/lineDetail",
+    "pages/collect/collect",
+    "pages/refundDetail/refundDetail",
+    "pages/thinkChange/thinkChange",
+    "pages/topContacts/topContacts",
+    "pages/addLinkman/addLinkman",
+    "pages/site/site",
+    "common/calendar/calendar",
+    "pages/addSite/addSite",
+    "pages/complain/complain",
+    "pages/record/record",
+    "pages/course/course",
+    "pages/service/service",
+    "pages/questionnaire/questionnaire",
+    "common/select/select",
+    "pages/iconfont/iconfont",
+    "pages/hotel/search/liveShot/liveShot",
+    "pages/hotel/search/details/details",
+    "pages/hotel/search/userComment/userComment",
+    "pages/hotel/hotel",
+    "pages/weather/weather"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#1b82d1",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index-active.png"
+      },
+      {
+        "pagePath": "pages/stroke/stroke",
+        "text": "行程",
+        "iconPath": "images/stroke.png",
+        "selectedIconPath": "images/stroke-active.png"
+      },
+      {
+        "pagePath": "pages/discover/discover",
+        "text": "发现",
+        "iconPath": "images/faxian.png",
+        "selectedIconPath": "images/faxian-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button",
+    "van-card": "@vant/weapp/card",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-steps": "@vant/weapp/steps/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-switch": "@vant/weapp/switch/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-tree-select": "@vant/weapp/tree-select/index",
+    "van-slider": "@vant/weapp/slider/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index",
+	"van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  }
+}

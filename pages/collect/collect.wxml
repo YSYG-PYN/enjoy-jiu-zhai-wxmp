@@ -1,0 +1,15 @@
+<!--pages/collect/collect.wxml-->
+<view class="box">
+	<view class ="commodity" wx:for="{{list}}" wx:key="{{index}}">
+		<image src="../../images/img001.jpeg" class="img"></image>
+		<view class="commodityDetail">
+			<view>九寨沟酒店</view>
+			<view class="evaluate">
+				<view>4.6分</view>
+				<view>400点评</view>
+				<view class="price">￥200起</view>
+			</view>
+		</view>
+	</view>
+	
+</view>

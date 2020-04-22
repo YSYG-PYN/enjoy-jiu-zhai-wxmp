@@ -1,0 +1,180 @@
+<!-- pages/foodBeverage/foodBeverage.wxml -->
+<view class="top_ipt">
+    <image src="./../../images/back.png" bind:tap="goBack" />
+    <view class="ipt_content">
+        <icon type="search" size="16" class="ipt_search_icon" />
+        <input placeholder-class="place_holder" type="text" placeholder="搜索"></input>
+    </view>
+</view>
+<view class="food_beverage_content">
+<!-- 
+    <view class="" bind:tap="dia">弹框</view>
+    <van-dialog id="van-dialog" /> -->
+    <van-tabs bind:click="onClick" class="food_beverage_tit" color="#4B9AED" sticky="true">
+        <van-tab title="全部">
+            <view class="sort_btn">
+                <view class="sbtn {{id == 1?'change_back':''}}" bind:tap="chooseTerm" data-targetclick="1" data-id="1">
+                    智能排序
+                </view>
+                <view class="sbtn {{id == 2?'change_back':''}}" bind:tap="chooseTerm" data-targetclick="1" data-id="2">
+                    区域位置
+                </view>
+                <view class="sbtn {{id == 3?'change_back':''}}" bind:tap="chooseTerm" data-targetclick="1" data-id="3">
+                    筛选
+                </view>
+            </view>
+            <view class="food_list">
+                <block wx:for="{{foodList}}">
+                    <view class="food_perlist" bind:tap="toFoodDetail" data-foodid="{{item.id}}" wx:key="{{item.id}}">
+                        <image class="" src="{{item.image}}" lazy-load="false" />
+                        <view class="food_list_detail" hover-class="none" hover-stop-propagation="false">
+                            <view class="food_restaurant">{{item.restaurantName}}</view>
+                            <view class="food_address">
+                                <view class="food_address_left">
+                                    <text>{{item.foodSort}}</text>
+                                    <text>{{item.foodAdress}}</text>
+                                </view>
+                                <view class="food_address_right">
+                                    <text>{{item.restaurantDis}}km</text>
+                                    <text>距离{{item.restaurantAdress}}</text>
+                                </view>
+                            </view>
+                            <view class="food_price_time">
+                                <view class="food_price">
+                                    ￥
+                                    <text>{{item.foodPrice}}</text>
+                                    /人
+                                </view>
+                                <view class="food_time">
+                                    <text class="food_ranking">N0.{{item.foodRanking}}</text>
+                                    <text>{{item.StartTime}}-{{item.EndTime}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+                <view class="findMore" wx:if="{{foodList.length>4}}" bind:tap="loadMore">查看更多</view>
+            </view>
+        </van-tab>
+        <van-tab title="藏餐">
+            <view class="sort_btn">
+                <view class="sbtn {{id == 1?'change_back':''}}" bind:tap="chooseTerm" data-targetclick="2" data-id="1">
+                    智能排序
+                </view>
+                <view class="sbtn {{id == 2?'change_back':''}}" bind:tap="chooseTerm" data-targetclick="2" data-id="2">
+                    区域位置
+                </view>
+                <view class="sbtn {{id == 3?'change_back':''}}" bind:tap="chooseTerm" data-targetclick="2" data-id="3">
+                    筛选
+                </view>
+            </view>
+            <view class="food_list">
+                <block wx:for="{{foodList}}" wx:key="{{item.id}}">
+                    <view class="food_perlist">
+                        <image class="" src="{{item.image}}" lazy-load="false" />
+                        <view class="food_list_detail" hover-class="none" hover-stop-propagation="false">
+                            <view class="food_restaurant">{{item.restaurantName}}</view>
+                            <view class="food_address">
+                                <view class="food_address_left">
+                                    <text>{{item.foodSort}}</text>
+                                    <text>{{item.foodAdress}}</text>
+                                </view>
+                                <view class="food_address_right">
+                                    <text>{{item.restaurantDis}}km</text>
+                                    <text>距离{{item.restaurantAdress}}</text>
+                                </view>
+                            </view>
+                            <view class="food_price_time">
+                                <view class="food_price">
+                                    ￥
+                                    <text>{{item.foodPrice}}</text>
+                                    /人
+                                </view>
+                                <view class="food_time">
+                                    <text class="food_ranking">N0.{{item.foodRanking}}</text>
+                                    <text>{{item.StartTime}}-{{item.EndTime}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </van-tab>
+        <van-tab title="火锅">
+            <view class="sort_btn">
+                <view class="sbtn {{id == 1?'change_back':''}}" bind:tap="chooseTerm" data-targetclick="3" data-id="1">
+                    智能排序
+                </view>
+                <view class="sbtn {{id == 2?'change_back':''}}" bind:tap="chooseTerm" data-targetclick="3" data-id="2">
+                    区域位置
+                </view>
+                <view class="sbtn {{id == 3?'change_back':''}}" bind:tap="chooseTerm" data-targetclick="3" data-id="3">
+                    筛选
+                </view>
+            </view>
+            <view class="food_list">
+                <block wx:for="{{foodList}}" wx:key="{{item.id}}">
+                    <view class="food_perlist">
+                        <image class="" src="{{item.image}}" lazy-load="false" />
+                        <view class="food_list_detail" hover-class="none" hover-stop-propagation="false">
+                            <view class="food_restaurant">{{item.restaurantName}}</view>
+                            <view class="food_address">
+                                <view class="food_address_left">
+                                    <text>{{item.foodSort}}</text>
+                                    <text>{{item.foodAdress}}</text>
+                                </view>
+                                <view class="food_address_right">
+                                    <text>{{item.restaurantDis}}km</text>
+                                    <text>距离{{item.restaurantAdress}}</text>
+                                </view>
+                            </view>
+                            <view class="food_price_time">
+                                <view class="food_price">
+                                    ￥
+                                    <text>{{item.foodPrice}}</text>
+                                    /人
+                                </view>
+                                <view class="food_time">
+                                    <text class="food_ranking">N0.{{item.foodRanking}}</text>
+                                    <text>{{item.StartTime}}-{{item.EndTime}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </van-tab>
+    </van-tabs>
+    <van-action-sheet show="{{show}}" bind:click-overlay="clickOverlay">
+        <view class="checkList">
+            <van-radio-group value="{{ radio }}" bind:change="onChange">
+                <van-cell-group>
+                    <block wx:for="{{checkArray}}" wx:for-item="item" wx:key="id">
+                        <van-cell title="{{item.name}}" clickable data-name="{{item.name}}">
+                            <van-radio slot="right-icon" name="{{item.name}}" />
+                        </van-cell>
+                    </block>
+                </van-cell-group>
+            </van-radio-group>
+            <view class="btn_content">
+                <button class="confrim_time_btn" bindtap="choose_time">确定</button>
+            </view>
+        </view>
+    </van-action-sheet>
+    <van-action-sheet show="{{ashow}}" bind:click-overlay="clickOverlay">
+        <van-tree-select items="{{ addressItems }}" main-active-index="{{ mainActiveIndex }}" active-id="{{ activeId }}" bind:click-nav="onClickNav" bind:click-item="onClickItem" />
+    </van-action-sheet>
+    <van-action-sheet show="{{pshow}}" bind:click-overlay="clickOverlay">
+        <view class="price_overlay" hover-class="none" hover-stop-propagation="false">
+            <view class="price_title" hover-class="none" hover-stop-propagation="false">
+                <block wx:for="{{btnList}}" wx:for-index="index" wx:for-item="item">
+                    <view class="sbtn {{sid == item.id?'change_price':''}}" bind:tap="clickPriceBtn" data-id="{{item.id}}">{{item.name}}</view>
+                </block>
+            </view>
+
+            <view class="btn_content">
+                <button class="confrim_time_btn" bindtap="choose_price">确定</button>
+            </view>
+        </view>
+    </van-action-sheet>
+</view>

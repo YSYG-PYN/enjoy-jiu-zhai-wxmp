@@ -1,0 +1,323 @@
+<!--pages/hotel/search/details/details.wxml-->
+<view class="topbar" style="padding-top:{{statusBarHeight}}px">
+    <view class="arrow-box row" bindtap="backToPreviousClick">
+        <image src="/images/back.png"></image>
+    </view>
+    <view class="xing" bindtap="Switch">
+        <image  hidden="{{xianshi}}" src="/images/hotel/shoucang.png"></image>
+        <!-- <van-icon name="star-o" bindtap="Collect" style="background:{{background}}" bindtap="clickColor" /> -->
+        <image hidden="{{!xianshi}}" src="/images/hotel/xing1.png"></image>
+    </view>
+</view>
+<view class="top-comend" style="padding-top:{{statusBarHeight}}px"></view>
+<view class="heade">
+    <text wx:for="{{head}}" data-index="{{index}}">{{item.name}}</text>
+</view>
+<view class="pic" bindtap="Pic">
+    <swiper indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="#dc5687" autoplay="{{true}}"
+        circular="{{true}}">
+        <swiper-item wx:for="{{pic}}" data-index="{{index}}">
+            <image src="{{item.img}}"></image>
+        </swiper-item>
+    </swiper>
+</view>
+<view>
+    <view class="title">
+        <text class="title_hotel">维也纳酒店(成都机场双流万达店)</text>
+        <p class="comfortable">舒适型</p>
+    </view>
+    <view class="tag">
+        <van-tag plain type="primary" color="#4698F0">4.9分<span class="circle"></span>289条点评
+            <van-icon name="arrow" />
+        </van-tag>
+        <van-tag plain type="warning">行李寄存</van-tag>
+        <van-tag plain type="success">免费取消</van-tag>
+    </view>
+    <view class="addres">
+        <text class="location">成都双流区东升街道星空路2段金恒德3期1</text>
+        <van-icon name="location-o" />
+        <text class="map" bindtap="map">地图</text>
+    </view>
+</view>
+<view class="content">
+    <view class="data">
+        <view class="left">
+            <text class="now">10月31日</text>
+            <text class="taday">今日入住</text>
+            <text class="striping"></text>
+            <text class="future">11月1日</text>
+            <text class="enter">明日退房</text>
+        </view>
+        <view class="right">
+            <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class="home" wx:for="{{home}}" data-index="{{index}}" bindtap="bookRoom">
+        <view class="img">
+            <image src="{{item.img}}"></image>
+        </view>
+        <view class="bed">
+            <view class="two_bed">{{item.name}}</view>
+            <view class="size">
+                <view>{{item.size}}</view>
+                <view class="window">{{item.window}}</view>
+                <view class="two_mi">{{item.two}}</view>
+            </view>
+            <view class="check">
+                {{item.chenck}}
+            </view>
+        </view>
+        <view class="home_right">
+            <view class="money">{{item.moeny}}</view>
+            <view class="order">{{item.order}}</view>
+            <view class="line_pay">
+                {{item.pay}}
+            </view>
+        </view>
+    </view>
+    <!-- 钟点房 -->
+    <view class="floor">
+        <view class="hour">
+            <text class="hour_home" decode="{{true}}" space="{{true}}">钟点房&nbsp;&nbsp;(2)</text>
+        </view>
+        <view class="hour_container" wx:for="{{hour}}" data-index="{{index}}">
+            <view class="img">
+                <image src="{{item.img}}"></image>
+            </view>
+            <view class="floor_hour">
+                <view class="two_bed">{{item.name}}</view>
+                <view class="size">
+                    <view>{{item.size}}</view>
+                    <view class="window">{{item.window}}</view>
+                    <view class="two_mi">{{item.two}}</view>
+                </view>
+                <view class="time_quantum">
+                    <text>{{item.approve}}</text>
+                    <text>{{item.timer}}</text>
+                </view>
+                <view class="check">
+                    {{item.chenck}}
+                </view>
+            </view>
+            <view class="floor_right">
+                <view class="floor_top">
+                    <view class="rmb">￥</view>
+                    <view class="floor_money">
+                        {{item.moeny}}
+                    </view>
+                </view>
+                <view class="floor_order">{{item.order}}</view>
+                <view class="floor_pay">
+                    {{item.pay}}
+                </view>
+            </view>
+        </view>
+        <!-- 折叠 -->
+        <view hidden="{{show}}">
+            <view class="hour_container" wx:for="{{hour}}" data-index="{{index}}">
+                <view class="img">
+                    <image src="{{item.img}}"></image>
+                </view>
+                <view class="floor_hour">
+                    <view class="two_bed">{{item.name}}</view>
+                    <view class="size">
+                        <view>{{item.size}}</view>
+                        <view class="window">{{item.window}}</view>
+                        <view class="two_mi">{{item.two}}</view>
+                    </view>
+                    <view class="time_quantum">
+                        <text>{{item.approve}}</text>
+                        <text>{{item.timer}}</text>
+                    </view>
+                    <view class="check">
+                        {{item.chenck}}
+                    </view>
+                </view>
+                <view class="floor_right">
+                    <view class="floor_top">
+                        <view class="rmb">￥</view>
+                        <view class="floor_money">
+                            {{item.moeny}}
+                        </view>
+                    </view>
+                    <view class="floor_order">{{item.order}}</view>
+                    <view class="floor_pay">
+                        {{item.pay}}
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="flexible" bindtap="aa">
+            <text class="pack_up">收起</text>
+            <van-icon name="arrow-up" />
+        </view>
+        <!-- 折叠面板 -->
+
+        <view class="collapse_items">
+            <view class="check_in">入住须知</view>
+            <view class="jion">入离时间</view>
+            <view class="jion_time">入住时间:12:00以后</view>
+            <view class="jion_leave">离店时间:12:00以前</view>
+            <view class="children">儿童政策</view>
+            <view class="disallow">不接受18岁以下客人单独入住;不接受18岁以下客人在无监护人陪同的情况下入住</view>
+            <view class="additional">附加费用</view>
+            <view class="breakfast">提供单点早餐</view>
+            <view class="pet">宠物</view>
+            <view class="no_pet">不可以携带宠物</view>
+        </view>
+        <view class="hotel_facilities">
+            <view class="facilities">酒店设施</view>
+            <view class="home_facilities">客房设施</view>
+            <view class="facilities_icon">
+                <view class="wifi_icon">
+                    <image src="/images/hotel/wifi.png"></image>
+                    <text class="wifi">房间Wi-Fi</text>
+                </view>
+                <view class="wifi_icon">
+                    <image src="/images/hotel/weiyu.png"></image>
+                    <text class="wifi">独立卫浴</text>
+                </view>
+                <view class="wifi_icon">
+                    <image src="/images/hotel/chuanglian.png"></image>
+                    <text class="wifi">遮光窗帘</text>
+                </view>
+                <view class="wifi_icon">
+                    <image src="/images/hotel/xiyu.png"></image>
+                    <text class="wifi">洗浴用品</text>
+                </view>
+                <view class="wifi_icon">
+                    <image src="/images/hotel/xishu.png"></image>
+                    <text class="wifi">洗漱用品</text>
+                </view>
+                <view class="wifi_icon">
+                    <image src="/images/hotel/kongtiao.png"></image>
+                    <text class="wifi">空调</text>
+                </view>
+                <view class="wifi_icon">
+                    <image src="/images/hotel/chuifj.png"></image>
+                    <text class="wifi">吹风机</text>
+                </view>
+                <view class="wifi_icon">
+                    <image src="/images/hotel/tv.png"></image>
+                    <text class="wifi">电视</text>
+                </view>
+                <view class="wifi_icon">
+                    <image src="/images/hotel/tuoxie.png"></image>
+                    <text class="wifi">拖鞋</text>
+                </view>
+                <view class="wifi_icon">
+                    <image src="/images/hotel/24hour.png"></image>
+                    <text class="wifi">全天热水</text>
+                </view>
+                <view class="wifi_icon">
+                    <image src="/images/hotel/reshuihu.png"></image>
+                    <text class="wifi">电热水壶</text>
+                </view>
+            </view>
+            <view class="home_hotel">
+                <view class="home_serve">酒店服务</view>
+                <view class="facilities_icon">
+                    <view class="wifi_icon">
+                        <image src="/images/hotel/jiaoxing.png"></image>
+                        <text class="wifi">叫醒服务</text>
+                    </view>
+                    <view class="wifi_icon">
+                        <image src="/images/hotel/qiantai.png"></image>
+                        <text class="wifi">全天前台</text>
+                    </view>
+                    <view class="wifi_icon">
+                        <image src="/images/hotel/xingli.png"></image>
+                        <text class="wifi">行李寄存</text>
+                    </view>
+                    <view class="wifi_icon">
+                        <image src="/images/hotel/dasao.png"></image>
+                        <text class="wifi">每日打扫</text>
+                    </view>
+                </view>
+            </view>
+            <view>
+                <view class="common">通用设施</view>
+                <view class="facilities_icon">
+                    <view class="wifi_icon">
+                        <image src="/images/hotel/nuanqi.png"></image>
+                        <text class="wifi">暖气</text>
+                    </view>
+                    <view class="wifi_icon">
+                        <image src="/images/hotel/dianti.png"></image>
+                        <text class="wifi">电梯</text>
+                    </view>
+                    <view class="wifi_icon">
+                        <image src="/images/hotel/jiankong.png"></image>
+                        <text class="wifi">监控系统</text>
+                    </view>
+                    <view class="wifi_icon">
+                        <image src="/images/hotel/anquan.png"></image>
+                        <text class="wifi">安全警报器</text>
+                    </view>
+                    <view class="wifi_icon">
+                        <image src="/images/hotel/yanwu.png"></image>
+                        <text class="wifi">烟雾警报器</text>
+                    </view>
+                    <view class="wifi_icon">
+                        <image src="/images/hotel/meihuo.png"></image>
+                        <text class="wifi">灭火器</text>
+                    </view>
+                    <view class="wifi_icon">
+                        <image src="/images/hotel/car.png"></image>
+                        <text class="wifi">没费停车</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="tel">
+            <text class="phone" decode="{{true}}" space="{{true}}">酒店电话:&nbsp;&nbsp;0286160199</text>
+            <van-icon name="phone-o" bindtap="Tel" />
+        </view>
+        <view class="comment" bindtap="comment">
+            <view class="user">用户点评</view>
+            <view class="graded">
+                <view class="score">
+                    <text class="graded_score">5.0</text>
+                    <text class="ultrabar">分超棒</text>
+                </view>
+                <view class="overtop">
+                    <view class="overtop_hotel">高于97%的同城舒适型酒店</view>
+                    <view class="overtop_score">卫生4.9 环境4.9 服务4.9 设施4.8</view>
+                </view>
+            </view>
+            <view class="give_mark">
+                <van-button color="#ECF4F5" text-color="#799CAE">设施挺好(23)</van-button>
+                <van-button color="#ECF4F5" text-color="#799CAE">环境舒适(59)</van-button>
+                <van-button color="#ECF4F5" text-color="#799CAE">卫生干净(98)</van-button>
+                <van-button color="#ECF4F5" text-color="#799CAE">服务周到(21)</van-button>
+            </view>
+            <view class="comment-title">
+                <view class="comment-left">
+                    <van-icon name="friends-o" />
+                    <text class="comment_travel">旅游达人</text>
+                </view>
+                <text class="comment_data">2019-12</text>
+            </view>
+            <view class="comment_article">
+                酒店地址距离万达广场对面，出行饮食娱乐都很方便，酒店的房间特别舒服，房间空间特别大，价格实惠，所有设施都很新关键是床柔软舒服，
+                虽然酒店挨近路边，晚上睡觉还是很安静的，办理入住和退房快捷简单，很愉快地一次体验。
+            </view>
+            <view class="comment_sincerity" bindtap="Sincerity">
+                <text class="comment_all">全部真实顾客评论<span></span>789条</text>
+                <van-icon name="arrow" />
+            </view>
+
+        </view>
+
+        <view class="company" bindtap="Aptitude">
+            <text class="aptitude">企业资质信息</text>
+            <van-icon name="arrow" />
+        </view>
+
+
+    </view>
+    <view class="btn_block" bindtap="Home">
+        <van-button type="primary" block color="#4B9AED">查找房型</van-button>
+    </view>
+
+</view>

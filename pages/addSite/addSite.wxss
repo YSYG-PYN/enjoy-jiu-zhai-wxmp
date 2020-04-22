@@ -1,0 +1,28 @@
+/* pages/addSite/addSite.wxss */
+.box{
+  padding: 0 30rpx;
+  border:1rpx solid #ccc; 
+}
+.input{
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.input label{
+  width: 150rpx;
+}
+.switch{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100rpx;
+}
+
+.fouter{
+ margin-top: 500rpx;
+  bottom: 100rpx;
+  padding:0 20rpx;
+}

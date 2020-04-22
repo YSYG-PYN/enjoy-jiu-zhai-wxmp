@@ -1,0 +1,4 @@
+<!--pages/appointHome/hospitalIntroduceDetail/hospitalIntroduceDetail.wxml-->
+<view class="appointHome-hospital-introduce">
+  <text>{{hospitalIntroduce}}</text>
+</view>

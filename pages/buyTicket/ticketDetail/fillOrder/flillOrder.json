@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "订单填写",
+  "usingComponents": {
+    "van-checkbox": "@vant/weapp/checkbox/index",
+		"van-action-sheet": "@vant/weapp/action-sheet/index"
+  }
+}

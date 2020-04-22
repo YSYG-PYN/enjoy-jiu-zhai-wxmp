@@ -1,0 +1,44 @@
+<!--pages/hotel/Order/Order.wxml-->
+<view class="topbar" style="padding-top:{{statusBarHeight}}px">
+    <view class="arrow-box row" bindtap="backToPreviousClick">
+        <image src="/images/back.png"></image>
+        <p>我的订单</p>
+    </view>
+</view>
+<view class="top-comend" style="padding-top:{{statusBarHeight}}px"></view>
+<van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="全部">
+        <view class="head">
+            <p class="bigHotel">维也纳大酒店（标准双人床）</p>
+            <view class="obligation">
+                <view>
+                    <p class="one">10月31日-11月01日 共一晚</p>
+                    <p class="room">房间：1</p>
+                    <p class="price">总价：268.00元</p>
+                </view>
+                <view class="pic">
+                    <image src="../../../images/hotel/bigHotel.png"></image>
+                </view>
+            </view>
+            <van-button type="default">评价</van-button>
+        </view>
+    </van-tab>
+    <van-tab title="待付款">
+        <p class="bigHotel">维也纳大酒店（标准双人床）</p>
+        <view class="obligation">
+            <view>
+                <p class="one">10月31日-11月01日 共一晚</p>
+                <p class="room">房间：1</p>
+                <p class="price">总价：268.00元</p>
+            </view>
+            <view class="pic">
+                <image src="../../../images/hotel/bigHotel.png"></image>
+            </view>
+        </view>
+        <van-button type="info">完成支付</van-button>
+    </van-tab>
+    <van-tab title="处理中">内容 3</van-tab>
+    <van-tab title="待出行">内容 4</van-tab>
+    <van-tab title="待评价">内容 5</van-tab>
+    <van-tab title="退款/售后">内容 6</van-tab>
+</van-tabs>

@@ -1,0 +1,11 @@
+
+<view class="appointment_container">
+   <view class="nav_left">
+    <scroll-view scroll-y class="scroll-left">
+      <block wx:for="{{hospitalItems}}">
+        <view class="nav_left_items" bindtap="switchNextTab" data-index="{{index}}" data-id="{{item.rowId}}">{{item.hosName}}</view>
+      </block>
+    </scroll-view>
+  </view>
+
+</view>

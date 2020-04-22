@@ -1,0 +1,66 @@
+/* pages/useTickets/useTickets.wxss */
+.box{
+  font-size: 27rpx;
+}
+
+/* 门票 */
+.header{
+  display: flex;
+  padding: 10rpx;
+  border: 1rpx solid #ccc;
+  margin:20rpx 20rpx 0 20rpx;
+
+}
+.img{
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 20rpx;
+ 
+}
+.img image{
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.ticketDetail{
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: space-between
+}
+
+/* 待使用 */
+.active{
+  padding: 20rpx;
+  border-bottom: 1px solid #ccc
+}
+.active view{
+  margin-top: 20rpx;
+}
+.active text{
+  color: #00f;
+}
+.ewm{
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.thinkChange{
+  width: 230rpx;
+  height: 230rpx;
+  display: block;
+}
+.title{
+  font-weight: 600;
+  font-size: 35rpx;
+}
+.presented{
+padding: 0 20rpx;
+  height:50rpx;
+  border: 1rpx solid #ccc;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 10rpx;
+  font-weight: 400
+}

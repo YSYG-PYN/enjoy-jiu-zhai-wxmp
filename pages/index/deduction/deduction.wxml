@@ -1,0 +1,28 @@
+<!--pages/index/deduction/deduction.wxml-->
+<!-- 演艺活动 -->
+<view class="deduction-activity">
+  <block wx:if="{{showLoading}}">
+    <view class="loading">努力加载中...</view>
+  </block>
+  <block wx:else>
+    <view class="film">
+      <view wx:for="{{resNewsData}}" class="wa-item wa-item-thumbnail-left" data-id="{{item.id}}" data-index='{{index}}' bindtap="toActivityDetail">
+        <image class="item-img" src="{{item.imgUrl}}"></image>
+        <view class="content-name min-h"> {{item.title}}
+         <text class="activity-price">￥{{item.price}}起</text>
+        </view>
+        <view>
+          <view class="news-info">{{item.content}}</view>
+          <text class="info-time">{{item.score}}</text>
+          <text class="info-time">{{item.sales}}</text>
+        </view>
+      </view>
+      <block wx:if="{{hasMore}}">
+        <view class="loading-tip">上拉加载更多</view>
+      </block>
+      <block wx:else>
+        <view class="loading-tip">没有更多内容了</view>
+      </block>
+    </view>
+  </block>
+</view>

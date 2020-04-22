@@ -1,0 +1,34 @@
+
+
+.newsItem{
+/* display: flex; */
+background-color: red;
+flex-direction: row;
+margin-left: 20rpx;
+width: 80%;
+
+}
+.authorName{
+  margin-left: 10rpx;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+
+
+.arrowContainer{
+  float: right;
+}
+.newsArrow{
+  margin-right: 10rpx;
+  width: 20rpx;
+  height: 16rpx;
+  vertical-align: middle;
+}
+
+.releaseTime{
+ vertical-align: middle;
+  margin-right: 5rpx;
+  color: gray;
+  font-size: 28rpx;
+}
+

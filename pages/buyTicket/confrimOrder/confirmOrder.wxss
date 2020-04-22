@@ -1,0 +1,108 @@
+/* pages/buyTicket/confrimOrder/confirmOrder.wxss */
+.confrim_order{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30rpx;
+    padding-top: 40rpx;  
+}
+.confirm_tit{
+    color: #333;
+    font-size: 36rpx;
+font-weight: 600;
+height: 90rpx;
+}
+.confirm_prompt{
+    font-size: 24rpx;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10rpx 20rpx;
+    border-radius: 5px;
+    margin-bottom: 20rpx;
+    background-color: rgba(75, 154, 237, 0.2);
+}
+.confirm_prompt .prompt_tit{
+    color: #333;
+    font-size: 30rpx;
+    margin-bottom: 12rpx;
+}
+.confrim_detail{
+    display: flex;
+    justify-content: space-between;
+    font-size: 22rpx;
+    color: #aaa;
+}
+.detail_left{
+    display: flex;
+    flex-direction: column;
+}
+.detail_left .de_address{
+    font-size: 28rpx;
+    font-weight: 600;
+    color: #333;
+}
+.de_time{
+    margin: 18rpx 0 14rpx;
+}
+.confrim_detail image{
+    width: 145rpx;
+    height: 145rpx;
+}
+.total_price{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 42px;
+    margin: 10rpx 0;
+    border-bottom: 1px solid #eee;
+}
+.total_price .rmb{
+    color: red;
+    font-size: 22rpx;
+}
+.rmb text{
+    font-size: 36rpx;
+    font-weight: 600;
+}
+.pay{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    line-height: 100rpx;
+}
+.pay image{
+    width: 40rpx;
+height: 40rpx;
+border-radius: 50px;
+margin-right: 20rpx;
+
+}
+.pay view:first-of-type{
+    display: flex;
+    align-items: center;
+}
+.agree{
+    font-size: 28rpx;
+    margin-top: 20rpx;
+}
+.agree text{
+    color: royalblue;
+}
+
+.btn_content{
+    padding-right: 30rpx;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.confrim_time_btn{
+	width: 100%;
+	border-radius: 25px;
+	background: #4B9AED;
+	box-sizing: border-box;
+	color: #fff;
+	height: 80rpx;
+    line-height: 80rpx;
+    font-size: 32rpx;
+}

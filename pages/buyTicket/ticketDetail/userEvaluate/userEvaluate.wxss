@@ -1,0 +1,108 @@
+/* pages/buyTicket/ticketDetail/userEvaluate/userEvaluate.wxss */
+.userEvaluate{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.userEvaluate_title_content{
+    width: 100%;
+    height: 30%;
+    background: #F4FBFF;
+    padding: 60rpx 20rpx;
+    box-sizing: border-box;
+    padding-left: 28rpx;
+}
+.evaluate_score_content{
+    display: flex;
+    align-items: flex-end;
+}
+.evaluate_score text:first-of-type{
+    color: #333333;
+    font-size: 100rpx;
+    font-weight: 500;
+}
+.evaluate_score_content .characters{
+    margin-bottom: 18rpx;
+    color: #999999;
+    font-size: 24rpx;
+    display: flex;
+    align-items: flex-end;
+}
+.evaluate_score_content view:nth-of-type(2){
+    margin-right: 20rpx;
+}
+
+
+/* 按钮 */
+.evaluate_btn_content{
+    width: 100%;
+    padding: 20rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 28rpx;
+}
+.evaluate_btn_content .btn{
+    padding: 14rpx 24rpx;
+    color: #799CAE;
+    background: #ECF4F5;
+    font-size: 28rpx;
+    margin-right: 20rpx;
+    border-radius: 3px;
+    margin-bottom: 20rpx;
+}
+.evaluate_btn_content .btn text{
+    font-size: 24rpx;
+}
+
+/* 用户评论列表 */
+.show_more_evaluate,.evaluate_content_list{
+    width: 100%;
+    padding: 20rpx;
+    box-sizing: border-box;
+    padding-right: 30rpx;
+    padding-left: 28rpx;
+}
+.evaluate_content_list .evaluate_content_perlist{
+    width: 100%;
+    color: #666;
+    font-size: 28rpx;
+}
+.list_title{
+    display: flex;
+    align-items: center;
+    font-size: 24rpx;
+    margin-bottom: 6rpx;
+}
+.profilePicture image{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+.user_message{
+    margin-left: 10rpx;
+    color: #999;
+}
+.user_message .user_message_name{
+    color: #333;
+    margin-bottom: 10rpx;
+}
+.user_message{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.user_content{
+    line-height: 20px;
+    letter-spacing: 1rpx;
+}
+.show_more_evaluate{
+    color: #4B9AED;
+    font-size: 32rpx;
+    padding-top: 4rpx;
+    letter-spacing: 2rpx;
+}
+.evaluate_num{
+    margin-left: 20rpx;
+}

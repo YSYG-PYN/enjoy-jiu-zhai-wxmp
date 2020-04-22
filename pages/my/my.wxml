@@ -1,0 +1,86 @@
+<view class="header">
+	<image class="myBg" src="../../images/my/myBg.png"></image>
+
+	<view class="login" bindtap="login" style="display:{{login?'none':'block'}}">
+		<view>立即登录</view>
+		<view>点击登录，查看更多信息。</view>
+	</view>
+	<!-- <view class="login" bindtap="login">立即登录</view>  -->
+	<view class="ChatHead" bindtap="personal">
+		<!-- <image src="../../images/img001.jpeg"></image> -->
+		<!-- <image src="{{userInfo.avatarUrl}}"></image> -->
+		<image src="{{login?userInfo.avatarUrl:images}}"></image>
+		<van-icon name="arrow" color="#999999" />
+		<!-- <image src="{{images}}"></image> -->
+	</view>
+</view>
+
+<!--<view class="box">-->
+	<view class="order">
+		<view class="orderTitle">
+			<view class="title">我的订单</view>
+			<view bindtap="order" class="allOrder">
+				<text>查看全部</text>
+				<van-icon name="arrow" color="#CCCCCC" />
+			</view>
+		</view>
+		<view class="action">
+			<van-grid border="{{ false }}">
+				<van-grid-item use-slot text="待付款" bindtap="obligation">
+					<image style="width: 80rpx;height: 80rpx" src="../../images/my/dfk.png"></image>
+					<view class="actionText">待付款</view>
+				</van-grid-item>
+				<van-grid-item use-slot text="待出行" bindtap="obligation">
+					<image style="width: 80rpx;height: 80rpx" src="../../images/my/dcx.png"></image>
+					<view class="actionText">待出行</view>
+				</van-grid-item>
+				<van-grid-item use-slot text="待评价" bindtap="obligation">
+					<image style="width: 80rpx;height: 80rpx" src="../../images/my/dpj.png"></image>
+					<view class="actionText">待评价</view>
+				</van-grid-item>
+				<van-grid-item use-slot text="退款/售后" bindtap="obligation">
+					<image style="width: 80rpx;height: 80rpx" src="../../images/my/sh.png"></image>
+					<view class="actionText">退款/售后</view>
+				</van-grid-item>
+			</van-grid>
+		</view>
+	</view>
+
+	<view class="inCommon">
+		<view class="orderTitle" style="margin: 0rpx 0rpx 35rpx 24rpx;padding-top: 40rpx">
+			<view class="title">常用功能</view>
+		</view>
+		<!--<van-cell icon="../../images/my/wdsc" use-label-slot title="我的收藏" is-link bindtap="collect">
+			<image slot="left-icon" src="../../images/my/wdsc"></image>
+		</van-cell>
+		<van-cell icon="../../images/my/wdsc" use-label-slot title="联系客服" is-link bindtap="modalcnt">
+			<image slot="left-icon" src="../../images/my/lxkf"></image>
+		</van-cell>
+		<van-cell icon="../../images/my/wdsc" use-label-slot title="常用联系人" is-link bindtap="topContacts">
+			<image slot="left-icon" src="../../images/my/cylxr"></image>
+		</van-cell>
+		<van-cell icon="../../images/my/wdsc" use-label-slot title="收货地址" is-link  bindtap="site">
+			<image slot="left-icon" src="../../images/my/shdz"></image>
+		</van-cell>
+		<van-cell icon="../../images/my/wdsc" use-label-slot title="投诉建议" is-link bindtap="complain">
+			<image slot="left-icon" src="../../images/my/tsjy"></image>
+		</van-cell>
+		<van-cell icon="../../images/my/wdsc" use-label-slot title="评价问卷" is-link bindtap="questionnaire">
+			<image slot="left-icon" src="../../images/my/pjwj"></image>
+		</van-cell>
+		<van-cell icon="../../images/my/wdsc" use-label-slot title="上报记录" is-link bindtap="record">
+			<image slot="left-icon" src="../../images/my/sbjl"></image>
+		</van-cell>-->
+		<view class="inCommonList" wx:for="{{incommon}}" wx:key="{{item.id}}" bindtap="{{item.src}}">
+			<view>
+				<image src="{{item.icon}}"></image>
+				<text>{{item.text}}</text>
+			</view>
+			<view>
+				<van-icon name="arrow" color="#C7C7CC" />
+			</view>
+		</view>
+	</view>
+
+
+<!--</view>-->

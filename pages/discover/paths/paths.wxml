@@ -1,0 +1,72 @@
+<!--pages/discover/paths/paths.wxml-->
+
+<view class="heard">
+  <image src="http://hbimg.b0.upaiyun.com/80980a7239def04f2763601f340f8de11f3875e1d427c-zjtsfD_fw658"></image>
+</view>
+<view class="box">
+  <view class="title">九寨沟2日打卡旅游线路</view>
+  <view class="date-title">
+    <view>适合9月-10月</view>
+    <view class="day">游玩2天</view>
+    <view>九寨沟</view>
+  </view>
+
+  <view class="content" wx:for="{{paths}}" wx:key="{{item.id}}">
+    <view class="oneDay">
+      <view class="title">{{item.day}}</view>
+      <view>{{item.site}}</view>
+    </view>
+    <view class="site">
+      <view class="detail">
+        <view class="site-title">
+          <view class="icon"></view>
+          <view>{{item.siteTitle[0]}}</view>
+        </view>
+        <view>{{item.time[0]}}</view>
+        <view class="tag">
+          <view>{{item.tag1[0]}}</view>
+          <view>{{item.tag2[0]}}</view>
+        </view>
+        <view>{{item.title[0]}}</view>
+      </view>
+      <image src="{{item.image[0]}}" class="img"></image>
+    </view>
+    <view class="distance">
+      <view class="icon"></view>
+      <view>直线距离5公里</view>
+    </view>
+    <view class="site">
+      <view class="detail">
+        <view class="site-title">
+          <view class="icon"></view>
+          <view>{{item.siteTitle[1]}}</view>
+        </view>
+        <view>{{item.time[1]}}</view>
+        <view class="tag">
+          <view>{{item.tag1[1]}}</view>
+          <view>{{item.tag2[1]}}</view>
+        </view>
+        <view>{{item.title[1]}}</view>
+      </view>
+      <image src="{{item.image[1]}}" class="img"></image>
+    </view>
+  </view>
+</view>
+
+<view class="footer">
+  <view class="title">线路推荐</view>
+  <scroll-view scroll-x="true">
+    <view class="line" scroll-x="true">
+      <block wx:for="{{lineCommandData}}" wx:key="{{item.id}}">
+        <view class="line_Item">
+          <view class="line_content_image">
+            <image src="{{item.image}}" bindtap="toLineDetail" data-linedetail="{{item.id}}"></image>
+            <text class="image_introduce">{{item.imageIntroduce}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+
+</view>

@@ -1,0 +1,123 @@
+/* pages/discover/paths/paths.wxss */
+.heard{
+  width: 100%;
+  height: 300rpx;
+}
+.heard image{
+  width: 100%;
+  height: 100%;
+}
+.box{
+  padding: 0 20rpx;
+  font-size: 30rpx;
+}
+.title{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+}
+.date-title{
+  display: flex;
+  font-size: 35rpx;
+  color: #4B9AED;
+}
+.date-title view{
+  margin-right: 20rpx;
+}
+.day{
+  padding: 0 20rpx;
+  border-left: 5rpx solid #4B9AED;
+  border-right: 5rpx solid #4B9AED;
+}
+
+/* 第一天 */
+.oneDay{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60rpx 0;
+}
+.oneDay view:nth-child(2){
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.site{
+  display: flex;
+  padding: 30rpx 0;
+}
+.detail{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 20rpx;
+}
+.detail>view{
+  padding-left:50rpx;
+}
+.content .site-title{
+  font-size: 40rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.icon{
+  width: 30rpx;
+  height: 30rpx;
+  background: #4B9AED;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.tag{
+  display: flex;
+}
+.tag view{
+  padding: 0 20rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #ccc;
+  border-radius: 10rpx;
+  color: #fff;
+  margin-right: 20rpx;
+} 
+.img{
+  width: 250rpx;
+  height: 250rpx;
+}
+.distance{
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+}
+
+
+
+.footer{
+  padding: 0 20rpx 50rpx 20rpx;
+  border-top: 10rpx solid #ccc;
+}
+/* 线路推荐 */
+
+.line_title {
+	font-weight: 600;
+	width: 100%;
+	padding-left: 40rpx;
+	line-height: 32px;
+	margin-top: 45rpx;
+	margin-bottom: 10rpx;
+}
+.line_content_image{
+  width: 400rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-start;
+}
+.line_content_image image{
+  width: 400rpx;
+  height: 300rpx;
+}
+

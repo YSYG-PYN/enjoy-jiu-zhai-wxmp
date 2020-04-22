@@ -1,0 +1,43 @@
+<!--pages/hotScenic/hotScenicDetail/hotScenicDetail.wxml-->
+<view class="single_ticket_detail">
+	<view class="ticket_position">
+			<!-- 轮播图 -->
+		<swiper  class="swiperContainer" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" interval="{{interval}}" duration="{{duration}}" vertical="{{vertical}}">
+   <block wx:for="{{banner}}" wx:key="unique">
+     <swiper-item class='swiperImgs'>
+       <image class="swiperimg" src="{{item.image}}"  data-id='{{item.id}}' data-index='{{index}}' />
+   <!-- 绑定一个事件，在js里面写事件函数的具体操作 -->
+      </swiper-item>
+     </block>
+    </swiper>
+		<view class="ticket_share_icon">
+			<image src="../../../images/ticketdetail/share.png"></image>
+		</view>
+	</view>
+	<view class="ticket_detail_tit">
+		<view class="ticket_tit_address">
+			<text>黄龙风景名胜区</text>
+		</view>
+		<view class="ticket_detail_time">
+			<view>
+				<text style="color:black;font-size:26rpx;margin-right:10rpx">地址</text>
+				<text>四川省阿坝藏族羌族自治州松潘县</text>
+			</view>
+			<view>
+        <image style="width:30rpx;height:30rpx;margin-top:5rpx" src="../../../images/dingwei.png"></image>
+        <text>导航</text>
+      </view>
+		</view>
+    <view>
+      <text style="font-size:26rpx">便捷消息</text>
+      <text style="color:blue;background:#f2f2f2;font-size:24rpx;margin-left:10rpx;margin-right:10rpx">开放中</text>
+      <text style='color:#888;'>08:30-17:00</text>
+    </view>
+    <view class="scenic_detail_description">
+    <view class="scenic_description_one">黄龙以彩池、雪山、峡谷、森林“四绝”著称于世，再加上滩流、古寺、民俗称为“七绝”。景区由黄龙沟、丹云峡、牟尼沟、雪宝鼎、雪山梁、红星岩，西沟等景区组成。主要景观集中于长约3.6公里的黄龙沟，沟内遍布碳酸钙华沉积。并呈梯田状排列，以丰富的动植物资源享誉人间，享有“世界奇观”、“人间瑶池”等美誉。1992年列入《世界自然遗产名录》。除了高山景观，还可以在这里发现各种不同的森林生态系统，以及石灰岩构造、瀑布和温泉。这一地区还生存着许多濒临灭绝的动物，包括大熊猫和四川疣鼻金丝猴。 [黄龙以规模宏大、结构奇巧、色彩丰艳的地表钙华景观为主景，以罕见的岩溶地貌蜚声中外，堪称人间仙境。2016年10月9日，国家旅游局发布十一假日旅游“红黑榜”，黄龙景区上榜综合秩序最佳景区。[2]  是世界自然遗产，世界人与生物圈保护区，“绿色环球21”证书，国家AAAAA级旅游景区，国家重点风景名胜区。</view>
+    <image style="width:100%" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1578309565581&di=5b6aef334f89d100ea2b5b5e5ac87835&imgtype=0&src=http%3A%2F%2Fimg1001.pocoimg.cn%2Fimage%2Fpoco%2Fworks%2F21%2F2012%2F0210%2F22%2F52778280201202102231492312423441230_000_52778280.jpg"></image>
+    <view class="scenic_description_one">黄龙以彩池、雪山、峡谷、森林“四绝”著称于世，再加上滩流、古寺、民俗称为“七绝”。景区由黄龙沟、丹云峡、牟尼沟、雪宝鼎、雪山梁、红星岩，西沟等景区组成。主要景观集中于长约3.6公里的黄龙沟，沟内遍布碳酸钙华沉积。并呈梯田状排列，以丰富的动植物资源享誉人间，享有“世界奇观”、“人间瑶池”等美誉。1992年列入《世界自然遗产名录》。除了高山景观，还可以在这里发现各种不同的森林生态系统，以及石灰岩构造、瀑布和温泉。这一地区还生存着许多濒临灭绝的动物，包括大熊猫和四川疣鼻金丝猴。 [黄龙以规模宏大、结构奇巧、色彩丰艳的地表钙华景观为主景，以罕见的岩溶地貌蜚声中外，堪称人间仙境。2016年10月9日，国家旅游局发布十一假日旅游“红黑榜”，黄龙景区上榜综合秩序最佳景区。[2]  是世界自然遗产，世界人与生物圈保护区，“绿色环球21”证书，国家AAAAA级旅游景区，国家重点风景名胜区。</view>
+    </view>
+	</view>
+  </view>
+

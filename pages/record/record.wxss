@@ -1,0 +1,20 @@
+/* pages/record/record.wxss */
+.box{
+  padding: 0 20rpx;
+  font-size: 30rpx;
+}
+.title{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: 600;
+}
+.active{
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+.course{
+  color: #00f;
+}

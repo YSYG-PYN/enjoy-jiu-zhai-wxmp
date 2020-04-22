@@ -1,0 +1,15 @@
+/* pages/index/emergencyGuide/emergencyGuide.wxss */
+
+
+.emergencyGuide-container{
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  padding: 10px 10px;
+  /* border-bottom: 1px solid #ededed; */
+  border: 1px dashed black;
+}
+
+.reminderText{
+  color: red;
+}

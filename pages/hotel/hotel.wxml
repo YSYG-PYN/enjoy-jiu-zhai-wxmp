@@ -1,0 +1,144 @@
+<view class="container">
+    <!-- 轮播开始 -->
+    <swiper class="swiper" indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="#dc5687"
+        autoplay="{{true}}" circular="{{true}}">
+        <swiper-item wx:for="{{swipers}}" wx:key="{{item.id}}">
+            <image src="{{item.image}}"></image>
+        </swiper-item>
+    </swiper>
+    <!-- 轮播结束 -->
+    <view class="content">
+        <!-- 滑块 -->
+        <scroll-view scroll-x="true" class="scoll_view">
+            <button size="mini">国内酒店</button>
+            <button size="mini">钟点房</button>
+            <button size="mini">民宿</button>
+            <button size="mini">本地体验</button>
+            <button size="mini">特色</button>
+        </scroll-view>
+        <!-- 滑块结束 -->
+        <!-- 搜索 -->
+        <view class="inp">
+            <view class="left">
+                <p class="city">成都</p>
+                <van-icon name="arrow" color="#d5d5d5" class="arrow"></van-icon>
+
+            </view>
+            <view class="right" bindtap="Search">
+                <van-icon name="search" color="#d5d5d5" class="search"></van-icon>
+                <input disabled="true" class="weui-input" auto-focus placeholder="酒店关键词/名称" />
+            </view>
+        </view>
+        <!-- 日期 -->
+        <view class="data">
+            <input type="text" class="ipt" value="{{riqi}}" readonly placeholder="2019-11-10" bindtap="shosedata" />
+            <span>-</span>
+            <input type="text" class="ipt1" value="{{riqi1}}" readonly placeholder="2019-11-10" bindtap="shosedata1" />
+            <view hidden="{{show}}">
+                <van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" min-date="{{ minDate }}"
+                    formatter="{{ formatter }}" bind:confirm="confirm" bind:cancel="cancel" />
+                <!-- <picker mode="date" value="{{startTime}}" bindchange="bindDateChange1">
+                    <view class="picker"> <text>开始日期</text> <text class="chosedate">{{startTime}}</text> </view>
+                </picker>
+                <picker mode="date" value="{{endTime}}" bindchange="bindDateChange2">
+                    <view class="picker"> <text>结束日期</text> <text class="chosedate">{{endTime}}</text> </view>
+                </picker> -->
+            </view>
+            <view hidden="{{show1}}">
+                <van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" min-date="{{ minDate }}"
+                    formatter="{{ formatter }}" bind:confirm="confirm1" bind:cancel="cancel1" />
+            </view>
+        </view>
+        <!-- 搜索酒店 -->
+        <van-button round type="info">酒店搜索</van-button>
+        <!-- 历史和酒店订单 -->
+        <view class="order">
+            <view class="collect" bindtap="Collect">
+                <van-icon name="star-o"></van-icon>
+                <span class="browse">浏览收藏</span>
+            </view>
+            <span class="xian">|</span>
+            <view class="hotel" bindtap="Order">
+                <van-icon name="label-o"></van-icon>
+                <span class="hotel_order">酒店订单</span>
+            </view>
+        </view>
+
+    </view>
+    <view class="bg"></view>
+    <!-- 特价酒店 -->
+    <view class="special">
+        <view class="header">
+            <h3>特价酒店</h3>
+            <van-icon name="arrow" bindtap="More"></van-icon>
+        </view>
+
+        <scroll-view scroll-x="true" enable-back-to-top="true" enable-flex="true">
+            <view class="floor">
+                <view class="lists">
+                    <image
+                        src="https://z1.muscache.cn/im/pictures/144f64d5-d872-44dd-b540-03a4ccfc15d1.jpg?aki_policy=x_large">
+                    </image>
+                    <view class="distance">
+                        <text decode="{{true}}" space="{{true}}">距离火车站&nbsp;</text>
+                        <p>3km</p>
+                    </view>
+                    <view class="home">
+                        <p>九寨沟名宿</p>
+                        <span class="middle">|</span>
+                        <p>豪华家庭房</p>
+                    </view>
+                    <p class="money">￥234/晚</p>
+                </view>
+                <view class="lists">
+                    <image
+                        src="https://z1.muscache.cn/im/pictures/144f64d5-d872-44dd-b540-03a4ccfc15d1.jpg?aki_policy=x_large">
+                    </image>
+                    <view class="distance">
+                        <text decode="{{true}}" space="{{true}}">距离火车站&nbsp;</text>
+                        <p>3km</p>
+                    </view>
+                    <view class="home">
+                        <p>九寨沟名宿</p>
+                        <span class="middle">|</span>
+                        <p>豪华家庭房</p>
+                    </view>
+                    <p class="money">￥234/晚</p>
+                </view>
+                <view class="lists">
+                    <image
+                        src="https://z1.muscache.cn/im/pictures/144f64d5-d872-44dd-b540-03a4ccfc15d1.jpg?aki_policy=x_large">
+                    </image>
+                    <view class="distance" decode="{{true}}" space="{{true}}">
+                        <text decode="{{true}}" space="{{true}}">距离火车站&nbsp;</text>
+                        <p>3km</p>
+                    </view>
+                    <view class="home">
+                        <p>九寨沟名宿</p>
+                        <span class="middle">|</span>
+                        <p>豪华家庭房</p>
+                    </view>
+                    <p class="money">￥234/晚</p>
+                </view>
+                <view class="lists">
+                    <image
+                        src="https://z1.muscache.cn/im/pictures/144f64d5-d872-44dd-b540-03a4ccfc15d1.jpg?aki_policy=x_large">
+                    </image>
+                    <view class="distance" decode="{{true}}" space="{{true}}">
+                        <text decode="{{true}}" space="{{true}}">距离火车站&nbsp;</text>
+                        <p>3km</p>
+                    </view>
+                    <view class="home">
+                        <p>九寨沟名宿</p>
+                        <span class="middle">|</span>
+                        <p>豪华家庭房</p>
+                    </view>
+                    <p class="money">￥234/晚</p>
+                </view>
+            </view>
+
+        </scroll-view>
+    </view>
+
+
+</view>

@@ -1,0 +1,9 @@
+<template name="newsItem">
+ <text class="authorName">重大通知：快要下雪了！！！</text>
+ <view class='arrowContainer'>
+  <text class="releaseTime">2019/1/18</text>
+  <image class='newsArrow' src='../images/arrow.png'></image>
+  </view>
+</template>
+
+

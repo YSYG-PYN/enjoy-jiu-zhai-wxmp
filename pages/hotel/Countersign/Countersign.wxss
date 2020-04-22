@@ -1,0 +1,145 @@
+/* pages/hotel/Countersign/Countersign.wxss */
+.affirm {
+  font-size: 18px;
+  color: #333;
+  margin-top: 29px;
+  margin-left: 12px;
+}
+.body {
+  width: 702rpx;
+  margin: 0 auto;
+}
+.order {
+  background: rgba(75, 154, 237, 0.3);
+  color: #666;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+.order_generate {
+  font-size: 14px;
+  margin-left: 10px;
+  display: block;
+  margin-top: 5px;
+}
+.save {
+  font-size: 12px;
+  margin-left: 10px;
+}
+.pic {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.pic_tit {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+.pic_data,
+.pic_room {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 5px;
+  display: block;
+}
+.pic image {
+  width: 140rpx;
+  height: 140rpx;
+}
+.total_price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+}
+.total {
+  font-size: 16px;
+  color: #333;
+}
+.price {
+  color: #ff3c3c;
+  font-size: 20px;
+  font-weight: bold;
+}
+.price span {
+  font-size: 10px;
+}
+.chosePay {
+  margin-top: 20px;
+}
+.van-icon-wechat {
+  color: #6cbe73;
+  font-size: 24px !important;
+  vertical-align: middle;
+  align-items: center;
+}
+.van-icon-alipay {
+  color: #4b9aed;
+  font-size: 24px !important;
+}
+.alipay_one,
+.wechart_one {
+  display: flex;
+}
+.chosePay .van-cell {
+  padding: 20px 0 !important;
+}
+.van-hairline--bottom:after,
+.van-hairline--left:after,
+.van-hairline--right:after,
+.van-hairline--surround:after,
+.van-hairline--top-bottom:after,
+.van-hairline--top:after,
+.van-hairline:after {
+  border: none !important;
+}
+.agreen {
+  font-size: 14px;
+  color: #333;
+  margin-top: 20px;
+}
+.agreen span {
+  color: #4b9aed;
+}
+.van-button--info {
+  border-radius: 22px !important;
+}
+.save_pay {
+  width: 702rpx;
+  margin: 0 auto;
+  background: #4b9aed;
+  border-radius: 22px;
+  height: 88rpx;
+  display: flex;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  line-height: 88rpx;
+  align-items: center;
+  position: fixed;
+  bottom: 10px;
+  /* left: 0; */
+}
+.save_pay image {
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  vertical-align: middle;
+}
+.tishi {
+  padding: 24px 16px;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: #333;
+  border-bottom: 1px solid #e6e6e6;
+}
+.bj_data {
+  display: block;
+  margin-bottom: 5px;
+}

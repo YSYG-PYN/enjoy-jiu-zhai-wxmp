@@ -1,0 +1,399 @@
+/* pages/hotel/search/search.wxss */
+.topbar {
+    width: 100%;
+    height: 90rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .arrow-box {
+    width: 10%;
+    text-align: center;
+    height: 100%;
+    float: left;
+ 
+  }
+  .arrow-box image {
+    width: 30rpx;
+    height: 34rpx;
+    margin-bottom: 4px;
+  }
+  .inp{
+    background-color: #f5f5f5;
+    border-radius: 10px ;
+    display: flex;
+    justify-content: space-between;
+    height: 60rpx;
+    width: 60%;
+    margin-top: 6px;
+}
+.city{
+  width: 80rpx;
+  font-size: 13px;
+  font-weight: normal;
+  color: #696969;
+}
+.left{
+    width: 90rpx;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+}
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.arrow{
+    font-size: 12px;
+    /* margin-right: 10rpx; */
+}
+.search{
+  border-left: 1px solid #D3D3D3;
+    margin-left: 10rpx;
+    padding-left: 20rpx;
+    font-size: 18px;
+}
+input{
+    width: 100%;
+    font-size: 13px;
+    color: #696969;
+    margin-left: 2px;
+}
+  .top-comend{
+    width: 100%;
+    height: 80rpx;
+  }
+  .container{
+    width: 700rpx;
+    margin: 0 auto;  
+}
+.scoll_view{
+    /* width: 720rpx; */
+    display: flex;
+    white-space: nowrap;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+button{
+    margin-top: 20px;
+    margin-right: 10px;
+    background: #fff;
+    /* box-shadow:1px 1px 1px 1px #999; */
+}
+.active {
+    background: skyblue;
+    color: #fff;
+    border: 1rpx solid #fff;
+  }
+.bg{
+    width: 100%;
+    height: 10px;
+    background-color: #e8e8e8;
+    margin-top: 15px;
+}
+.content{
+    width: 100%;
+    border-bottom: 2px solid #999;
+    border-top: 1px solid transparent;
+}
+.header{
+    width: 700rpx;
+    margin: 0 auto;
+    height: 310rpx;
+    display: flex;
+    /* align-items: center; */
+}
+
+.header image{
+    width: 220rpx;
+    height: 220rpx;
+    border-radius: 5px;
+    margin-top: 26px;
+}
+
+.header_right{
+    width: 480rpx;
+    /* text-align: center; */
+    margin-top: 26px;
+} 
+.title{
+    margin-left: 10px;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.list_home,.km_distance{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.enough{
+    color: skyblue;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.home,.distance{
+    font-size: 12px;
+    color: #999;
+    margin-left: 10px;
+}
+.km{
+    font-size: 12px;
+    margin-left: 12px;
+}
+.money_number{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.money{
+    font-size: 15px;
+    color: #999;
+    
+}
+.money b{
+    color: #000;
+}
+.enter{
+   text-align: left;
+
+}
+.number{
+    color: skyblue;
+    font-size: 13px;
+    
+}
+.remark{
+    color: #999;
+    font-size: 13px;
+    margin-right: 10px;
+}
+.value-class {
+    flex: none !important;
+}
+.van-button--round{
+    width: 100%;
+    border-radius: 22px;
+    height: 88rpx;
+}
+.van-sidebar-item{
+    border-left: none !important;
+    width: 138px !important;
+    border-bottom: none !important;
+}
+.van-tree-select__item{
+    font-weight: normal !important;
+    border-bottom: none !important;
+}
+.content-active-class  .van-tree-select__item--active{
+    color: var(--tree-select-item-active-color,skyblue );
+
+}
+.van-tree-select__item--active{
+    color: skyblue !important;
+    
+}
+.van-ellipsis{
+    border-bottom: none;
+}
+.star{
+    padding: 0 14px;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.price button{
+    margin-left: 1px;
+    margin-top: 22px;
+}
+.price .btn{
+    margin-top: 8px;
+}
+.unlimited{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #666666;
+    font-size: 12px;
+    padding: 0 5px;
+}
+.slide{
+    padding: 10px 20px;
+}
+.custom-button{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: skyblue;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+}
+.van-slider{
+    margin-bottom: 10px;
+}
+.calendar .content{
+    margin-bottom: 5px !important;
+}
+
+
+@import "/pages/iconfont/iconfont.wxss";
+.canlendarBgView{
+  display: flex;
+  flex-direction: column;
+}
+text{
+  color: #282828;
+ 
+}
+.dateSelectView{
+  background: #10A040;
+  color: #fff;
+}
+.dateSelectView text{
+  color: #fff;
+}
+
+.canlendarTopView{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 0;
+  margin:  0 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E8E7E7;
+  box-sizing: border-box;
+}
+.leftBgView{
+  margin-right: 34px;
+
+}
+.iconfont{
+  font-weight: bold;
+}
+.icon-fanhui{
+  font-size: 14px;
+}
+.icon-qianjin{
+  font-size: 16px;
+}
+.centerView{
+  font-size: 12px;
+  
+}
+.rightBgView{
+  margin-left: 34px;
+}
+.border{
+  width: 100%;
+ padding: 0 40px;
+  box-sizing: border-box;
+}
+.weekBgView{
+  font-size: 12px;
+  width: 100%;
+  display: flex;
+  padding-top: 12px;
+  
+}
+.weekView{
+  width: 14%;
+  text-align: center;
+}
+.dateBgView{
+  display: flex;
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+
+.dateEmptyView{
+ width: 14%;
+}
+
+
+.dateView{
+ width: 14%;
+ margin-top: 13px;
+ text-align: center;
+ font-size: 11px;
+}
+.datesView{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+}
+.van_actions{
+    box-sizing: border-box;
+    display: flex;
+}
+.area{
+  display: flex;
+}
+.area-left p,.area-center p{
+  display: block;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.area-left p{
+  border-bottom: 1px solid #EEEEEE;
+}
+.area-left p:nth-child(1){
+  width: 214rpx;
+  height: 138rpx !important;
+  line-height: 138rpx;
+}
+.area-left p:nth-last-child(1){
+  border-bottom: none !important;
+}
+.area-left{
+  background: #F8F8F8;
+  text-align: center;
+  height: 666rpx;
+}
+.area-center{
+  width: 138rpx;
+  text-align: center;
+  background: #F8F8F8;
+}
+.area-center p:nth-child(1){
+  height: 138rpx !important;
+  line-height: 138rpx;
+}
+.area-right{
+  flex: 1;
+}
+.one{
+  height: 114rpx  !important;
+  margin-top: 10px !important;
+}
+.area-right .van-cell-group{
+  margin-top: 20px;
+}
+.van-hairline--top-bottom:after{
+  border-width: 0 !important;
+}
+.activeBG,.activeBreak{
+  background: #fff;
+}
+.chain{
+  flex: 1;
+  margin-top: 20px;
+}

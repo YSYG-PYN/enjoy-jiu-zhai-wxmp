@@ -1,0 +1,80 @@
+/* pages/hotScenic/hotScenicDetail/hotScenicDetail.wxss */
+
+.single_ticket_detail {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	justify-content: center;
+}
+
+.ticket_position {
+	position: relative;
+}
+
+.swiperContainer {
+  width: 100%;
+}
+.swiperImgs{
+  position: relative;
+}
+.swiperimg {
+  width: 100%;
+  height: 100%;
+}
+
+.ticket_share_icon {
+	position: absolute;
+	right: 20rpx;
+	top: 20rpx;
+
+}
+
+.ticket_share_icon image {
+	width: 60rpx;
+	height: 60rpx;
+	margin-right: 20rpx;
+}
+
+.ticket_list_content,
+.ticket_detail_tit,
+.title_detail_map {
+	width: 100%;
+	font-size: 28rpx;
+	box-sizing: border-box;
+	padding: 0 20rpx;
+	margin-top: 20rpx;
+}
+
+.title_list_car,
+.ticket_detail_time,
+.ticket_tit_address,
+.ticket_detail_detail,
+.title_detail_map {
+	font-weight: 700;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.ticket_detail_time {
+	font-weight: normal;
+	font-size: 28rpx;
+	color: #888;
+	margin-top: 10rpx;
+}
+
+.scenic_detail_description{
+   margin:20rpx 10rpx 20rpx 10rpx;
+   font-size: 28rpx;
+    color: #888;
+}
+
+.scenic_description_one{
+  text-indent:2em;
+  line-height: 40rpx;
+}
+
+
+
+

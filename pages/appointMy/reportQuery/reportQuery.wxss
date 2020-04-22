@@ -1,0 +1,37 @@
+
+page{
+  background: #f5f5f5;
+}
+
+.appointDetail-container{
+  
+  margin-top: 20rpx;
+  background-color: white;
+   
+}
+.appointDetailItems{
+  padding: 10rpx 25rpx 10rpx 20rpx;
+
+}
+
+.descriptionText{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  font-size: 35rpx;
+  color: #939393;
+}
+
+
+
+.loading-tip {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #ccc;
+}
+.wa-item {
+  border: 0;
+  margin: 0;
+  border-top: 1px solid #dedede;
+}

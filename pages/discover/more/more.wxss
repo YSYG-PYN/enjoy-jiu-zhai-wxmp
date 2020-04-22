@@ -1,0 +1,96 @@
+/* pages/discover/more/more.wxss */
+/* 头部搜索返回、按钮 */
+.topbar {
+  width: 100%;
+  height: 90rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.arrow-box {
+  width: 10%;
+  text-align: center;
+  height: 100%;
+  float: left;
+}
+.arrow-box image {
+  width: 30rpx;
+  height: 34rpx;
+}
+.input-box {
+  margin-top: 14rpx;
+  width:60%;
+  height: 60rpx;
+  float: left;
+  background-color: #f2f2f2;
+  border-radius: 88rpx;
+  margin-left: 20rpx;
+	padding-left: 20rpx;
+}
+ 
+.input-box input {
+  font-size: 24rpx;
+  color: #333;
+  width: 100%;
+  padding-left: 7%;
+}
+.top-comend{
+  width: 100%;
+  height: 80rpx;
+}
+
+
+
+.box{
+  display: flex;
+}
+.tap{
+  width: 200rpx;
+  text-align: center;
+  height: 1000rpx;
+  border-right: 1rpx solid #ccc;
+}
+.tap view{
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border: 1rpx solid #ccc;
+  margin-left: 25rpx;
+  margin-top: 20rpx;
+  border-radius: 15rpx;
+}
+.tapView{
+  background: #4B9AED;
+	color: #fff;
+}
+.detail{
+  flex: 1;
+  padding: 20rpx 0 0 20rpx;
+}
+.title{
+  font-weight: 600;
+}
+.recommend{
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  font-size: 40rpx;
+}
+.recommend image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.recommend view{
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-left: 20rpx;
+}

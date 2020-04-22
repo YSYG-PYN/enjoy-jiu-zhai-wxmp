@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "swiper": "/pages/index/data/data",
+    "calendar": "../../../../../common/calendar/calendar"
+  }
+}

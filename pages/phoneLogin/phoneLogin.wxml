@@ -1,0 +1,34 @@
+<!--pages/phoneLogin/phoneLogin.wxml-->
+<view class="box">
+    <view class="img">
+          <image src="../../images/img001.jpeg"></image>
+    </view>
+    <view class="active">
+          <view class="region">
+                <text>国家/地区</text>
+                <text>中国+86></text>
+          </view>
+          <view class="phone">
+          <view class="input">
+              <label><image src="../../images/shouji.png"></image></label>
+              
+                  <input placeholder="{{title}}" bindinput='phoneValue'></input>
+              
+              
+          </view>
+               <label>123</label>
+          </view>
+          <view class="code">
+          <view class="input">
+              <label><image src="../../images/code.png"></image></label>
+              <input placeholder="请输入验证码" bindinput='codeValue'></input>
+          </view>
+              
+              <van-button round type="primary" size="small" bindtap="acquireCode">获取验证码</van-button>
+          </view>
+          <view  class="login">
+               <van-button type="primary" round block bindtap="login">登录</van-button> 
+          </view>
+         
+    </view>
+</view>

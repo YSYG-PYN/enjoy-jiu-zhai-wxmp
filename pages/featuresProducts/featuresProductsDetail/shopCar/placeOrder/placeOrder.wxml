@@ -1,0 +1,87 @@
+<view id="box">
+    <view class="receivingAddress">
+        <view class="personal">
+            徐尚伟  13398763347
+        </view>
+        <view class="address">
+            新疆维吾尔自治区巴音郭楞蒙古自治州
+            博湖县仁廉大道154号
+        </view>
+        <view class="modify" bindtap="toAddressList">
+            <text>修改</text>
+            <van-icon name="arrow" color="#949494" />
+        </view>
+    </view>
+    <block wx:for="{{items}}" wx:key="{{item.id}}">
+        <view class="carts-container">
+            <view class="shopName">
+                <image src="http://bpic.588ku.com/element_origin_min_pic/01/35/55/98573bea60c0a81.jpg"></image>
+                <text>{{item.shopName}}</text>
+            </view>
+            <view class="commodity">
+                <view class="commodityDetail">
+                    <image src="{{item.goods.thumb[0].url}}"></image>
+                    <view class="commoditySj">
+                        <view class="commodityName">{{item.goods.title}}</view>
+                        <view class="commodityType">
+                            {{item.goods.product}}
+                        </view>
+                        <view class="commodityMoney">
+                            <text>￥</text>
+                            <text>{{item.goods.price}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="clear"></view>
+            <view class="delivery">
+                <text class="deliveryDetail">配送方式  <text>快递</text></text>
+                <text>免运费</text>
+            </view>
+            <view class="subtotal">
+                共1件 小计: <text>￥</text><text>{{item.goods.price}}</text>
+            </view>
+        </view>
+    </block>
+    <van-submit-bar
+            price="{{totalPrice*100}}"
+            button-text="提交订单"
+            bind:submit="toggleActionsheet3"
+    />
+    <van-action-sheet
+            show="{{ show }}"
+            title="支付方式"
+            bind:click-overlay="onClose"
+            bind:close="onClose" >
+        <van-radio-group value="{{ radio }}" bind:change="onChange">
+            <van-cell-group>
+                <van-cell
+                        title="单选框 1"
+                        clickable
+                        data-name="1"
+                        bind:click="onClick"
+                        icon="http://img3.imgtn.bdimg.com/it/u=436937017,337546424&fm=26&gp=0.jpg"
+                >
+                    <van-radio slot="right-icon" name="1" />
+                </van-cell>
+                <van-cell
+                        title="单选框 2"
+                        clickable
+                        data-name="2"
+                        bind:click="onClick"
+                        icon="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2145677754,3630634650&fm=26&gp=0.jpg"
+                >
+                    <van-radio slot="right-icon" name="2" />
+                </van-cell>
+            </van-cell-group>
+        </van-radio-group>
+        <view class="payment">
+            <view class="count">
+                <text>总价：</text>
+                <text>￥</text>
+                <text>{{totalPrice}}</text>
+            </view>
+            <button class="btn" bindtap="toSuccessfulPayment">立即购买</button>
+        </view>
+    </van-action-sheet>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/my/bindingPhone/bindingPhone.wxml-->
+<van-cell-group>
+ <van-field
+    value="{{ username }}"
+    clearable
+    label="手机号"
+    placeholder="请输入手机号"
+    bind:click-icon="onClickIcon"
+  />
+  <van-field
+    value="{{ sms }}"
+    center
+    clearable
+    label="验证码"
+    placeholder="请输入验证码"
+    border="{{ false }}"
+    use-button-slot
+  >
+    <van-button slot="button" size="small" type="primary">获取验证码</van-button>
+  </van-field>
+  </van-cell-group>
+  <view class="save">
+      <van-button type="primary" block>保存</van-button>
+  </view> 

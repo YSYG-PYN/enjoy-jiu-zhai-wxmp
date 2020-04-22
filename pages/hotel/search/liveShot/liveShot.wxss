@@ -1,0 +1,205 @@
+/* pages/hotel/search/liveShot/liveShot.wxss */
+.iconusecont-div {
+    display: inline-block;
+    width: 104rpx;
+    height: 60rpx;
+    text-align: center;
+    margin-top: 30rpx;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+  }
+
+  .download_logo{
+    background: red;
+    width: 60rpx;
+    height: 60rpx;
+    float: right;
+  }
+  .flex-item {
+    display: inline-block;
+    width: 104rpx;
+    height: 60rpx;
+    font-size: 24rpx;
+    border: 1rpx solid #ededed;
+    text-align: center;
+    border-radius: 10rpx;
+    color: #000;
+    cursor: pointer;
+    line-height: 30rpx;
+  }
+  .use_name {
+    font-size: 24rpx;
+    line-height: 60rpx;
+  }
+  .active-tag .flex-item {
+    background: #4B9AED;
+    color: #fff;
+  }
+  .exterior{
+      margin-left: 20rpx;
+      
+      margin-top: 40rpx;
+      margin-bottom: 20rpx;
+  }
+  .exterior_outside{
+      font-size: 18px;
+      color: #333;
+  }
+  .four{
+      font-size: 13px;
+      color: #666;
+  }
+  .hotel_pic,.more_pic{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: 20rpx;
+  }
+  .hotel_pic image,.more_pic image{
+    width: 234rpx;
+    height: 234rpx;
+    border-radius: 5px;
+  }
+  .image:nth-last-child(2){
+      margin-left: 10rpx;
+  }
+  .hotel_img{
+    position: relative;
+  }
+  .shade,.busines_shade{
+      width: 243rpx;
+      height: 240rpx;
+      text-align: center;
+      line-height: 260rpx;
+      background: rgba(255, 255, 255, .8);
+      color: #666;
+      font-size: 14px;
+      position: absolute;
+      top: 0;
+      right: 0;
+  }
+  .xian{
+      width: 702rpx;
+      height: 2rpx;
+      margin: 20rpx auto 0 auto;
+      border-bottom: 1px solid #e6e6e6;
+  }
+  .business,.business2{
+      font-size: 14px;
+      color: #333;
+      margin-left: 20rpx;
+      margin-bottom: 20rpx;
+  }
+  .business2{
+      margin-top: 60rpx;
+  }
+  .uploading_img{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-left: 20rpx;  
+      border-radius: 5px;
+  }
+  .uploading_img image{
+    width: 240rpx;
+    height: 240rpx;
+    margin-bottom: 10rpx;
+    border-radius: 5px;
+  }
+  .reference{
+      height: 166rpx;
+      background: #F7F7F9;
+      margin-top: 30rpx;
+      border: 1px solid transparent;
+  }
+  .reference_content{
+      font-size: 12px;
+      color: #333;
+      margin-top: 20rpx;
+      margin-left: 20rpx;
+  }
+  .hotel_interest{
+      font-size: 14px;
+      color: #333;
+      height: 122rpx;
+      display: flex;
+      justify-content: space-between;
+  }
+  .interest{
+      margin-left: 20rpx;
+  }
+  .hotel_interest .van-button--normal{
+      width: 228rpx;
+      height: 88rpx;
+      border-radius: 22px;
+      margin-top: 18rpx;
+      margin-right: 30rpx;
+  }
+  .hotel_interest .van-button__text{
+      font-size: 18px;
+  }
+  .wrapper {
+    height: 100%;
+    background-color: black;
+    position: relative;
+  }
+  .wrapper .wrapperContainer{
+      width: 100%;
+      height: 800rpx;
+  }
+  .wrapperContainer image{
+    width: 100%;
+    height: 700rpx;
+    margin-top: 152rpx;
+  }
+  .wrapper .van-icon-cross{
+      font-size: 24px;
+      color: #fff;
+      position: absolute;
+      top: 130rpx;
+      right: 40rpx;
+      z-index: 100;
+  }
+  .wrapper_detail{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 100rpx;
+  }
+  .wrapper_detail image{
+      width: 44rpx;
+      height: 44rpx;
+      margin-right: 24rpx;
+      margin-top: 0 !important;
+  }
+  .guest_room{
+    font-size: 16px;
+    margin-left: 24rpx;
+    color: #fff;
+    margin-right: 15rpx;
+  }
+  .double_bed{
+    font-size: 12px;
+    height: 28rpx;
+    color: #e6e6e6;
+    border-left: 1px solid #F7F7F9;
+    padding-left: 8rpx;
+  }
+  .swiper_border{
+    
+    height: 12rpx;
+    border-radius: 2px;
+    margin-left: 24rpx;
+    background: #fff;
+    margin-top: 10rpx;
+  }
+  .wrapper_bottom{
+    display: flex;
+  }
+  .wrapper_xian{
+    width: 700rpx;
+    height: 2rpx;
+    background-color: #333;
+    margin-top: 15rpx;
+    margin-right: 20rpx;
+  }

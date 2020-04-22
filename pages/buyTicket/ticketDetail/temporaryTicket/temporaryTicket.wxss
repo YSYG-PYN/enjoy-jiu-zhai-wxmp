@@ -1,0 +1,49 @@
+/* pages/buyTicket/ticketDetail/temporaryTicket/temporaryTicket.wxss */
+.order {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.order_tit {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 300rpx;
+	width: 100%;
+
+}
+
+.pay_num {
+	font-weight: 600;
+	font-size: 36rpx;
+	margin-top: 30rpx;
+}
+
+.bussiness {
+	width: 100%;
+	border: 1px solid #ccc;
+	border-left: none;
+	border-radius: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 30rpx;
+	font-size: 28rpx;
+}
+
+.pay_btn {
+	width: 95%;
+	height: 50px;
+	line-height: 50px;
+	background: #aaa;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 18px;
+	margin-top: 40rpx;
+}

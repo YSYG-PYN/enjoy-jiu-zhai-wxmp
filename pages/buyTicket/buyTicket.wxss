@@ -1,0 +1,200 @@
+.buy_ticket {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 28rpx;
+}
+
+.index_searchIpt_content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #ccc;
+	width: 95%;
+	font-size: 28rpx;
+	line-height: 48rpx;
+	border-radius: 50px;
+	background-color: #fff;
+}
+
+.ipt_search_icon {
+	margin-top: 18rpx;
+}
+
+.ticket {
+	width: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin-top: 30rpx;
+}
+
+/* 按钮 */
+.ticket_btn {
+	display: flex;
+	padding-left: 20rpx;
+	box-sizing: border-box;
+}
+
+.ticket_btn .btn {
+	padding: 14rpx 24rpx;
+    color: #799CAE;
+    background: #ECF4F5;
+    font-size: 28rpx;
+    margin-right: 20rpx;
+    border-radius: 3px;
+	margin-bottom: 20rpx;
+	min-width: 140rpx;
+	text-align: center;
+}
+
+/* 门票列表 */
+.ticket_content {
+	width: 100%;
+}
+
+.ticket_detail {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin-bottom: 20rpx;
+	border-bottom: 1px solid #eee;
+}
+.ticket_detail image{
+	width: 210rpx;
+	height: 210rpx;
+	border-radius: 5px;
+	margin-left: 20rpx;
+}
+.ticket_introduce {
+	padding-left: 20rpx;
+	overflow: hidden;
+	width: calc(100% - 230rpx);
+	color: #333333;
+}
+.ticket_introduce_tit{
+	font-size: 30rpx;
+	font-weight: 600;
+}
+.ticket_address,.ticket_address view{
+	display: flex;
+}
+.ticket_address view{
+	flex-direction: column;
+	flex-direction: column;
+	font-size: 24rpx;
+	margin: 20rpx 0;
+	margin-right: 60rpx;
+	font-weight: 600;
+	margin-bottom: 26rpx;
+}
+.ticket_address view .ticket_time_con{
+	font-size: 22rpx;
+	font-weight: normal;
+	color: #aaa;
+}
+.ticket_price_content{
+	display: flex;
+	justify-content: space-between;
+	padding: 18rpx 0;
+	border-bottom: 1px solid #eee;
+	padding-right: 50rpx;
+	align-items: flex-end;
+}
+.ticket_introduce_con{
+	font-size: 24rpx;
+	color: #666;
+	padding: 12rpx 0;
+	padding-left: 6rpx;
+	padding-right: 50rpx;
+	padding-bottom: 20rpx;
+}
+.score_content{
+	display: flex;
+	align-items: center;
+}
+.score_content .score_num{
+	margin-right: 30rpx;
+}
+.price_{
+	color: #FF3C3C;
+	font-size: 22rpx;
+}
+.price_ text:nth-of-type(1){
+	font-size: 38rpx;
+}
+.price_ text:nth-of-type(2),.score_amount{
+	color: #999;
+}
+.score_content{
+	color: #4B9AED;
+	font-size: 28rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .ticket_detail image {
+	width: 180rpx;
+	height: 180rpx;
+	background: #aaa;
+	border-radius: 5px;
+	margin-left: 20rpx;
+}
+
+.ticket_introduce {
+	padding-left: 20rpx;
+	overflow: hidden;
+	margin-right: 30rpx;
+}
+
+.ticket_introduce_tit {
+	display: flex;
+	justify-content: space-between;
+	line-height: 42px;
+}
+
+.ticket_spots text:nth-of-type(2) {
+	color: #aaa;
+	font-size: 24rpx;
+	margin-left: 30rpx;
+}
+
+.ticket_price {
+	font-size: 32rpx;
+	font-weight: 600;
+}
+
+.ticket_address,
+.ticket_score,
+.ticket_spots_detail {
+	font-size: 24rpx;
+	color: #aaa;
+	line-height: 20px;
+}
+.ticket_score text:nth-of-type(1){
+	color: 	#4876FF;
+}
+.ticket_price{
+	color: red;
+}
+
+.ticket_spots_detail {
+	width: 480rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+} */

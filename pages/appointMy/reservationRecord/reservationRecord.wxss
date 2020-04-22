@@ -1,0 +1,83 @@
+
+page{
+  background: #f5f5f5;
+}
+
+.appointDetail-container{
+  
+  margin-top: 20rpx;
+  background-color: white;
+   
+}
+.appointDetailItems{
+  padding: 1% 2% 1% 5%;
+
+}
+.appointDetailItem_name_time{
+   /* display:flex;
+   flex-flow: column nowrap;
+   justify-content: center; */
+
+   width: 100%;
+   margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.grayLine{
+  background: #dedede;
+  width: 100%;
+  height: 2rpx;
+  margin-top: 8rpx;
+  margin-bottom: 10rpx;
+  padding: 0 0 20 0rpx;
+}
+
+.detailButton{
+  /* float: right; */
+  /* height: 40rpx; */
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  border-radius: 15rpx;
+  padding: 10rpx 10rpx;
+  text-align: center;
+  font: 20rpx;
+  color: orangered;
+  /* background: #0082D7; */
+}
+
+.descriptionText{
+  margin-top: 20rpx;
+  /* margin-left: 30rpx; */
+  /* text-align: center; */
+  font-size: 28rpx;
+  width: 50%;
+}
+.patient_name{
+  /* padding: 20rpx 20rpx;
+  width: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  margin: 1% 1% 1% 5%;
+  width: 44%;
+  height: auto;
+}
+
+
+
+
+.loading-tip {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #ccc;
+}
+.wa-item {
+  border: 0;
+  margin: 0;
+  border-top: 1px solid #dedede;
+}

@@ -1,0 +1,218 @@
+.swipers{
+    width: 100%;
+}
+.swipers image{
+    width: 100%;
+    height: 344rpx;
+}
+.contents{
+    background-color: #F8F8F8;
+}
+.contents>view{
+    padding: 0rpx 24rpx 0rpx 24rpx;
+    background-color: white;
+}
+.contents .top{
+    height: 240rpx;
+    margin-bottom: 20rpx;
+    padding-top: 22rpx;
+}
+.proName{
+    font-size:32rpx;
+    font-family:PingFangSC-Medium,PingFang SC;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    margin-bottom: 40rpx;
+}
+.amountOfMoney{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 26rpx;
+    padding-bottom: 18rpx;
+}
+.money{
+    font-size:20rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(255,60,60,1);
+}
+.amount{
+    font-size:36rpx;
+    font-family:PingFangSC-Medium,PingFang SC;
+    font-weight:bold;
+    color:rgba(255,60,60,1);
+}
+.number{
+    font-size:24rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(153,153,153,1);
+    float: right;
+}
+.change{
+    /*margin-bottom: 80rpx;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.yx{
+    font-size:28rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(153,153,153,1);
+    margin-right: 47rpx;
+}
+.specifications{
+    font-size:28rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+}
+.gg{
+    margin-bottom: 20rpx;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.spec{
+    font-size:28rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+}
+.service{
+    display: flex;
+    align-items: center;
+    height: 100rpx;
+    margin-bottom: 20rpx;
+}
+.service text:nth-child(1){
+    font-size:28rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(153,153,153,1);
+    margin-right: 40rpx;
+}
+.service text:nth-child(2){
+    display: inline-block;
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 50%;
+    background:rgba(75,154,237,1);
+    margin-right: 10rpx;
+}
+.service text:nth-child(3){
+    font-size:24rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+}
+.contents .commit{
+    padding-top: 32rpx;
+    padding-bottom: 18rpx;
+    margin-bottom: 20rpx;
+}
+.userCommit{
+    margin-bottom: 30rpx;
+}
+.userCommit text:nth-child(1){
+    font-size:32rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+}
+.userCommit text:nth-child(2){
+    font-size:28rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(75,154,237,1);
+    float: right;
+    line-height: 38rpx;
+}
+.userName{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20rpx;
+}
+.head{
+    display: flex;
+    align-items: center;
+}
+.userName image:nth-child(1){
+    width: 44rpx;
+    height: 44rpx;
+    margin-right: 12rpx;
+}
+.userName text:nth-child(2){
+    font-size:24rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+}
+.userName text:nth-child(3){
+    font-size:24rpx;
+    font-family:PingFangSC-Light,PingFang SC;
+    font-weight:300;
+    color:rgba(102,102,102,1);
+    float: right;
+    line-height: 44rpx;
+}
+.productDetail{
+    margin-top: 42rpx;
+}
+.commitDetail{
+    font-size:24rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height:34rpx;
+}
+.title{
+    font-size:28rpx;
+    font-family:PingFangSC-Medium,PingFang SC;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    margin-bottom: 20rpx;
+}
+.contents .proDetails{
+    padding-top: 32rpx;
+    padding-bottom: 30rpx;
+    margin-bottom: 20rpx;
+}
+.proDetails image{
+    width: 100%;
+    height: 360rpx;
+    margin-bottom: 30rpx;
+}
+.proDetailsContent{
+    font-size:28rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height:40rpx;
+}
+.contents .purchaseInstructions{
+    padding-top: 24rpx;
+    padding-bottom: 30rpx;
+}
+.provice{
+    height: 100rpx;
+    font-size:28rpx;
+    font-family:PingFangSC-Light,PingFang SC;
+    font-weight:300;
+    color:rgba(102,102,102,1);
+    line-height:100rpx;
+    margin-bottom: 100rpx;
+    border-top: 1px solid #EEEEEE;
+}
+
+
+
+
+
+
+

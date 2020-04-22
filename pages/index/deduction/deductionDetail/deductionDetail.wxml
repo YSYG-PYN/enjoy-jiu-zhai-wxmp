@@ -1,0 +1,79 @@
+<!--pages/index/deduction/deductionDetail/deductionDetail.wxml-->
+<!-- 门票详情 -->
+<view class="deduction-detail">
+ <scroll-view scroll-y class="scroll-container">
+	<!-- 轮播图 -->
+		<swiper  class="swiperContainer" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" interval="{{interval}}" duration="{{duration}}" vertical="{{vertical}}" bindchange="onSlideChangeEnd">
+   <block wx:for="{{banner}}" wx:key="unique">
+     <swiper-item class='swiperImgs'>
+       <image class="swiperimg" src="{{item.image}}"  data-id='{{item.id}}' data-index='{{index}}'  bindtap='onSwiperTap'/>
+   <!-- 绑定一个事件，在js里面写事件函数的具体操作 -->
+      </swiper-item>
+     </block>
+    </swiper>
+    <view class="deduction-description">
+       <view class="escription-tickets">
+        <view class="ticket-title-content">
+         <view class="ticket-title">《千古九寨情演绎活动》夜场门票</view>
+         <view class="ticket-content">当地特色文艺演出，体验民族风情</view>
+        </view>
+        <view class="ticket-score-evaluation">
+          <view class="score-number">4.9分</view>
+          <view class="icon-image">星级icon</view>
+          <view class="evaluation">1000条评价</view>
+        </view>
+       </view>
+       <view class="site-map-view">
+         <image class="site-icon" src="../../../../images/weizhi.png"></image>
+         <view class="address-detail">四川省阿坝藏族羌族自制州九寨沟县301省道扎如寺路></view>
+         <view class="map-description" bindtap="toMap">地图</view>
+         <image class="direction-icon" src="../../../../images/back-right.png"></image>
+       </view>
+       <view>
+          <view class="tickets-title">门票</view>
+          <view class="tickets-detail">
+            <view class="tickets-name">《千古九寨情演绎活动》夜场门票</view>
+             <view class="tickets-price">
+               <text class="user-price">￥ 150起</text>
+               <text class="depress-price">￥ 599 </text>
+             </view>
+             <view class="tickets-description">
+              <view >
+                <view class="ticket-desc-one">可订明日</view>
+                <view class="ticket-desc-two">不可退|无需换票</view>
+                <view class="ticket-desc-two">
+                 <text>已售1000+ |</text>
+                 <text class="buy-to-know" bindtap="toBuyKnowDetail"> 购买需知</text>
+                </view>
+              </view>
+              <view class="ticket-booking" bindtap="toBookPage">预订</view>
+             </view>
+          </view>
+       </view>
+       <view class="relate_recommend_view">
+         <view class="line_title" bindtap="toRelatedRecommend">
+		      <text>相关推荐</text>
+         </view>
+         <scroll-view scroll-x="true">
+		<view class="line" scroll-x="true">
+			<block wx:for="{{ticketCommandData}}" wx:key="{{item.id}}">
+				<view class="line_content_detail" class="line_Item">
+					<view class="ticket_image">
+						<image src="{{item.image}}" bindtap="toRelatedDetail" data-linedetail="{{item.id}}"></image>
+					</view>
+					<text class="image_introduce">{{item.imageIntroduce}}</text>
+				</view>
+			</block>
+			<view class="line_Item" bindtap="toRelatedRecommend">
+				<view class="ticket_image">
+					<image src="{{ticketCommandData[ticketCommandData.length-1].image}}"></image>
+					<view class="ticket_mask"><text>More+</text></view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+       </view>
+    </view>
+ </scroll-view>
+
+</view>

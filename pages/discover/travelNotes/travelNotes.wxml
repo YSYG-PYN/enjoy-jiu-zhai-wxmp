@@ -1,0 +1,61 @@
+<!--pages/discover/travelNotes/travelNotes.wxml-->
+<view class="topbar" style="padding-top:{{statusBarHeight}}px">
+   <view class="arrow-box row" bindtap="backToPreviousClick">
+    <image src="../../../images/back.png"></image>
+   </view>
+   <view class="input-box row">
+      <icon type="search" size="16" class="ipt_search_icon" />
+      <input  bindinput="bindHideKeyboard" placeholder="搜索九寨最全旅游攻略" />
+    </view>
+</view>
+<view class="top-comend" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+<view class="box">
+    <view class="strategy">
+        游记攻略
+    </view>
+    <!-- 导航 -->
+    <view class="scenic_btn">
+     <scroll-view scroll-x="true" class="select_scenic_btn">
+      <block wx:for="{{dataArray}}">
+         <view class="{{index==idx?'_select':'select'}}"  bindtap="selectDataTab" data-index="{{index}}" data-text="{{item}}">{{item.name}} </view>
+      </block>
+     </scroll-view>
+	</view>
+
+   
+    <view class="travelNotes" wx:for="{{travelNotes}}" wx:key="{{item.id}}">
+    <view class="commodity">
+      <view class="content">
+        <view class="detail">
+            <view class="title">{{item.title}}</view>
+            <view class="site">
+                <image src="../../../images/xiaoxi.png" class="icon"></image>
+                <text>{{item.site}}</text>
+            </view>
+        </view>
+        <view class="img">
+          <image src="{{item.image}}"></image>
+        </view>
+      </view>
+
+      <view class="name">
+           <image src="../../../images/picture.png" class="icon"></image>
+            <text>{{item.name}}</text>
+            <text class="size">于</text>
+            <text>{{item.date}}出发</text>
+      </view>
+
+
+
+
+    </view>
+  </view>
+ 
+
+
+
+
+    
+</view>

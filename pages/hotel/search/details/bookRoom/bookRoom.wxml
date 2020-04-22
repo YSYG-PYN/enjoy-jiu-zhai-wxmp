@@ -1,0 +1,252 @@
+<view class="body">
+    <view class="topbar" style="padding-top:{{statusBarHeight}}px">
+        <view class="arrow-box row" bindtap="backToPreviousClick">
+            <image src="/images/back.png"></image>
+            <p>维也纳大酒店</p>
+        </view>
+        <!-- <view class="topbar_center">维也纳大酒店</view> -->
+        <view class="xing" bindtap="Collect">
+            <image src="/images/hotel/shoucang.png"></image>
+        </view>
+    </view>
+    <view class="top-comend" style="padding-top:{{statusBarHeight}}px"></view>
+
+    <view class="room">
+        <view class="room_head">
+            <view class="romm_left">
+                <p class="two_peop">标准双人间</p>
+                <view class="room_detail">
+                    <span class="detail_left">30m² 有窗</span>
+                    <span>双床1.2m</span>
+                </view>
+                <view class="two">
+                    <van-button type="default" class="btn">延迟退房</van-button>
+                    <van-button type="default" class="btn1">立即确认</van-button>
+                </view>
+                <view class="data">
+                    <span>10月31日</span>
+                    <text decode="true" space="true">&nbsp;-</text>
+                    <text decode="true" space="true">&nbsp;11月1日&nbsp;&nbsp;</text>
+                    <span>共1晚</span>
+                </view>
+            </view>
+            <view class="room_right">
+                <image src="../../../../../images/hotel/bigHotel.png"></image>
+            </view>
+        </view>
+    </view>
+    <view>
+        <p class="tourist">游客信息</p>
+        <view class="room_num" bindtap="chooseRoom">
+            <van-cell-group>
+                <van-cell-group>
+                    <van-field label="房间数" readonly value="{{ value }}" placeholder="入住人姓名" border="{{ false }}"
+                        bind:change="onChange" />
+                </van-cell-group>
+            </van-cell-group>
+            <van-icon name="arrow-down" class="{{xza?'xz':''}}" />
+        </view>
+        <view class="block" hidden="{{show}}">
+            <view class="iconusecont-div {{state==index?'active-tag':''}}" bindtap="select_use" wx:for="{{use}}"
+                data-key='{{index}}' data-name="{{item.name}}">
+                <view class="flex-item">
+                    <text class='use_name'>{{item.name}}</text>
+                </view>
+            </view>
+        </view>
+
+        <view class="room_peop">
+            <van-cell-group>
+                <van-cell-group>
+                    <van-field label="入住人" value="{{ value2 }}" placeholder="入住人姓名" border="{{ false }}"
+                        bind:change="onChange2" />
+                </van-cell-group>
+            </van-cell-group>
+            <van-icon name="user-circle-o" bindtap="roomPreop" />
+        </view>
+        <van-popup show="{{ show2 }}" position="bottom" custom-style="height: 50%;" bind:close="closeAdd">
+            <view class="add" bindtap="AddPersonal">
+                <van-icon name="plus" />
+                <text decode="true" space="true" class="linkman">&nbsp;去添加常用联系人</text>
+            </view>
+            <van-radio-group value="{{ radio }}" bind:change="choseAdd">
+                <van-cell-group>
+                    <van-cell clickable data-name="1" bind:click="onClick">
+                        <view class="personal">
+                            <p>李未来</p>
+                            <p class="name">+86</p>
+                            <p>13865207419</p>
+                        </view>
+                        <van-radio slot="right-icon" name="1" />
+                    </van-cell>
+                    <van-cell clickable data-name="2" bind:click="onClick">
+                        <view class="personal">
+                            <p>李未来</p>
+                            <p class="name">+86</p>
+                            <p>13865207419</p>
+                        </view>
+                        <van-radio slot="right-icon" name="2" />
+                    </van-cell>
+                </van-cell-group>
+            </van-radio-group>
+            <p class="special_hotel">酒店正对您的偏好尽量安排，但不能保证，请您谅解</p>
+        </van-popup>
+        <view class="phone">
+            <van-cell-group>
+                <van-cell-group>
+                    <van-field label="手机" value="{{ value3 }}" placeholder="用于接受预订信息" border="{{ false }}"
+                        bind:change="onChange3" />
+                </van-cell-group>
+            </van-cell-group>
+            <van-icon name="phone-circle-o" bindtap="linkman" />
+        </view>
+        <van-dialog use-slot show="{{ show5 }}" show-cancel-button bind:close="onClose">
+            <view class="visit">
+                <view class="app">"app名称"想要访问您的通讯录</view>
+                <view class="app_hotel">“app名称”会在酒店，飞机，火车等服务中使用您的通讯录权限</view>
+            </view>
+        </van-dialog>
+        <view class="room_data">
+            <van-cell-group>
+                <van-cell-group>
+                    <van-field label="入住时段" value="{{ value4 }}" placeholder="14:00后办理" border="{{ false }}"
+                        bind:change="onChange4" />
+                </van-cell-group>
+            </van-cell-group>
+        </view>
+    </view>
+    <view>
+        <view class="room_peop" bindtap="choserPeo">
+            <van-cell-group>
+                <van-cell-group>
+                    <van-field label="特别要求" readonly value="{{ value5 }}" border="{{ false }}"
+                        bind:change="onChange2" />
+                </van-cell-group>
+            </van-cell-group>
+            <van-icon name="arrow" />
+        </view>
+        <view>
+            <van-popup show="{{ show1 }}" position="bottom" custom-style="height: 60%;" bind:close="Close">
+                <view class="popup">
+                    <p class="special">特别要求</p>
+                </view>
+                <van-checkbox-group value="{{ result }}" bind:change="choseRequire">
+                    <van-cell-group>
+                        <van-cell wx:for="{{ list }}" wx:key="index" title="{{ item }}" value-class="value-class"
+                            clickable data-index="{{ index }}" bind:click="toggle">
+                            <van-checkbox catch:tap="noop" class="checkboxes-{{ index }}" name="{{ item }}" />
+                        </van-cell>
+                    </van-cell-group>
+                </van-checkbox-group>
+                <p class="special_hotel">酒店正对您的偏好尽量安排，但不能保证，请您谅解</p>
+            </van-popup>
+        </view>
+        <view class="room_bill">
+            <van-cell-group>
+                <van-cell-group>
+                    <van-field label="发票" value="{{ value6 }}" placeholder="入住人姓名" border="{{ false }}"
+                        bind:change="onChange2" />
+                </van-cell-group>
+            </van-cell-group>
+            <van-icon name="phone-o" bindtap="clickPhone" />
+        </view>
+        <view class="zhezhao" hidden="{{zhezhao}}">
+            <view class="dw">
+                <view class="call_pay">拨打电话</view>
+                <view class="call_phone" bindtap="Call">028-62670088</view>
+                <view class="cancel" bindtap="closeZh">
+                    取消
+                </view>
+            </view>
+
+
+        </view>
+
+    </view>
+    <view>
+        <view class="explain">
+            <p class="explain_withhold">扣款说明:</p>
+            <p class="withhold">18:00前可免费取消修改，若未入住或 过时取消将收取您全额房费rmb268。app会根据您的 付款方式进行预授权或扣除房费，订单需等酒店或供
+                应商确认后生效，订单确认结果以短信通知为准，附 加费将与房费同时扣除或返还。</p>
+        </view>
+        <view class="explain">
+            <p class="explain_withhold">入离时间:</p>
+            <view class="withhold time">
+                <p class="withhold_data">14:00后办理入住：早到店可能需要等待</p>
+                <p>12:00前办理退房：续住及行李寄存请联系酒店前台</p>
+            </view>
+        </view>
+    </view>
+    <view class="professional">
+        <p>专业服务</p>
+        <image src="../../../../../images/hotel/yuan.png"></image>
+        <p>全程保障</p>
+    </view>
+</view>
+<view class="zhe" hidden="{{zhe}}" bindtap="zheClose"></view>
+<view class="floor" hidden="{{line}}">
+    <view class="floor_head" hidden="{{zhe}}">
+        <view class="line_pay">
+            <view class="zhe_pay">在线付款</view>
+            <view>
+                <text class="dol">￥</text>
+                <text class="money">268</text>
+            </view>
+        </view>
+        <view class="roomMoeny">
+            <text class="roomMoeny_left" decode="true" space="true">2019-11-01&nbsp;房费&nbsp;不含早</text>
+            <text class="">￥268 ×1间</text>
+        </view>
+        <view class="erect">
+            <text>房费立减</text>
+            <text>- ￥ 0</text>
+        </view>
+    </view>
+    <view class="room_floor">
+        <view class="floor_left aa">
+            <text class="pay" decode="true" space="true">在线支付:&nbsp;</text>
+            <text class="dol">￥</text>
+            <text class="money">268</text>
+        </view>
+
+        <view class="floor_right">
+            <p class="floor_detaile" bindtap="particulars">明细</p>
+            <van-icon name="arrow-up" bindtap="particulars" />
+            <van-button round type="info" bindtap="sunbim">提交订单</van-button>
+        </view>
+    </view>
+</view>
+<view class="zhe" hidden="{{alipay}}"></view>
+<view class="floor" hidden="{{pay}}">
+    <view class="floor_head" hidden="{{alipay2}}">
+        <view class="payment">支付方式</view>
+        <van-radio-group value="{{ we }}" bind:change="Payment">
+            <van-cell-group>
+                <van-cell  clickable data-name="1" bind:click="clickWechat">
+                    <view class="alipay_one">
+                        <van-icon name="alipay" />
+                        <text decode="true" space="true" class="alipay">&nbsp;支付宝</text>
+                    </view>
+                    <van-radio slot="right-icon" name="1" />
+                </van-cell>
+                <van-cell  clickable data-name="2" bind:click="clickWechat">
+                    <view class="wechart_one">
+                        <van-icon name="wechat" />
+                        <text class="alipay" decode="true" space="true">&nbsp;微信支付</text>
+                    </view>
+                    <van-radio slot="right-icon" name="2" />
+                </van-cell>
+            </van-cell-group>
+        </van-radio-group>
+    </view>
+    <view class="room_floor">
+        <view class="floor_left aa">
+            <text class="pay" decode="true" space="true">在线支付:&nbsp;</text>
+            <text class="dol">￥</text>
+            <text class="money">268</text>
+        </view>
+        <view class="wechat_right">
+            <van-button round type="info" bindtap="Immediate">立即支付</van-button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,35 @@
+<!--pages/linerecommend/linerecommend.wxml-->
+<view class="line_recommend">
+	<scroll-view scroll-x="true">
+		<view class="line" scroll-x="true">
+			<block wx:for="{{lineCommandData}}" wx:key="{{item.id}}">
+				<view class="line_content_detail" class="line_Item">
+					<view class="line_content_image">
+						<image src="{{item.image}}"></image>
+					</view>
+					<text class="image_introduce">{{item.imageIntroduce}}</text>|<text class="special_text">{{item.lineSpecial}}</text>
+				</view>
+			</block>
+			<!-- <view class="line_Item">
+				<view class="line_content_image">
+					<image src="{{lineCommandData[lineCommandData.length-1].image}}"></image>
+					<view class="mask"><text>More+</text></view>
+				</view>
+			</view> -->
+		</view>
+	</scroll-view>
+	<!-- 列表展示 -->
+	<!-- 热门线路 -->
+	<text class="line_title">热门线路</text>
+	<!-- 列表 -->
+	<view class="line_list">
+		<block wx:for="{{lineList}}" wx:key="{{item.id}}" >
+			<view class="line_list_content">
+				<view class="line_detail" bindtap="toLineDetail" data-linedetail="{{item.id}}">{{item.lineListDetail}}</view>
+				<view class="line_detail_image">
+					<image src="{{item.image}}" bindtap="toLineDetail" data-linedetail="{{item.id}}"></image>
+				</view>
+			</view>
+		</block>
+	</view>
+</view>

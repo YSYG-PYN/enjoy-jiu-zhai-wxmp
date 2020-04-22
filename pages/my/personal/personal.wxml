@@ -1,0 +1,33 @@
+<!--pages/my/personal/personal.wxml-->
+<view>
+    <view class="headPortrait">
+      <view>头像</view>
+      <image src="{{login?userInfo.avatarUrl:images}}"></image>
+    </view>
+    <van-cell title="用户名" value="{{login?userInfo.nickName:'未登录'}}" />
+    <van-cell title="性别" is-link bind:click="showPopup" value="{{gender}}"/>
+        <van-popup show="{{ show }}" position="bottom" custom-style="height: 50%;" >
+          <view bindtap="nan">{{nan}}</view>
+          <view bindtap="nv">{{nv}}</view>
+          <view bindtap="secrecy">{{secrecy}}</view>
+          <view class="close" bindtap="onClose">取消</view>
+        </van-popup>
+   <!-- 生日 -->
+         <picker mode="date" value="{{startTime}}" bindchange="birthday">
+              <view class="picker">
+                    <van-cell title="生日" is-link  value="{{startTime}}"/> 
+              </view>
+          </picker>
+          
+     <van-cell title="绑定手机"  is-link value="未绑定" bindtap="bindingPhone"/>
+    <van-cell title="绑定微信"  is-link value="已绑定" bindtap="unbind"/>
+</view>
+<view class="quit">
+    <van-button type="primary" block color="#ccc" bindtap="quit">退出登录</van-button>
+</view>
+
+
+
+
+
+

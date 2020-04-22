@@ -1,0 +1,12 @@
+<!--pages/buyTicket/ticketDetail/temporaryTicket/temporaryTicket.wxml-->
+<view class="order">
+	<view class="order_tit">
+		<text class="pay_tit">订单付款</text>
+		<text class="pay_num">￥100.00</text>
+	</view>
+	<view class="bussiness">
+		<text>收款方</text>
+		<text>九寨沟县XX有限公司</text>
+	</view>
+	<view class="pay_btn">立即支付</view>
+</view>

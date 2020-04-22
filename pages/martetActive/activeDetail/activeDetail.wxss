@@ -1,0 +1,103 @@
+/* pages/martetActive/activeDetail/activeDetail.wxss */
+page{
+    height: 100%;
+}
+#box{
+    height: 100%;
+}
+.foript_position {
+    /* position: relative; */
+    width: 100%;
+    height: auto;
+}
+.swiperContainer {
+    width: 100%;
+    height: 400rpx;
+}
+.swiperImgs{
+    position: relative;
+
+}
+.swiperimg {
+    border-radius: 10rpx;
+    width: 100%;
+    height: 100%;
+}
+.content{
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #999999;
+}
+.title{
+    font-size: 30rpx;
+    font-weight: bold;
+    margin-bottom: 20rpx;
+}
+.money{
+    font-size: 30rpx;
+    margin-bottom: 20rpx;
+}
+.count{
+    font-size: 30rpx;
+    font-weight: bold;
+    padding: 10px 0px;
+    border-bottom: 1px solid #999999;
+    margin-bottom: 10rpx;
+}
+.produceDetail .titles{
+    padding: 10px 0px;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #666666;
+}
+.produceDetail view{
+    font-size: 25rpx;
+    color: #999999;
+    margin-bottom: 15rpx;
+}
+.signUp{
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+.look{
+    display: flex;
+    justify-content: space-between;
+}
+.look text:first-child{
+    font-size: 25rpx;
+}
+.look text:last-child{
+    color: #999999;
+    font-size: 25rpx;
+    margin-bottom: 40rpx;
+}
+.people{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30rpx;
+}
+.peopleList image{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+.peopleList view{
+    text-align: center;
+    font-size: 25rpx;
+    color: #999999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

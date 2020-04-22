@@ -1,0 +1,74 @@
+<!--pages/appointHome/appointHome.wxml-->
+
+<import src="newscell-template/newscell-template.wxml"/>
+<view class="homeContainer">
+  <swiper  class="swiperContainer" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" vertical="{{vertical}}">
+   <block wx:for="{{banner}}" wx:key="unique">
+     <swiper-item class='swiperImgs'>
+       <image class="swiperimg" src="{{item.hosImgUrl}}"  data-id='{{item.hospitalId}}' data-index='{{index}}'  bindtap='onSwiperTap'/>
+   <!-- 绑定一个事件，在js里面写事件函数的具体操作 -->
+      </swiper-item>
+     </block>
+    </swiper>
+  <view class='treatmentService-swiperContainer'>
+    <view bindtap="toDoctor" class="lable-line">诊疗服务</view>
+  </view>
+    
+   <view class="big-logo">
+    <block>
+      <view bindtap="toAppointmentRegister" class="logoinfo">
+        <image src="../images/icon_5.png" />
+        <text class="logotext">预约挂号</text>
+      </view>
+    </block>
+    <block>
+      <view bindtap="toAppointmentTodayRegister" class="logoinfo">
+        <image src="../images/icon_5.png" />
+        <text class="logotext">当天挂号</text>
+      </view>
+    </block>
+    <block>
+      <view bindtap="toEmergencyGuide" class="logoinfo">
+        <image src="../images/icon_01.png" />
+        <text class="logotext">急诊须知</text>
+      </view>
+    </block>
+    <block>
+      <view bindtap="toPatientFlow" class="logoinfo">
+        <image src="../images/icon_4.png" />
+        <text class="logotext">住院流程</text>
+      </view>
+    </block>
+  </view>
+<view class="index-list-content">
+
+    <view class="lable-line">预约通知
+    </view>
+      <view wx:for="{{informNews}}" class="wa-item wa-item-thumbnail-left" bindtap="informNewsDetailTap" data-id="{{item.reserveId}}" data-index="{{index}}">
+        <view class="min-h"> 就诊人
+        <text style="color:red">{{item.visitPersonName}}</text>
+        请于
+        <text style="color:red">{{item.reserverTime}}{{item.week}}</text>
+        到
+       <text style="color:red">{{item.hospitalName}} {{item.depName}}</text>
+        医生
+       <text style="color:red">{{item.doctorName}}</text> 处就诊</view>
+      </view>
+     <view  class="lable-line">报告通知
+    </view>
+  
+      <view wx:for="{{reportMesage}}" class="wa-item wa-item-thumbnail-left"  bindtap="reportDetailTap" data-id="{{item.reportId}}" data-index="{{index}}">
+        <view class="min-h"> 就诊人
+        <text style="color:red">{{item.visitPersonName}}</text>
+        于
+        <text style="color:red">{{item.reportTime}}</text>
+        到
+       <text style="color:red">{{item.hospitalName}} {{item.depName}}</text> 
+       处就诊的报告已出。</view>
+
+      </view>
+  
+  </view>
+
+
+</view>

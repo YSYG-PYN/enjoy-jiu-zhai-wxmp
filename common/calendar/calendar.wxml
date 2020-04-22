@@ -1,0 +1,30 @@
+<!--common/calendar/calendar.wxml-->
+<view class="calendar">
+   <view class='w100P showData'>
+         <view style='color: #999'>日</view>
+         <view>一</view>
+         <view>二</view>
+         <view>三</view>
+         <view>四</view>
+         <view>五</view>
+         <view style='color: #999'>六</view>
+   </view>
+    <view class='tit'>
+        <view class='pre'>
+          <image src="../../images/right_arrow.jpg" bindtap='gotoPreMonth' style="display:{{!show?'none':'block'}}"/>
+        </view>
+        <view class='current'>{{currentYear}}-{{currentMonth}}</view>
+        <view class='next'>
+          <image src="../../images/left_arrow.jpg" bindtap='gotoNextMonth' style="display:{{show?'none':'block'}}"/>
+            
+        </view>
+    </view>
+
+    <view class='content'>
+      <view wx:for="{{allArr}}" wx:key="{{index}}" class='itemData' data-currency="{{item.month == 'current' ? '1' : '0'}}" data-day='{{item.date}}' bindtap='getNowData'>
+         <view class="{{item.month == 'current' ? '' : 'gray'}}" style="height:40px;width:40px;line-height:40px;{{item.month == 'current'&&nowYear==currentYear&&currentMonth==nowMonth&&item.date==nowDate?'color:#fff;background:#1CA2FC;border-radius:10px':''}}"
+         >{{item.date}}</view>
+      </view >
+    </view>
+</view>
+

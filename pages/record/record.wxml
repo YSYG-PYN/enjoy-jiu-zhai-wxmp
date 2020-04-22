@@ -1,0 +1,27 @@
+<!--pages/record/record.wxml-->
+<view class="box">
+    <view class="title">历史记录</view>
+    <view>
+          <view>您好，您提交的事故上报正在处理中，请耐心等待</view>
+          <view class="active">
+                 <view class="date">
+                      <text>2020-01-06</text>
+                       <text>12:12:12</text>
+                 </view>
+                 <view class="course" bindtap="course">申请已受理 ></view> 
+          </view>
+    </view> 
+     <view>
+          <view>您好，你本次提交的事故已处理，感谢您对我们工作的支持和信任。</view>
+           <view class="active">
+                 <view class="date">
+                      <text>2020-01-06</text>
+                       <text>12:12:12</text>
+                 </view>
+                 <view class="course"bindtap="course">处理完成 ></view> 
+          </view> 
+    </view> 
+
+
+
+</view>

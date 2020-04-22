@@ -1,0 +1,145 @@
+/* pages/discover/travelNotes/travelNotes.wxss */
+/* 头部搜索返回、按钮 */
+.topbar {
+  width: 100%;
+  height: 90rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.arrow-box {
+  width: 10%;
+  text-align: center;
+  height: 100%;
+  float: left;
+}
+.arrow-box image {
+  width: 30rpx;
+  height: 34rpx;
+}
+.input-box {
+  margin-top: 14rpx;
+  width:60%;
+  height: 60rpx;
+  float: left;
+  background-color: #f2f2f2;
+  border-radius: 88rpx;
+	padding-left: 20rpx;
+}
+ 
+.input-box input {
+  font-size: 24rpx;
+  color: #333;
+  width: 100%;
+  padding-left: 7%;
+}
+.top-comend{
+  width: 100%;
+  height: 80rpx;
+}
+
+.box{
+  padding:0 20rpx;
+  font-size: 30rpx;
+}
+
+.strategy{
+    font-weight: 600;
+    margin-top: 20rpx;
+    font-size: 35rpx;
+}
+/* 按钮 */
+.scenic_btn {
+  background: white;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.select_scenic_btn{
+  display: flex;
+  white-space: nowrap;  
+} 
+
+._select {
+  width:140rpx;
+  text-align: center;
+  line-height: 80rpx;
+  display: inline-block; 
+  color:white;
+  margin:0 10rpx;
+  background: #0082D7;
+  border-radius: 10rpx;
+box-shadow: #666 0px 0px 3px;
+}
+.select{
+  line-height: 80rpx;
+  width:140rpx;
+  text-align: center;
+  margin:5rpx 10rpx;
+  display: inline-block;
+  border-radius: 10rpx;
+  box-shadow: #666 0px 0px 3px;
+}
+._select :nth-child(1){
+ margin-left: 0rpx;
+}
+.scenic_btn input {
+	width: 140rpx;
+	text-align: center;
+	height: 32px;
+	border: 1px solid #ccc;
+	border-radius: 5px 5px 0 0;
+}
+
+
+.title{
+  font-weight: 600;
+  line-height: 50rpx;
+}
+.commodity{
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #ccc;
+
+}
+.content{
+  display: flex;
+}
+.site{
+  display: flex;
+  align-items: center;
+  color: #4B9AED;
+  font-size: 28rpx;
+  height: 50rpx;
+}
+.icon{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.img{
+  margin-left: 20rpx;
+}
+.img image{
+  width:300rpx;
+  height: 200rpx; 
+}
+.name{
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color:#ccc;
+}
+.name text{
+  margin: 0 10rpx;
+}
+.size{
+  color: #4B9AED;
+}

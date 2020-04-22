@@ -1,0 +1,126 @@
+<!-- pages/foodBeverage/foodDetail/foodDetail.wxml -->
+<view class="top_ipt">
+    <image src="./../../../images/back.png" bind:tap="goBack" />
+    <view class="icon_collect">
+        <image src="../../../images/food/collect.png" />
+        <image src="../../../images/food/share.png" />
+    </view>
+</view>
+<view class="food_detail_content">
+    <block wx:for="{{foodDetailObj}}">
+        <view class="restaurant_detail_content">
+            <image class="detail_image" src="{{item.image}}" />
+            <view class="restaurant_title">
+                <view class="restaurant_name">{{item.restaurantName}}</view>
+                <view class="restaurant_recommend">
+                    <text>口味：{{item.tasteScore}}</text>
+                    <text>环境：{{item.environment}}</text>
+                    <text>服务：{{item.service}}</text>
+                    <text>食材：{{item.foodMaterial}}</text>
+                </view>
+            </view>
+            <view class="interval"></view>
+            <view class="onBusiness">
+                <text>营业中</text>
+                <text>{{item.StartTime}}-{{item.EndTime}}</text>
+            </view>
+            <view class="interval"></view>
+            <view class="guide">
+                <text>{{item.restaurantSpecificAddress}}</text>
+                <view class="guide_icon" bind:tap="toMap">
+                    <image src="../../../images/food/navigation.png" />
+                    <text>导航</text>
+                </view>
+            </view>
+            <view class="interval"></view>
+
+            <view class="">
+                
+            </view>
+
+
+
+
+
+
+
+            <view class="interval"></view>
+
+            <view class="business_Consultation">
+                <text>商家咨询</text>
+                <image src="../../../images/food/phone.png" bind:tap="phoneCall" data-phone="13456782342" />
+            </view>
+            <view class="biginterval"></view>
+            <view class="food_ranking">
+                <text>『九寨沟美食榜』</text>
+                <text>第{{item.foodRanking}}名</text>
+            </view>
+            <view class="food_menu">
+                
+            </view>
+            <view class="biginterval"></view>
+            <view class="special_food">
+                <view class="special_food_title">
+                    <view class="food_title_text">
+                        特色菜品
+                        <text>({{item.specialFood.length}})</text>
+                    </view>
+                    <view class="more" bind:tap="toMoreSpecialfood">
+                        <!-- <image src="../../../images/food/backicon.png"/> -->
+                        >
+                    </view>
+                </view>
+                <view class="special_food_content">
+                    <scroll-view scroll-x="true">
+                        <view class="hot_spots" scroll-x="true">
+                            <block wx:for="{{item.specialFood}}" wx:key="{{item.sid}}">
+                                <view class="hot">
+                                    <image class="hot_image" src="{{item.foodImg}}"></image>
+                                    <text class="hot_spots_introduce">{{item.foodName}}</text>
+                                </view>
+                            </block>
+                        </view>
+                    </scroll-view>
+                </view>
+            </view>
+            <view class="biginterval"></view>
+            <view class="special_food">
+                <view class="special_food_title">
+                    <view class="food_title_text">
+                        附近餐厅
+                        <text>(23)</text>
+                    </view>
+                    <view class="more">
+                        <!-- <image src="../../../images/food/backicon.png"/> -->
+                        查看更多>
+                    </view>
+                </view>
+                <view class="special_food_content">
+                    <scroll-view scroll-x="true">
+                        <view class="hot_spots" scroll-x="true">
+                            <!-- <block wx:for="{{hotFoodData}}" wx:key="{{item.fid}}"> -->
+                            <view class="hot">
+                                <image class="hot_image" src="http://img2.imgtn.bdimg.com/it/u=4072812991,3502748939&fm=26&gp=0.jpg"></image>
+                                <text class="hot_spots_introduce">酸奶</text>
+                            </view>
+                            <view class="hot">
+                                <image class="hot_image" src="http://img2.imgtn.bdimg.com/it/u=4072812991,3502748939&fm=26&gp=0.jpg"></image>
+                                <text class="hot_spots_introduce">酸奶</text>
+                            </view>
+                            <view class="hot">
+                                <image class="hot_image" src="http://img2.imgtn.bdimg.com/it/u=4072812991,3502748939&fm=26&gp=0.jpg"></image>
+                                <text class="hot_spots_introduce">酸奶</text>
+                            </view>
+                            <view class="hot">
+                                <image class="hot_image" src="http://img2.imgtn.bdimg.com/it/u=4072812991,3502748939&fm=26&gp=0.jpg"></image>
+                                <text class="hot_spots_introduce">酸奶</text>
+                            </view>
+                            <!-- </block> -->
+                        </view>
+                    </scroll-view>
+                </view>
+            </view>
+            <van-action-sheet bind:cancel="closeVan" bind:click-overlay="closeVan" show="{{ show }}" actions="{{ actions }}" cancel-text="取消" />
+        </view>
+    </block>
+</view>

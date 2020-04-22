@@ -1,0 +1,125 @@
+<!-- pages/buyTicket/ticketDetail/fillOrder/flillOrder.wxml -->
+<view class="fill_order">
+    <view class="order_content">
+        <view class="order_detail">
+            <view class="order_tit">
+                <text class="order_tit_address">九寨沟风景区门票</text>
+                <view class="order_tit_price">
+                    <text class="price">￥</text>243<text class="price_per">/张</text>
+                </view>
+            </view>
+            <view class="mustkonw" bindtap="toCommand">购买通知</view>
+            <view class="order_time">2020-2-1</view>
+            <view class="order_num">
+                <text>购买数量</text>
+                <view class="num_btn">
+                    <view class="reduce">-</view>
+                    <input type="number" value="1" class="num"/>
+                    <view class="add">+</view>
+                </view>
+            </view>
+        </view>
+
+        <view class="fill_visitor_msg">
+            <view class="msg_tit">游客信息</view>
+            <view class="msg_content">
+                <view class="vname">
+                    <text>出游人</text>
+                    <input type="text" placeholder-="出游人姓名" placeholder-style="color:#aaa;font-size:26rpx"/>
+                </view>
+                 <view class="vphone">
+                    <text>手机号</text>
+                    <input type="number" placeholder-="用于接收确认短信" placeholder-style="color:#aaa;font-size:26rpx"/>
+                </view>
+                 <view class="vcard">
+                    <text>身份证</text>
+                    <input type="idcard" placeholder-="用于景点入园凭证" placeholder-style="color:#aaa;font-size:26rpx"/>
+                </view>
+
+            </view>
+        </view>
+         <view class="fill_visitor_msg">
+            <view class="msg_tit">意外险</view>
+            <view class="msg_content">
+                <view class="accident">
+                    <text>意外险</text><view class="accident_price"><text class="price_a">￥5</text>/份</view> 
+                </view>
+                <view class="check">
+                     <!-- <checkbox checked="{{checked}}"/>我已阅读并接受保险经济委托协议.意外险条款 -->
+                   <van-checkbox value="{{ checked }}" bind:change="onChange">我已阅读并接受保险经济委托协议.意外险条款</van-checkbox>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="commit_btn">
+        <view class="order_total_price">
+            <view>
+                订单金额：
+                <text class="picon">￥</text>
+                <text class="price_total">243</text>
+            </view>
+            <view class="price_btn">
+                <view class="detail" bindtap="toDetail">明细^</view>
+                <view class="sub_btn" bindtap="toPay">提交订单</view>
+            </view>
+        </view>
+    </view>
+
+
+	<van-action-sheet show="{{show}}" title="费用明细" bind:click-overlay="oncolse"  bind:close="colse" >
+        <view class="detail_tit">
+            九寨沟 玉树林+观光车+自驾游玩（熊猫基地，乐山，九寨沟，杜甫堂）
+        </view>
+        <view class="detail_price">
+            <text>门票</text>
+            <view>
+            <text>￥468.00</text>X<text>1</text>
+            </view>
+        </view>
+        <view class="detail_total_price">
+            总价￥<text class="dprice">468.00</text>
+        </view>
+		<view class="btn_content">
+				<button class="confrim_time_btn" bindtap="choose_present_time">确定</button>
+			</view>
+	</van-action-sheet>
+
+
+	<van-action-sheet show="{{gshow}}" title="九寨沟风景区门票" bind:close="colse" bind:click-overlay="oncolse">
+		<view class="rule">
+			<view class="rule_tit">预定规则</view>
+			<view class="rule_content">
+				<view>
+					<text>预定时间</text>
+					<text>19:00之前可定今日（当地时间）</text>
+				</view>
+				<view>
+					<text>生效时间</text>
+					<text>出票后立即生效</text>
+				</view>
+				<view>
+					<text>有效期</text>
+					<text>指定出行时间1天内有效</text>
+				</view>
+				<view>
+					<text>出票速度</text>
+					<text>平均10分钟出票</text>
+				</view>
+            </view>
+            <view class="rule_tit">费用说明</view>
+			<view class="rule_content">
+				<view>
+					<text>费用包含</text>
+					<text>九寨沟门票一张</text>
+				</view>
+				<view>
+					<text>费用不含</text>
+					<text>一切个人消费及费用包含中未提及的任何费用。</text>
+				</view>
+            </view>
+            <view class="btn_content">
+				<button class="confrim_time_btn" bindtap="choose_present_time">确定</button>
+			</view>
+			</view>
+	</van-action-sheet>
+</view>

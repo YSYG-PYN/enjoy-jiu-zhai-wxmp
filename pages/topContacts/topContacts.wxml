@@ -1,0 +1,31 @@
+<!--pages/topContacts/topContacts.wxml-->
+<view class="box">
+    <view class="active">
+          <label>
+              <view>王大锤</view>
+              150122119630215436
+          </label>
+          <view class="tel">
+              18512341324
+          </view>
+    </view>
+    <view class="site">
+       <checkbox>默认地址</checkbox>
+        <view class="right">
+      		   <view>
+      			   <van-icon name="edit" size="25"/>
+      			   <text>编辑</text>
+      		   </view>
+      		    <view class="del">
+      				 <van-icon name="delete" size="25"/>
+      				<text>删除</text>
+      			</view>
+      </view>
+       
+    </view>
+
+</view>
+
+<view class="fouter">
+    <van-button type="primary" block bindtap="addLinkman">添加联系人</van-button>
+</view>

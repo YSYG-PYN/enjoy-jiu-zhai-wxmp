@@ -1,0 +1,55 @@
+<!--pages/martetActive/martetActive.wxml-->
+<view id="box">
+    <!-- 轮播图 -->
+    <view class="foript_position">
+        <swiper class="swiperContainer" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}"
+                interval="{{interval}}" duration="{{duration}}" vertical="{{vertical}}">
+            <block wx:for="{{banner}}" wx:key="{{item.id}}">
+                <swiper-item class='swiperImgs' bindtap="toMarketActive">
+                    <image class="swiperimg" src="{{item.image}}" data-id='{{item.id}}' data-index='{{index}}' />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <view class="content">
+        <view class="title">
+            <text>九寨沟大峡谷滑雪比赛</text>
+            <text>活动进行中</text>
+            <button bindtap="toActiveDetail">点击报名</button>
+        </view>
+        <view class="times">
+            <text>时间</text>
+            <text>2019.12.12  24：00—2019.12.20  24：00</text>
+        </view>
+        <view class="data">
+            <view>
+                <view>已报名人数</view>
+                <view>100</view>
+            </view>
+            <view>
+                <view>累计票数</view>
+                <view>10000</view>
+            </view>
+            <view>
+                <view>访问数量</view>
+                <view>100万</view>
+            </view>
+        </view>
+        <view class="query">
+            <input type="text" placeholder="请输入编号获取姓名" />
+            <button>查询</button>
+        </view>
+        <button id="lookRank">查看排名</button>
+        <view class="rank">
+            <block wx:for="{{rank}}" wx:key="{{item.id}}">
+                <view class="rankDetail">
+                    <image src="{{item.image}}"></image>
+                    <view>{{item.name}}</view>
+                    <view>当前投票数：{{item.ticket}}</view>
+                    <button>{{item.state}}</button>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

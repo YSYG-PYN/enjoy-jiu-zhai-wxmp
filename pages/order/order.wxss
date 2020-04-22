@@ -1,0 +1,44 @@
+/* pages/order/order.wxss */
+.all{
+	padding: 0 10rpx 20rpx 10rpx;
+	font-size: 30rpx;
+}
+.aa{
+  
+  width: 750rpx !important;
+  display: flex;
+  justify-content: space-around;
+
+}
+.commodity{
+	padding-bottom: 10rpx;
+	border-bottom: 1rpx solid #ccc;
+}
+.title{
+	width: 100%;
+	height: 80rpx;
+	line-height: 80rpx;
+}
+.btn{
+	float: right;
+}
+.useTickets{
+	float: right;
+	margin-left: 20rpx;
+}
+.active{
+	
+	padding: 20rpx 0;
+	
+}
+.ticket{
+	display: flex;
+	justify-content: space-between;
+}
+.rates{
+	margin-left: 60rpx;
+}
+.quantity{
+	display: flex;
+	justify-content: space-between;
+}

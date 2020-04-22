@@ -1,0 +1,7 @@
+{
+	"navigationBarTitleText": "订单确认",
+	"usingComponents": {
+		"van-action-sheet": "@vant/weapp/action-sheet/index",
+		"calendar": "./../../../../common/calendar/calendar"
+	}
+}

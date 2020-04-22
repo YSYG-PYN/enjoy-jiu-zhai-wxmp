@@ -1,0 +1,192 @@
+<!--pages/discover/travelAgency/travelDetails/travelDetails.wxml-->
+<view class="tab">
+	<image src="../../../../images/back.png" bindtap="goBack"></image>
+	<view class="head">
+		<view bindtap="commodity" class="{{commodity?'_tabview':'tabview'}}">商品</view>
+		<view bindtap="tabEvaluate" class="{{tabEvaluate?'_tabview':'tabview'}}">评价</view>
+		<view bindtap="detail" class="{{detail?'_tabview':'tabview'}}">详情</view>
+	</view>
+</view> 
+<view class="top-comend" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+<view class="travelDetails">
+	<scroll-view class="businessCard-bot-left floarLeft" scroll-y style="height:{{viewHeg}}px" scroll-into-view="{{toIndex}}"
+	 scroll-with-animation="true" bindscroll="scrollTop" enable-back-to-top="true">
+		<!-- 商品 -->
+		<!-- 轮播图 -->
+		<view id="commodity">
+			<view class="swiper">
+				<swiper style="width:100%;height: 400rpx;" showImage="{{background}}" indicatorDots="{{indicatorDots}}" autoplay="{{autoplay}}"
+				 interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicatorColor="{{indicatorColor}}"></swiper>
+			</view>
+			<view class="box">
+				<view class="title">九寨沟黄龙山风景区3日跟团游玩双11钜惠,错过再等一年</view>
+				<view class="market"><text>￥300</text><text>已售300</text></view>
+				<view class="date">
+					<view class="nav">
+						<!-- 导航 -->
+						<view class="scenic_btn">
+							<scroll-view scroll-x="true" class="select_scenic_btn">
+								<block wx:for="{{dataArray}}">
+									<view class="{{index==idx?'_select':'select'}}" bindtap="selectDataTab" data-index="{{index}}" data-text="{{item}}">
+										<view>{{item.time}}</view>
+										<view>￥{{item.price}}</view>
+									</view>
+								</block>
+							</scroll-view>
+						</view>
+					</view>
+					<view class="more" bindtap="showPopup">
+						<view>
+							<van-icon name="calender-o" size="50rpx" />
+						</view>
+						<view>更多日期</view>
+					</view>
+					<van-popup show="{{ show }}" position="bottom" custom-style="height: 55%;" round bind:close="onClose">
+						<view class="calendar">
+							<calendar currentYear="2020" currentMonth="3" nowYear="2020" nowMonth="13" nowDate="5" bindsendObj='getCalendarData'></calendar>
+						</view>
+
+					</van-popup>
+				</view>
+			</view>
+			<view class="footer">
+				<view>服务承诺</view>
+				<view>自费</view>
+			</view>
+		</view>
+		<!-- 评价 -->
+		<view id="evaluateDiv">
+			<view class="box">
+				<view class="heard">
+					<view class="title">用户点评(1437)</view>
+					<view>
+						<text>5.0分</text>
+						<text>超棒</text>
+					</view>
+				</view>
+				<view class="evaluate" wx:for="{{evaluate}}" wx:key="{{item.id}}">
+					<view class="user">
+						<view>
+							<image src="../../../../images/picture.png"></image>
+							<view>{{item.name}}</view>
+						</view>
+						<view>{{item.time}}</view>
+					</view>
+					<view>{{item.remark}}</view>
+				</view>
+			</view>
+		</view>
+		<!-- 产品详情 -->
+		<view id="detail">
+			<view class="{{detail?'tabDetail':'_tabDetail'}}">
+				<view class="{{detailDetail?'detailDetail':''}}" bindtap="detailDetail">产品详情</view>
+				<view class="{{detailPaths?'detailDetail':''}}" bindtap="detailPaths">行程路线</view>
+				<view class="{{detailCost?'detailDetail':''}}" bindtap="detailCost">购买费用</view>
+				<view class="{{detailNotice?'detailDetail':''}}" bindtap="detailNotice">购买须知</view>
+			</view>
+			<view id="detailDetail" class="{{detail?'detailDiv':''}}">
+				<view class="box">
+					<view class="title">产品详情</view>
+					<view class="producta">
+						<image class="productImg" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2786251743,1770017086&fm=26&gp=0.jpg"></image>
+					</view>
+					<view class="synopsis">贝母为多年生草本植物。其鳞茎供药用，能止咳化痰、清热散结之功。按品种的不同，可分为川贝母、浙贝母和土贝母三大类。川贝母是贝母中的珍品，其价在各种贝母中最高。贝母不仅可以入药，还可以炖汤，汤美味鲜，具有滋补的效果。</view>
+				</view>
+			</view>
+			<!-- 行程路线 -->
+			<view id="detailPaths">
+				<view class="box">
+					<view class="title">行程路线</view>
+					<view class="content" wx:for="{{paths}}" wx:key="{{item.id}}">
+						<view class="oneDay">
+							<view class="title">{{item.day}}</view>
+							<view>{{item.site}}</view>
+						</view>
+						<view class="site">
+							<view class="detail">
+								<view class="site-title">
+									<view class="icon"></view>
+									<view>{{item.siteTitle[0]}}</view>
+								</view>
+								<view>{{item.time[0]}}</view>
+								<view class="tag">
+									<view>{{item.tag1[0]}}</view>
+									<view>{{item.tag2[0]}}</view>
+								</view>
+								<view>{{item.title[0]}}</view>
+							</view>
+							<image src="{{item.image[0]}}" class="img"></image>
+						</view>
+						<view class="distance">
+							<view class="icon"></view>
+							<view>直线距离5公里</view>
+						</view>
+						<view class="site">
+							<view class="detail">
+								<view class="site-title">
+									<view class="icon"></view>
+									<view>{{item.siteTitle[1]}}</view>
+								</view>
+								<view>{{item.time[1]}}</view>
+								<view class="tag">
+									<view>{{item.tag1[1]}}</view>
+									<view>{{item.tag2[1]}}</view>
+								</view>
+								<view>{{item.title[1]}}</view>
+							</view>
+							<image src="{{item.image[1]}}" class="img"></image>
+						</view>
+					</view>
+				</view>
+			</view>
+			<!-- 费用说明 -->
+			<view id="detailCost">
+				<view class="box">
+					<view class="title">费用说明</view>
+					<view class="costCategory">费用包含</view>
+					<view class="cost">
+						<view class="category">
+							<view>~大交通</view>
+							<view>1.飞机往返经济舱机票</view>
+							<view>2.燃油附加费（以实际标准为准）</view>
+							<view>3.机场建设费</view>
+						</view>
+						<view class="category">
+							<view>~当地交通</view>
+							<view>1.根据参团人数调派车辆，保证一人一正座</view>
+						</view>
+						<view class="category">
+							<view>~住宿</view>
+							<view>1.行程所列套餐</view>
+						</view>
+
+					</view>
+				</view>
+			</view>
+			<!-- 购买须知 -->
+			<view id="detailNotice">
+				<view class="box">
+					<view class="title">购买须知</view>
+					<view class="notice">
+						<view>旅客应在航空公司或其销售代理人的售票处购票。旅客购票凭本人有效身份证件或公安机关出具的其他身份证件，并填写。</view>
+						<view>旅客应当使用航空公司可以接受的货币和付款方式交付票款，除航空公司与旅客另有协议外，票款一律现付。
+							革命伤残军人和因公致残的人民警察凭《中华人民共和国革命伤残军人证》和《中华人民共和国人民警察伤残抚恤证》，按照同一航班成人普通票价的50%购票。
+							儿童按照同一航班成人普通票价的50%购买儿童票，提供座位。婴儿按照同一航班成人普通票价的10%购买婴儿票，不提供座位；如需要单独占用座位时，应购买儿童票。每一成人旅客携带婴儿超过一名时，超过的人数应购儿童票。
+						</view>
+					</view>
+					<view class="supplier">该产品由九寨 提供</view>
+
+				</view>
+			</view>
+		</view>
+</scroll-view>
+</view>
+<van-goods-action>
+	<van-goods-action-icon icon="like-o" text="收藏" />
+	<van-goods-action-icon icon="shop-o" text="店铺" />
+	<van-goods-action-icon icon="cart-o" text="购物车" info="5" />
+	<van-goods-action-button color="#7232dd" text="加入购物车" type="warning" />
+	<van-goods-action-button color="#4B9AED" text="立即购买" />
+</van-goods-action>

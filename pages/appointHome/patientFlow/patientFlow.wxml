@@ -1,0 +1,6 @@
+<!--pages/index/patientFlow/patientFlow.wxml-->
+
+    <view class="patientFlow-container">
+      <text> 1. 门（急）诊就诊，医生开入院证\n2. 持有效证件（身份证），携必要生活用品，到住院处交纳住院押金，办理入院手续（保存好有关收据)\n 3. 携带住院手续至病房办理住院\n
+      </text>
+    </view>

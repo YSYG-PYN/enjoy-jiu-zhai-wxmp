@@ -1,0 +1,101 @@
+page {
+  display: block;
+  background-color: #f5f5f5;
+  font-family: "微软雅黑";
+  font-size: 28rpx;
+}
+.patientSelect-container{
+   /* margin-top: 20rpx; */
+  padding:25rpx 20rpx 0rpx 50rpx;
+  font-size: 35rpx;
+  background-color: white;
+  height: 80rpx;
+
+  
+}
+.appointDetail-container{
+  
+  margin-top: 20rpx;
+  background-color: white;
+   
+}
+.patientSeletContent{
+  float: right;
+  font-size: 30rpx;
+}
+
+.arrowImage{
+  float: right;
+  margin-right: 10rpx;
+  width: 30rpx;
+  height: 30rpx;
+  position: relative;
+  top: 5rpx;
+
+}
+.backIndexImage{
+  width: 80rpx;
+  height: 80rpx;
+  float: right;
+  margin-right: 20rpx;
+  
+
+}
+.round-click{
+   height: 120rpx;
+    width: 120rpx;
+    background-color: #1b82d1;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 80rpx;
+    right: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+
+}
+.round-click text{
+    font-size: 28rpx;
+    max-width: 80rpx;
+    color: #fff;
+    text-align: center;
+}
+
+.appointDetailItems{
+  padding: 10rpx 25rpx 10rpx 20rpx;
+
+}
+
+.descriptionText{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  font-size: 35rpx;
+  color: #939393;
+}
+
+.confirmAppointbtn{
+  
+   margin-top:40rpx;
+   background: #1b82d1;
+    /* background-color:#1b82d1;  */
+    /* height:80rpx; */
+
+}
+
+.confirmAppointtext{
+  
+  display:flex;
+  align-items:center;
+  padding:15rpx 25rpx;
+  font-size: 35rpx;
+  justify-content:center;
+  color: white;
+  font: 30rpx;
+}
+
+.textReminder{
+  margin-top: 30rpx;
+  padding: 20rpx 20rpx;
+  color: #f7a010;
+}

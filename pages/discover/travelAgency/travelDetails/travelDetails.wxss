@@ -1,0 +1,329 @@
+/* pages/discover/travelAgency/travelDetails/travelDetails.wxss */
+.tab{
+	width: 100%;
+ background: #fff;
+	padding:40rpx 0rpx 0rpx 0rpx;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+ 	display: flex;
+ justify-content: space-between;
+	align-items: center; 
+}
+.tab image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 20rpx;
+}
+.head{
+  width: 380rpx;
+  margin-right:185rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.tabview{
+	height:70rpx;
+	line-height: 70rpx;
+}
+._tabview{
+	height:70rpx;
+	border-bottom: 5rpx solid #f00;
+	line-height: 70rpx;
+}
+.travelDetails{
+	margin-top: 160rpx;
+  margin-bottom: 160rpx;
+}
+
+.swiper{
+  width:100%;
+  height: auto;
+}
+.box{
+  padding:20rpx;
+  font-size: 30rpx;
+}
+.title{
+  font-weight: 600;
+  font-size: 35rpx;
+}
+.market{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+}
+.market text:nth-child(1){
+  color: red;
+  font-size: 35rpx;
+  font-weight: 600;
+}
+.market text:nth-child(2){
+  color:#ccc;
+}
+
+/* 滑动nav */
+.date{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+}
+.nav{
+  width:80%;
+}
+.more{
+  width: 20%;
+  background: #fff;
+  height: 110rpx;
+  border-radius: 10rpx;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.scenic_btn {
+  background: white;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+   font-weight: 600; 
+}
+
+.select_scenic_btn{
+  display: flex;
+  white-space: nowrap;
+  font-size: 28rpx; 
+  
+} 
+
+._select {
+  height:90rpx;
+  width:140rpx;
+  text-align: center;
+  padding: 20rpx 10rpx 0 10rpx;
+  display: inline-block; 
+  color:white;
+  margin: 20rpx;
+  background: #0082D7;
+  border-radius: 10rpx;
+
+}
+._select :nth-child(1){
+ margin-left: 0rpx;
+}
+._select view:nth-child(2){
+  color: #fff;
+}
+
+.select{
+  height:90rpx;
+  padding: 20rpx 10rpx 0 10rpx;
+  width:140rpx;
+  text-align: center;
+  background: #f2f2f2;
+  margin: 10rpx;
+  display: inline-block;
+  border-radius: 10rpx;
+}
+.select view:nth-child(2){
+  color: #f00;
+}
+.scenic_btn input {
+	width: 140rpx;
+	text-align: center;
+	height: 32px;
+	border: 1px solid #ccc;
+	border-radius: 5px 5px 0 0;
+}
+.calendar{
+  padding-top:30rpx;
+}
+.footer{
+  height: 100rpx;
+  margin-top: 40rpx;
+  padding-left: 20rpx;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  border-top: 10rpx solid #ccc;
+  border-bottom: 10rpx solid #ccc;
+}
+.footer view:nth-child(1){
+  margin-right: 30rpx;
+  color: #ccc;
+}
+
+
+/* 评价 */
+.heard{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60rpx;
+}
+.heard text{
+  font-size: 30rpx;
+    color: #4B9AED;
+    margin-left: 30rpx;
+}
+.evaluate{
+  margin-top: 30rpx;
+}
+.user{
+  display: flex;
+  justify-content: space-between;
+  height: 60rpx;
+  align-items: center;
+}
+.user image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.user>view{
+  display: flex;
+  align-items: center;
+}
+
+/*详情  */
+/*产品详情 */
+.producta{
+  width:100%;
+  margin: 20rpx 0;
+}
+._product{
+  width:100%;
+  margin: 20rpx 0;
+	margin-top: 100rpx;
+}
+.productImg{
+  width:100%;
+  height: 350rpx; 
+}
+/* 行程线路 */
+.oneDay{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60rpx 0;
+}
+.oneDay view:nth-child(2){
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.site{
+  display: flex;
+  padding: 30rpx 0;
+}
+.detail{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 20rpx;
+}
+.detail>view{
+  padding-left:50rpx;
+}
+.content .site-title{
+  font-size: 40rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.icon{
+  width: 30rpx;
+  height: 30rpx;
+  background: #4B9AED;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.tag{
+  display: flex;
+}
+.tag view{
+  padding: 0 20rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #ccc;
+  border-radius: 10rpx;
+  color: #fff;
+  margin-right: 20rpx;
+} 
+.img{
+  width: 250rpx;
+  height: 250rpx;
+}
+.distance{
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+}
+
+
+
+
+
+
+/* 费用说明 */
+.costCategory{
+  color: #ccc;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.cost{
+  color: #ccc;
+}
+.category{
+  margin-top: 20rpx;
+}
+
+/* 购买须知 */
+.notice{
+margin-top: 20rpx;
+  color: #ccc;
+ 
+}
+.supplier{
+  margin-top: 60rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #ccc;
+  color: #ccc;
+}
+.detailDiv{
+	padding-top: 80rpx;
+}
+._tabDetail{
+  height: 80rpx;
+	padding: 10rpx 20rpx;
+  border: 1rpx solid #ccc;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.tabDetail{
+  width:710rpx;
+  height: 80rpx;
+  padding: 10rpx 20rpx;
+  border: 1rpx solid #ccc;
+  background: #fff;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+	position: fixed;
+	top: 110rpx;
+}
+.detailDetail{
+  border-bottom: 5rpx solid #f00;
+}
+/* .cart{
+  display: flex;
+  padding: 0;
+  border-radius:40rpx;
+  border: 1rpx solid #0082D7;
+} */

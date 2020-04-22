@@ -1,0 +1,251 @@
+/**index.wxss**/
+
+.container {
+	background: rgba(243, 247, 250, 1);
+}
+
+.foript_position {
+	/* position: relative; */
+	width: 100%;
+	height: auto;
+}
+
+.ipt_content {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0 20rpx;
+	box-sizing: border-box;
+	padding-bottom: 20rpx;
+	background: #fff;
+}
+
+.index_searchIpt_content {
+	display: flex;
+	align-items: center;
+	width: 80%;
+	height: 60rpx;
+	font-size: 28rpx;
+	border-radius: 10rpx;
+	background: rgba(243, 247, 250, 1);
+	border-radius: 28px;
+	padding-left: 80rpx;
+	box-sizing: border-box;
+	margin-left: 32rpx;
+}
+
+.index_searchIpt {
+	line-height: 60rpx;
+	width: 100%;
+	font-size: 22rpx;
+	font-weight: 500;
+	color: rgba(153, 153, 153, 1);
+	padding-left: 10rpx;
+	box-sizing: border-box;
+}
+
+.index_searchIpt_content image {
+	width: 30rpx;
+	height: 30rpx;
+}
+
+.index_weather {
+	font-size: 28rpx;
+	font-weight: 600;
+	color: rgba(51, 51, 51, 0.9);
+	display: flex;
+	align-items: center;
+}
+
+.index_weather image {
+	width: 48rpx;
+	height: 48rpx;
+}
+
+.nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 40rpx;
+	padding-top: 20rpx;
+	background: #fff;
+}
+
+.nav image {
+	width: 100rpx;
+	height: 100rpx;
+	margin-bottom: 14rpx;
+}
+
+.nav .nav_content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 26rpx;
+	color: rgba(102, 102, 102, 1)
+}
+
+/* 线路推荐 */
+
+.select_title, .hot_title, .line_title {
+	font-weight: 600;
+	width: 100%;
+	padding-left: 20rpx;
+	padding-right: 40rpx;
+	padding-top: 25rpx;
+	line-height: 32px;
+	margin-top: 20rpx;
+	padding-bottom: 10rpx;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	background: #fff;
+	color: rgba(51, 51, 51, 1);
+}
+.select_title{
+	background: transparent;
+}
+
+.line_title image, .hot_title image {
+	width: 80rpx;
+	height: 36rpx;
+}
+
+.backgroung_color_hot, .backgroung_color_hot {
+	background: #fff;
+	padding-bottom: 40rpx;
+}
+
+.image_introduce {
+	font-size: 26rpx;
+	font-weight: 600;
+	color: rgba(51, 51, 51, 1);
+	height: 40px;
+	width: 100%;
+	display: block;
+}
+
+.special_text {
+	display: inline-block;
+	padding: 6rpx 10rpx;
+	font-size: 24rpx;
+	color: rgba(70, 152, 240, 1);
+	background-color: rgba(70, 152, 240, 0.1);
+	border-radius: 20px 0px 0px 20px;
+	position: relative;
+	padding-right: 20rpx;
+}
+
+.otherColor {
+	background-color: rgba(78, 132, 20, 0.1);
+	color: rgba(78, 132, 20, 1);
+}
+
+.special_decoration {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 15rpx;
+	height: 14rpx;
+}
+
+.select {
+	width: 100%;
+}
+
+.left_select, .right_select {
+	width: 48%;
+	margin: 0 1%;
+	float: left;
+}
+
+.left_select image, .right_select image {
+	width: 100%;
+}
+
+.select_command {
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 30rpx;
+	background-color: #fff;
+}
+
+.select_command .select_image {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 4rpx;
+}
+
+.select_image image {
+	border-radius: 10rpx;
+} 
+
+.select_introduce, .select_introduce_detail {
+	display: flex;
+	justify-content: space-between;
+	font-size: 28rpx;
+	box-sizing: border-box;
+	padding: 0 20rpx;
+	margin-top: 16rpx;
+}
+
+.select_introduce_detail {
+	padding-bottom: 10rpx;
+}
+
+.select_dis, .select_sintroduce {
+	color: #aaa;
+	font-size: 24rpx;
+}
+
+.select_sintroduce {
+	margin-right: 20rpx;
+}
+.select_price,.select_price .pricxe_unit {
+	color: rgba(153, 153, 153, 1);
+	font-size: 24rpx;
+}
+.select_price .pricxe_unit{
+	color: rgba(224, 32, 32, 1);
+	font-weight: normal;
+}
+.select_price text{
+	color: rgba(224, 32, 32, 1);
+	font-weight: 600;
+	font-size: 30rpx;
+}
+.select_num{
+	color: rgba(153, 153, 153, 1);
+}
+
+.line_content_image image {
+	width: 260rpx !important;
+	height: 220rpx !important;
+}
+
+.line_Item {
+	width: 260rpx !important;
+}
+
+.hot .hot_image {
+	width: 320rpx !important;
+	height: 250rpx !important;
+}
+
+.swiperContainer {
+	width: 100%;
+	height: 400rpx;
+}
+
+.swiperImgs {
+	position: relative;
+}
+
+.swiperimg {
+	border-radius: 10rpx;
+	width: 100%;
+	height: 100%;
+}

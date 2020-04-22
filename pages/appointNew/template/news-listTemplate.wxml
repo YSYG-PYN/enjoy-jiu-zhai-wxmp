@@ -1,0 +1,9 @@
+<!-- 新闻cell模板 -->
+<template name ="newsListTemplate"> 
+
+<navigator url="/pages/news/newsDetail/newsDetail">
+
+</navigator>
+
+
+</template>

@@ -1,0 +1,6 @@
+/* pages/my/reportDetail/reportDetail.wxss */
+.reportDetail-container{
+  margin-top: 20rpx;
+  text-align: center;
+}
+

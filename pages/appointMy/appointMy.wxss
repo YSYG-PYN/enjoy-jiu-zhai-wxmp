@@ -1,0 +1,105 @@
+.avatar-wrapper {
+  background: #1b82d1;
+  padding: 25px 0;
+}
+
+.avatar-wrapper .avatar {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.avatar-wrapper .avatar image {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+}
+
+.avatar-wrapper .text {
+  text-align: center;
+  color: #fff;
+}
+
+.list-wrapper{
+  width: 100%;
+}
+.weui-cell__hd  {
+  border-bottom: 1px solid #ededed;
+  align-items: center;
+  margin-top: 5px;
+  padding: 8px 5px;
+   flex-direction: row wrap;
+}
+
+.weui-cell__hd  image{
+  margin-left: 10px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+.weui-cell__hd  text{
+ margin-left: 10px;
+  color: coral;
+  margin-top: 5px;
+}
+
+.weui-cells::after{
+  content: none;
+  border-bottom: none;
+}
+
+.weui-cells::before{
+  border-top: none;
+}
+
+
+
+/* 授权登录页面 */
+
+
+.header {
+    margin: 90rpx 0 90rpx 50rpx;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    width: 650rpx;
+    height: 300rpx;
+    line-height: 450rpx;
+}
+
+.header image {
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.content {
+    margin-left: 50rpx;
+    margin-bottom: 90rpx;
+}
+
+.content text {
+    display: block;
+    color: #9d9d9d;
+    margin-top: 40rpx;
+}
+
+.bottom {
+    border-radius: 80rpx;
+    margin: 70rpx 50rpx;
+    font-size: 35rpx;
+}
+.belongTo{
+    position: fixed;
+    width:100%;  
+    bottom: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.belongTo  text{
+    font-size: 26rpx;
+    color: #dedede;
+    text-align: center;
+
+}
+
+

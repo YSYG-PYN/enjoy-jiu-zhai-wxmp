@@ -1,0 +1,55 @@
+<!--pages/discover/tourGuide/tourGuide.wxml-->
+<view class="topbar" style="padding-top:{{statusBarHeight}}px">
+   <view class="arrow-box row" bindtap="backToPreviousClick">
+    <image src="../../../images/back.png"></image>
+   </view>
+  <view class="input-box row">
+      <icon type="search" size="16" class="ipt_search_icon" />
+      <input  bindinput="bindHideKeyboard" placeholder="搜索九寨最全旅游攻略" />
+    </view>
+</view>
+<view class="top-comend" style="padding-top:{{statusBarHeight}}px"></view>
+
+    
+<view class="box">
+    <view class="title">旅行社</view> 
+   <!-- <view class="nav">
+        <view>全部</view>
+        <view>综合排序</view>
+        <view>天数</view>
+        <view>出发地</view>
+    </view> -->
+	<view class="scenic_btn">
+	<scroll-view scroll-x="true" class="select_scenic_btn">
+	 <block wx:for="{{dataArray}}">
+	    <view class="{{index==idx?'_select':'select'}}"  bindtap="selectDataTab" data-index="{{index}}" data-text="{{item}}">{{item.name}} </view>
+	 </block>
+	</scroll-view>
+			</view>
+	
+    <view class="tourGuide" wx:for="{{tourGuide}}" wx:key="{{item.id}}" bindtap="travelDetails">
+        <view class="scenic">
+            <view>
+                <image src="{{item.image}}"></image>
+            </view>
+            <view class="detail">
+                <view>
+                    <view>{{item.title}}</view>
+                    <view class="icon">
+                        <van-tag  type="success" class="Tag">专业品质</van-tag>
+                        <van-tag  type="danger">私人导游</van-tag>
+                    </view>
+                    <view class="traffic">{{item.traffic}}</view>
+                </view>
+                <view class="sell">
+                    <view><text class="price">￥{{item.price}}</text>起</view>
+                     <view>
+                        <text class="grade">{{item.grade}}分</text>
+                        <text>月销{{item.salesVolume}}</text>
+                     </view>
+                
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

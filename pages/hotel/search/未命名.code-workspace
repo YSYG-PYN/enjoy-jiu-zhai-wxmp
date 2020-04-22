@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "/Users/foreverj/Desktop/enjoy-jiu-zhai-wxmp-master"
+		},
+		{
+			"path": "/Users/foreverj/Desktop/jzg_ly"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.wxml": "html",
+			"*.wxss": "css"
+		},
+		"liveServer.settings.multiRootWorkspaceName": "jzg_ly"
+	}
+}

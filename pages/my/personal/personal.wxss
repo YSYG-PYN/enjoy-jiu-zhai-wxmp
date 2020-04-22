@@ -1,0 +1,37 @@
+/* pages/my/personal/personal.wxss */
+.close{
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 80rpx;
+  background: #ccc;
+}
+van-popup view{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+/* 头像 */
+.headPortrait{
+  height: 150rpx;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30rpx;
+}
+.headPortrait view:nth-child(2){
+   width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.headPortrait image{
+  width: 130rpx;
+  height: 130rpx;
+}
+.quit{
+  margin-top: 50rpx;
+  padding: 0 20rpx;
+}

@@ -1,0 +1,70 @@
+<view>
+  <view>
+   <!-- <label>用户类型:</label>
+     <radio-group class="item-right radio-group" bindchange="changeSex">   
+       <radio value="{{item.name}}" checked="{{item.checked}}">本地人</radio>
+       <radio >游客</radio>
+     </radio-group>
+
+    <label>游客类型:</label>
+     <radio-group class="item-right radio-group" bindchange="changeSex">   
+       <radio value="{{item.name}}" checked="{{item.checked}}">游客(普通)</radio>
+       <radio>游客(慢病)</radio>
+       <radio>游客(带小孩)</radio>
+     </radio-group> -->
+
+
+      <!-- <picker name="picker_hx" class="cybm_pic_1" value="{{patientData[index].rowId}}"  data-selecthx="{{patientData[index].name}}" range="{{patientData}}" range-key="{{'name'}}"  bindchange="bindPickerChange_hx"  >
+        <view class="patientSelect-container" >
+         就诊人: 
+         <image class="arrowImage" src="../../images/arrow.png"></image>
+         <text class="patientSeletContent">{{patientData[index].name}} </text>    
+        </view>
+      </picker> -->
+    <view class="section">
+   <view class="section__title">选择用户归属类型</view>
+   <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="pickerContent">
+    当前选择:
+    <image class="arrowImage" src="../../images/arrow.png"></image>
+       <text class="patientSeletContent">{{array[index]}}
+       </text>
+    </view>
+  </picker>
+   <!-- <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="pickerContent">
+    当前选择:
+    <image class="arrowImage" src="../../images/arrow.png"></image>
+       <text class="patientSeletContent">{{multiArray[1][multiIndex[1]]}}    
+       </text>
+    </view>
+   </picker> -->
+</view>
+      <view class="doctorContent-container" wx:if="{{doctorList.length!=0}}">
+     <view class="doctorTitleText"> 系统给您分配的医师</view>
+    
+    <!-- <view class="blankbackground" wx:if="{{doctorList.length==0}}">暂无医生</view> -->
+    <!-- <view wx:if="{{doctorList.length!=0}}"> -->
+  <scroll-view scroll-y style="height: 100%;" scroll-top="300">
+      
+      <view  wx:for="{{doctorList}}" class="wa-item wa-item-thumbnail-left" data-id="{{item.attendanceId}}" data-index="{{index}}" bindtap="toDoctorDetailTap">
+        <image class="item-img" src="{{item.avatarUrl}}"></image>
+        <view class="doctorName"> {{item.name}}
+        <text class="doctorGrade">{{item.codeName}}</text>
+        </view>
+        <view class="doctorPhone">联系方式:{{item.iphone}}</view>
+        <view class="doctorPhone">微信号:{{item.ws}}</view>
+        <view class="doctordescription">
+        <text  wx:if="{{!item.introduction}}">简介: 暂无。</text>
+        <text  wx:else>简介:{{item.introduction}}</text>
+        </view> 
+    
+      </view>
+    </scroll-view>
+    <!-- </view> -->
+
+   </view> 
+
+
+ </view>
+</view>

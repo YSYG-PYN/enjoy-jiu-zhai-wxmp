@@ -1,0 +1,39 @@
+<!--pages/discover/more/more.wxml-->
+<view class="topbar" style="padding-top:{{statusBarHeight}}px">
+   <view class="arrow-box row" bindtap="backToPreviousClick">
+    <image src="../../../images/back.png"></image>
+   </view>
+  <view class="input-box row">
+      <icon type="search" size="16" class="ipt_search_icon" />
+      <input  bindinput="bindHideKeyboard" placeholder="输入感兴趣的话题" />
+    </view>
+</view>
+<view class="top-comend" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+<view class="box">
+    <view class="tap">
+        <view bindtap="my" class="{{model?'tapView':''}}">我的</view>
+        <view bindtap="recommend" class="{{model?'':'tapView'}}">推荐</view>
+    </view>
+    <view class="detail" wx:if="{{model==true}}">
+        <view class="title">我创建的推荐</view>
+    </view>
+     <view class="detail" wx:else>
+        <view class="title">热门推荐</view>
+        <view class="recommend">
+            <image src="../../../images/xiaoxi.png"></image>
+            <view>九寨沟自驾游</view>
+        </view>
+         <view class="recommend">
+            <image src="../../../images/xiaoxi.png"></image>
+            <view>九寨沟最美景点</view>
+        </view>
+         <view class="recommend">
+            <image src="../../../images/xiaoxi.png"></image>
+            <view>九寨沟冬日雪景</view>
+        </view>
+    </view>
+   
+
+</view>

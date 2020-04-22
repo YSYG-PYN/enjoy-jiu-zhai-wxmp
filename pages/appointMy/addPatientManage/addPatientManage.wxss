@@ -1,0 +1,33 @@
+
+page {
+  display: block;
+  background-color: #f5f5f5;
+  font-family: "微软雅黑";
+  font-size: 28rpx;
+}
+.addPatient-container{
+  /* background-color: white; */
+
+}
+.inputname-txt{
+   padding: 5rpx 30rpx;
+   background-color: white;
+   height: 70rpx;
+   border-bottom: 1rpx solid #ccc;
+}
+
+.inputidcard-text{
+  padding: 5rpx 30rpx;
+  background-color: white;
+  height: 70rpx;
+   border-bottom: 1rpx solid #ccc;
+}
+
+.addpatientButton {
+   
+    /* border-radius: 80rpx; */
+    background-color: #0082D7;
+    margin-top: 70rpx;
+    color: white;
+    font-size: 30rpx;
+}

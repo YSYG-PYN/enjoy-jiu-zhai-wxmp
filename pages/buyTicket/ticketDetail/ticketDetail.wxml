@@ -1,0 +1,90 @@
+<!--pages/buyTicket/ticketDetail/ticketDetail.wxml-->
+<view class="single_ticket_detail">
+	<view class="ticket_position">
+		<swiper class="swiperContainer" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" interval="{{interval}}" duration="{{duration}}" vertical="{{vertical}}">
+			<block wx:for="{{swiperImg}}" wx:key="{{item.id}}">
+				<swiper-item class='swiperImgs'>
+				<image class="swiperimg" src="{{item.image}}"  data-id='{{item.id}}' data-index='{{index}}'/>
+			</swiper-item>
+		</block>
+		</swiper>
+		<view class="ticket_share_icon">
+			<image src="../../../images/ticketdetail/collect.png"></image>
+			<image src="../../../images/ticketdetail/share.png"></image>
+		</view>
+	</view>
+	<block wx:for="{{contentObj}}" wx:key="{{item.id}}">
+			<view class="ticket_detail_tit">
+			<view class="ticket_tit_address">
+				<text>{{item.ticketAddress}}（{{item.addressLabel}}）</text>
+				<text>{{item.addressScore}}分</text>
+			</view>
+			<view class="ticket_detail_time">
+				<view>
+					<text>最晚{{lastestTime}}点入园</text>|
+					<text>购票须知</text>|
+					<text>游玩攻略></text>
+				</view>
+				<view bind:tap="toRecommend">{{item.recommendNum}}条评价></view>
+			</view>
+			<view class="ticket_detail_detail">
+				<text>{{item.addressRecommend}}</text>
+				<image src="../../../images/show.png"></image>
+			</view>
+		</view>
+		<view class="title_detail_map">
+			<image src="../../../images/show.png"></image>
+			<view class="map_address">{{item.addressDeatil}}</view>
+			<view class="map" bindtap="toMap">地图></view>
+		</view>
+	</block>
+
+	<view class="ticket_list_content">
+		<view class="list_tit">购买门票</view>
+		<view class="list_btn" bindtap="consoleTit">
+			<view class="btn_order" style="background:#4B9AED">全部</view> 
+			<view class="btn_order">成人票</view>
+			<view class="btn_order">儿童票</view>
+			<view class="btn_order">老人票</view>
+			<view class="btn_order">学生票</view>
+			<view class="btn_order">军人票</view>
+			<view class="btn_order">宗教人士</view>
+
+		</view>
+		
+		<block wx:for="{{ticketContent}}" wx:key="{{item.cid}}">
+		<view class="title_list_car">
+			<view class="car_tit">{{item.ticketSort}}</view>
+			<block wx:for="{{item.ticketSortContent.length < 5?item.ticketSortContent:flag?[item.ticketSortContent[0]]:item.ticketSortContent}}" wx:key="{{item.scid}}">
+				<!-- flag?item.ticketSortContent[0]:item.ticketSortContent -->
+				<block >
+					<view class="ticket_car_detail">
+						<view class="car_detail">
+							<view class="car_detai_tit">【{{item.ticketSortContentTitLabel}}】门票+观光车+沟口酒店至景区转车</view>
+							<text class="change_color">可定明日</text>
+							<view>
+								<text>有条件退</text>|<text>无需换票</text>
+							</view>
+							<view>
+								<text>已售{{item.ticketSoldNum}}+</text>|
+								<text class="change_color">购买须知</text>
+							</view>
+						</view>
+						<view class="car_advance">
+							<view class="car_price">
+								<text>￥{{item.ticketPrice}}起</text><text class="line_through">￥{{item.ticketOriginalPrice}}</text>
+							</view>
+							<view class="advance" data-orderid="1" bindtap="toOrderTicket">预定</view>
+						</view>
+					</view>
+				</block>
+			</block>
+			<button class="close" bindtap="closeList" hidden="{{item.ticketSortContent.length < 5}}" binttap="showList">{{flag?'展开':'收起'}}</button>
+		
+		</view>
+		
+		
+		</block>
+	</view>
+</view>	
+

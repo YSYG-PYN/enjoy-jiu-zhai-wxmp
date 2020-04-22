@@ -1,0 +1,11 @@
+<!--pages/index/data/data.wxml-->
+<!-- 首页轮播图 -->
+<view class="index_swiper">
+	<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" interval="{{interval}}" duration="{{duration}}">
+		<block wx:for="{{showImage}}" wx:key="{{item.id}}" >
+			<swiper-item>
+				<cover-image class="swiper-item" src="{{item.image}}"></cover-image>
+			</swiper-item>
+		</block>
+	</swiper>
+</view>

@@ -1,0 +1,20 @@
+<view class="appointResult-container">
+  <view class="successiImage-container">
+   <image  class="success-img" src="../../images/success.png"></image>
+  </view>
+   <view class="successText"><text>预约成功！</text></view>
+   <view class="confirmCode">预约验证码：XXXXXX</view>
+   <view class="reminderText">
+     <text> 
+     接下来
+     第一步: 
+     就诊前别忘了将身份证，就诊卡带上，预约验证码必留存
+     第二步:
+     就诊当天09：30前去挂号处取号，迟到的预约就作废咯！
+     第三步:
+     取号成功，直奔科室去看医生咯！
+     第四步:
+     如需退约，需在就诊前1天通过预约挂号平台取消预约，半年内连续发生三次爽约或未按规定时间内取消的，将取消其半年内网上预约挂号资格。
+     </text>
+   </view>
+</view>

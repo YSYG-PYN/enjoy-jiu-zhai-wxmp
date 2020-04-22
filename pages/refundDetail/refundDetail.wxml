@@ -1,0 +1,68 @@
+<!--pages/refundDetail/refundDetail.wxml-->
+<view class='box'>
+	<view class="active">
+		<view class="ticket">
+			<text>九寨沟风景区门票+观光车+沟区酒店至景区专车(成人票)</text>
+			<text class="rates">￥200.00</text>
+		</view>
+		<view class="quantity">
+			<text>张数：2张</text>
+			<text>2020/01/02</text>
+		</view>
+	</view>
+
+	<view class="orderInformation">
+		<van-steps
+  steps="{{ steps }}"
+  active="{{ active }}"
+  direction="vertical"
+  active-color="#00f"
+/>
+	</view>	
+
+	<view class="orderInformation">
+		<view class="headline">订单详情</view>
+		<view class="message">
+			<text class="title">创建时间:</text>
+			<text class="detail">2020-01-02</text>
+		</view>
+		<view class="message">
+			<text class="title">订单编号:</text>
+			<text class="detail">20200102</text>
+		</view>
+		<view class="message">
+			<text class="title">退还金额:</text>
+			<text class="detail">￥200</text>
+		</view>
+		<view class="message">
+			<text class="title">退还方式:</text>
+			<text class="detail">退回微信钱包</text>
+		</view>
+	</view>
+	
+	<view class="orderInformation">
+		<view class="headline">出行人信息</view>
+		<view class="message">
+			<text class="title">联系人:</text>
+			<text class="detail">张三</text>
+		</view>
+		<view class="message">
+			<text class="title">身份证:</text>
+			<text class="detail">410422******5513</text>
+		</view>
+		<view class="message">
+			<text class="title">手机号码:</text>
+			<text class="detail">13412341234</text>
+		</view>
+	</view>
+	
+	<view class="orderInformation">
+		<view class="headline">售后服务</view>
+		<view class="message">
+			<text class="title">联系电话:</text>
+			<text class="SupportPhone">0211-12345678</text>
+		</view>
+	</view>
+	
+
+</view>

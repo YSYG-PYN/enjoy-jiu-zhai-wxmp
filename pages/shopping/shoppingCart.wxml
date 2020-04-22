@@ -1,0 +1,71 @@
+<view class="box">
+	<view class="Shop" wx:for="{{list}}" wx:key="{{index}}">
+		<checkbox></checkbox>
+		<text>九寨沟特色虫草专营店{{item}}></text>
+
+		<view class="out" wx:for="{{list2}}" wx:key="{{index}}">
+			<checkbox class="dan"></checkbox>
+			<view class="shangpin">
+				<view>
+					<image src="../../images/img001.jpeg"></image>
+				</view>
+				<view class="xinxi">
+					<view>数据</view>
+					<view class="caozuo">
+						<view>￥3000</view>
+						<view>
+							<van-stepper value="{{ 1 }}" bind:change="onChange" class="shuliang" data-id="{{item.pid}}" />
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="calculate">
+			<view>已优惠:￥30</view>
+			<view class="jisuan">
+				<view>￥30</view>
+				<van-button type="primary" size="small" color="#f00" bindtap="btn">去结算</van-button>
+			</view>
+		</view>
+	</view>
+
+	<view class='recommend'>
+		<view class="title">为您推荐</view>
+		<view class="product">
+			<view calss='commodity'>
+				<image src="../../images/img001.jpeg" class="img"></image>
+				<view class="name">正品那曲冬春夏草</view>
+				<view>￥120</view>
+			</view>
+			<view calss='commodity'>
+				<image src="../../images/img001.jpeg" class="img"></image>
+				<view class="name">正品那曲冬春夏草</view>
+				<view>￥120</view>
+			</view>
+			<view calss='commodity'>
+				<image src="../../images/img001.jpeg" class="img"></image>
+				<view class="name">正品那曲冬春夏草</view>
+				<view>￥120</view>
+			</view>
+			<view calss='commodity'>
+				<image src="../../images/img001.jpeg" class="img"></image>
+				<view class="name">正品那曲冬春夏草</view>
+				<view>￥120</view>
+			</view>
+		</view>
+		<!-- <van-submit-bar price="{{ 3050 }}" button-text="结算" bind:submit="onClickButton" tip="{{ true }}">
+		
+			<view><checkbox checked="{{selectall}}" bindtap="quan" class="quan"></checkbox>
+      全选
+			</view>
+		</van-submit-bar> -->
+	</view>
+	<view class="fouter">
+		<view>
+			<checkbox class="quan"></checkbox>全选
+		</view>
+		<view>总优惠:￥30</view>
+		<view>合计:￥30</view>
+		<van-button type="primary" size="small" color="#f00" bindtap="btn">结算</van-button>
+	</view>
+</view>

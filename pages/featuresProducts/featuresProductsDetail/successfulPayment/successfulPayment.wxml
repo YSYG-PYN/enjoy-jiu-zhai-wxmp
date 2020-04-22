@@ -1,0 +1,7 @@
+<!--pages/featuresProducts/featuresProductsDetail/successfulPayment/successfulPayment.wxml-->
+<view id="box">
+    <image src="../../../../images/successfulPayment.png"></image>
+    <view class="success">支付成功</view>
+    <view class="text">您的订单已提交成功</view>
+    <button bindtap="toIndex">确定</button>
+</view>

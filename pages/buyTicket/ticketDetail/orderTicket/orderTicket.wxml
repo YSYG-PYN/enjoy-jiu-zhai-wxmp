@@ -1,0 +1,39 @@
+<!--pages/buyTicket/ticketDetail/orderTicket/orderTicket.wxml-->
+<view class="order_ticket">
+	<van-action-sheet show="{{show}}" title="九寨沟风景区门票" >
+		<view class="showTimeChoose">
+			<view class="choose_price">￥<text class="price_num">243</text><text>起/张</text></view>
+			<view class="choose_time_tit">使用日期（当地时间）</view>
+			<view class="choose_time_btn">
+				<!--   -->
+				<block wx:for="{{btnList}}" wx:key="{{item.id}}">
+					<view class="time_specific {{item.active}}" data-change="{{item.id}}" bindtap="changeColor">
+						<text class="time">{{item.btnTime}}</text>
+						<text class="time_status">{{item.btnChoose}}</text>
+						<view class="mask" style="display:{{item.active=='active'?'block':'none'}}">
+							<image lazy-load="false" src="../../../../images/active_icon.png"></image>
+						</view>
+					</view>
+				</block>
+				<view class="time_specific choose_more" bindtap="choose_more_time">
+					<text class="time">></text>
+					<text class="time_status">更多</text>
+				</view>
+			</view>
+			<view class="choose_time_point">需要在游玩当天的17：00前预定</view>
+			<view class="btn_content">
+				<button class="confrim_time_btn" bindtap="choose_time">确定</button>
+			</view>
+		</view>
+	</van-action-sheet>
+
+
+	<van-action-sheet show="{{cshow}}" title="九寨沟风景区门票" bind:close="closeToPev">
+		<view class="more_time">
+			<calendar currentYear="2020" currentMonth="1" nowYear="2020" nowMonth="1" nowDate="7" bindsendObj='getCalendarData'></calendar>
+		</view>
+		<view class="btn_content">
+			<button class="confrim_time_btn" bindtap="choose_present_time">确定</button>
+		</view>
+	</van-action-sheet>
+</view>

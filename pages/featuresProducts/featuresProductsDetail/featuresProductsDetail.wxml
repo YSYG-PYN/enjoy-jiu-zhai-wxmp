@@ -1,0 +1,90 @@
+<!--featuresProductsDetail.wxml-->
+<view class="swipers">
+    <swiper  class="swiperContainer" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" interval="{{interval}}" duration="{{duration}}" vertical="{{vertical}}">
+        <block wx:for="{{proDetailSwiperList}}" wx:key="{{item.id}}">
+            <swiper-item class='swiperImgs'>
+                <image class="swiperimg" src="{{item.image}}"  data-id='{{item.id}}' data-index='{{index}}'/>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+<view class="contents">
+    <view class="top">
+        <view class="proName">四川九寨川贝母</view>
+        <view class="amountOfMoney">
+            <view>
+                <text class="money">￥</text>
+                <text class="amount">220~4699</text>
+            </view>
+            <text class="number">已售283</text>
+        </view>
+        <view class="change">
+            <view>
+                <text class="yx">已选</text>
+                <text class="specifications">特等100g</text>
+            </view>
+            <van-icon name="arrow" color="#999999" />
+        </view>
+    </view>
+    <view class="gg" bind:click="showPopup" >
+        <text class="spec">规格</text>
+        <van-icon name="arrow" color="#999999" />
+    </view>
+    <view class="service">
+        <text>服务承诺</text>
+        <text></text>
+        <text>包邮服务</text>
+    </view>
+    <view class="commit">
+        <view class="userCommit">
+            <text>用户点评（1434）</text>
+            <text>5.0 分</text>
+        </view>
+        <view class="userName">
+            <view class="head">
+                <image src="../../../images/head.png"></image>
+                <text>旅游达人</text>
+            </view>
+            <text>2019-12</text>
+        </view>
+        <view class="commitDetail">
+            这个贝母真的很好，非常赞👍，用来炖汤喝止咳化痰、清热散结
+            见效很快。
+        </view>
+    </view>
+    <view class="proDetails">
+        <view class="title">产品详情</view>
+        <image src="http://img3.imgtn.bdimg.com/it/u=1701139370,3795858641&fm=26&gp=0.jpg"></image>
+        <view class="proDetailsContent">
+            贝母为多年生草本植物。其鳞茎供药用，能止咳化痰、清热散结之功。按品种的不同，可分为川贝母、浙贝母和土贝母三大类。川贝母是贝母中的珍品，其价在各种贝母中最高。贝母不仅可以入药，还可以炖汤，汤美味鲜，具有滋补的效果。
+        </view>
+    </view>
+    <view class="purchaseInstructions">
+        <view class="title">购买须知</view>
+        <view class="proDetailsContent">
+            旅客应在航空公司或其销售代理人的售票处购票。旅客购票凭本人有效身份证件或公安机关出具的其他身份证件，并填写。
+            旅客应当使用航空公司可以接受的货币和付款方式交付票款，除航空公司与旅客另有协议外，票款一律现付。
+            革命伤残军人和因公致残的人民警察凭《中华人民共和国革命伤残军人证》和《中华人民共和国人民警察伤残抚恤证》，按照同一航班成人普通票价的50%购票。
+            儿童按照同一航班成人普通票价的50%购买儿童票，提供座位。婴儿按照同一航班成人普通票价的10%购买婴儿票，不提供座位；如需要单独占用座位时，应购买儿童票。每一成人旅客携带婴儿超过一名时，超过的人数应购儿童票。
+        </view>
+    </view>
+    <view class="provice">该产品由九寨 提供</view>
+
+    <!--商品导航-->
+    <van-goods-action>
+        <van-goods-action-icon icon="like" text="收藏" bind:click="onClickIcon" style="color: red" />
+        <van-goods-action-icon icon="shop-o" text="店铺" bindtap="toshop"/>
+        <van-goods-action-icon icon="cart-o" text="购物车" bindtap="toshopCar" info="{{shopNum}}"/>
+        <van-goods-action-button text="加入购物车" type="warning" bindtap="handle" />
+        <van-goods-action-button text="立即购买" bindtap="toPayment" />
+    </van-goods-action>
+</view>
+<van-popup
+    show="{{ show }}"
+    closeable
+    position="bottom"
+    custom-style="height: 20%"
+    bind:close="onClose"
+>
+
+</van-popup>

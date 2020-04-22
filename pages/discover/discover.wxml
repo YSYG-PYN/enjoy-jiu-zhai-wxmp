@@ -1,0 +1,111 @@
+<!--pages/discover/discover.wxml-->
+	<view class="header">
+		<van-search value="{{ value }}" placeholder="请输入搜索关键词" use-action-slot bind:change="onChange" bind:search="onSearch"
+		 shape="round" class="search">
+		</van-search>
+		<image class="tip" src="../../images/discover/message.png"></image>
+		<image class="tipCount" src="../../images/discover/msgCount.png"></image>
+	</view>
+	<!-- 轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{background}}" wx:key="{{item.id}}">
+      <swiper-item>
+        <image class="slide-image" src="{{item.image}}" data-id='{{item.id}}'/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+	<!-- 导航 -->
+	<view class="nav">
+		<view class="nav_content" bindtap="travelNotes">
+			<image src="../../images/discover/yj.png"></image>
+			<text>游记</text>
+		</view>
+		<view class="nav_content" bindtap="travelAgency">
+			<image src="../../images/discover/lxs.png"></image>
+			<text>旅行社</text>
+		</view>
+		<view class="nav_content" bindtap="toBuyTicket" bindtap="tourGuide">
+			<image src="../../images/discover/dy.png"></image>
+			<text>导游</text>
+		</view>
+		<view class="nav_content" bindtap="pathsRecommend">
+			<image src="../../images/discover/xltj.png"></image>
+			<text>线路推荐</text>
+		</view>
+		<view class="nav_content" bindtap="toBuyTicket">
+			<image src="../../images/discover/yry.png"></image>
+			<text>一日游</text>
+		</view>
+	</view>
+
+	<view class="line_recommendation">
+		<!-- 线路推荐标题 -->
+		<view class="line_title" bindtap="toLineRecommend">
+			<text>线路推荐</text>
+			<van-icon name="arrow" color="#CCCCCC" />
+		</view>
+		<!-- 线路推荐内容 -->
+		 <scroll-view scroll-x="true">
+			<view class="line">
+				<view wx:for="{{lineCommandData}}" wx:key="{{item.id}}">
+					<view  class="line_Item" bindtap="paths">
+						<view class="line_content_image">
+							<image src="{{item.scenicImg}}" bindtap="toLineDetail" data-linedetail="{{item.id}}" class="image"></image>
+						</view>
+						<text class="image_introduce">{{item.lineIntroduce}}</text>
+						<image src="../../images/discover/needDay.png" class="lineTip"></image>
+						<view class="date">{{item.day}}</view>
+					</view>
+				</view>
+			</view>
+		 </scroll-view>
+	</view>
+
+
+<view class="box">
+	<!-- 发布 -->
+	<view class="{{issue?'issue':'_issue'}}" bindtap="issue">
+		<image src="../../images/fabu.png" class="issueImg"></image>
+	</view>
+	<!-- 游记 -->
+	<view class="line_title" bindtap="toLineRecommend">
+		<text>游记推荐</text>
+		<van-icon name="arrow" color="#CCCCCC" />
+	</view>
+	
+	<!-- 导航 -->
+	<view class="scenic_btn">
+		<scroll-view scroll-x="true" class="select_scenic_btn">
+			<block wx:for="{{dataArray}}" wx:key='{{item.id}}'>
+				<view class="{{index==idx?'_select':'select'}}" bindtap="selectDataTab" data-index="{{index}}" data-text="{{item}}">
+					<view>{{item.day}}</view>
+				</view>
+			</block>
+		</scroll-view>
+	</view>
+	
+	<view class="recommend" >
+          <view class="scenicSpot" wx:for="{{recommend}}" wx:key='{{item.id}}'>
+            <image src="{{item.image}}"></image>
+            <view class="scenicSpot-title">{{item.evaluate}}</view>
+            <view class="evaluate">
+              <view>
+                <image src="{{item.headPic}}"></image>
+                <text>{{item.name}}</text>
+              </view>
+              <view>
+                <text>{{item.good}}</text>
+				<image src="{{item.heartImg}}"></image>
+              </view>
+            </view>
+          </view>
+	</view>
+
+</view>
+
+
+
+     

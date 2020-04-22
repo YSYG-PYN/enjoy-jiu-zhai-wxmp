@@ -1,0 +1,9 @@
+<view class="addPatient-container">
+  <view class="addPatientcell-container">
+    <input class="inputname-txt"  confirm-type="return" bindfocus="bindfocus" bindinput="patientNameInput"  value="{{patientName}}" placeholder="请输入姓名" type="text"/>
+    <input class="inputidcard-text"  confirm-type="return" bindfocus="bindfocus"  bindinput="patientCardIDInput" value="{{patientCardID}}" placeholder="请输入身份证号码" type="text"/>
+    <button class='addpatientButton'  lang="zh_CN" bindtap="addPatientTap">
+            确认添加
+        </button>
+ </view>
+</view>

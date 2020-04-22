@@ -1,0 +1,3 @@
+<view class="reportDetail-container">
+ <image src="{{checkReport}}" data-src="{{checkReport}}" bindtap="previewImage" class='img'></image> 
+</view>

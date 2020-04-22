@@ -1,0 +1,105 @@
+.box{
+	margin-bottom: 100rpx;
+	font-size: 30rpx;
+}
+.Shop{
+	 margin: 20rpx 20rpx 0rpx 20rpx;
+	 border-bottom: 2rpx solid #ccc;
+	 padding-bottom: 10rpx;
+}
+.out{
+  display: flex;
+  margin-top: 20rpx;
+}
+.dan{
+  margin-top: 70rpx;
+}
+.shangpin{
+	border: 2rpx solid #ccc;
+	display: flex;
+	flex: 1;
+	padding: 20rpx 20rpx;
+}
+.shangpin image{
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.xinxi{
+  padding-left: 30rpx;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.xinxi view{
+  line-height: 50rpx;
+}
+.caozuo{
+	display: flex;
+	justify-content: space-between;
+}
+
+.calculate{
+	display: flex;
+	justify-content: space-between;
+	margin-left: 60rpx;
+}
+.jisuan{
+	width: 300rpx;
+	display: flex;
+	justify-content: space-between;
+}
+
+.calculate view{
+	height: 80rpx;
+	line-height: 80rpx;
+}
+
+.recommend{
+	padding: 20rpx;
+	border-bottom: 2rpx solid #ccc;
+}
+.title{
+	text-align: center;
+	height: 50rpx;
+	line-height: 50rpx;
+	margin-bottom: 20rpx;
+	font-size: 35rpx;
+	font-weight: 600;
+}
+.product{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.commodity{
+	width:300rpx;
+}
+.name{
+	margin-bottom: 10rpx;
+}
+ 
+.img{
+	height: 300rpx;
+	width: 300rpx;
+	display: block;
+}
+.fouter{
+	display: flex;
+	justify-content: space-around;
+	line-height: 80rpx;
+	height: 80rpx;
+}
+
+
+
+
+
+
+
+
+
+
+

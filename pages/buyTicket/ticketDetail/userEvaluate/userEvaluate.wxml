@@ -1,0 +1,36 @@
+<!-- pages/buyTicket/ticketDetail/userEvaluate/userEvaluate.wxml -->
+<view class="userEvaluate">
+    <view class="userEvaluate_title_content">
+        <view class="evaluate_score_content">
+            <view class="evaluate_score"><text>5.0</text></view>
+            <view class="characters">分</view>
+            <view class="characters">162人已评</view>
+        </view>
+        <view>
+        <van-rate value="{{ value }}" bind:change="onChange"></van-rate></view>
+    </view>
+    <view class="evaluate_btn_content">
+        <view class="btn">全部<text>1234</text></view>
+        <view class="btn">好评<text>1234</text></view>
+        <view class="btn">优质评论<text>1234</text></view>
+        <view class="btn">景色优美<text>1234</text></view>
+    </view>
+    <view class="evaluate_content_list">
+       <block wx:for="{{flag?[recommendList[0]]:recommendList}}">
+            <view class="evaluate_content_perlist">
+                <view class="list_title">
+                    <view class="profilePicture">
+                        <image src="{{item.profileImage}}"></image>
+                    </view>
+                    <view class="user_message">
+                        <view class="user_message_name">{{item.userName}}</view>
+                        <view class="user_message_time">{{item.time}}</view>
+                    </view>
+                </view>
+                <view class="user_content">{{item.content}}</view>
+            </view>
+          
+       </block>
+    </view>
+     <view class="show_more_evaluate" bind:tap="closeList">{{flag?'阅读全部评价':'收起全部评价'}}<text class="evaluate_num" >(4)</text></view>
+</view>

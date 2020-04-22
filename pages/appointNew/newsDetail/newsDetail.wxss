@@ -1,0 +1,30 @@
+
+.wxParse-p {
+  text-indent: 2rem;
+  line-height: 50rpx;
+}
+
+.info {
+  text-align: center;
+  color: #999;
+  margin: 5px 0;
+}
+.medicalName {
+  color: #000;
+  text-align: center;
+  margin: 10px 10px 0;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.m-content{
+  margin: 0 10px;
+}
+.newsDetail-img{
+  text-align: center;
+}
+.newsDetail-text{
+  color:black;
+  font-size: 30rpx;
+  text-indent:0.5cm;
+
+}

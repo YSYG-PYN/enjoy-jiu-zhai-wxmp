@@ -1,0 +1,145 @@
+<!-- pages/weather/weather.wxml -->
+<view class="weather_top">
+    <image src="../../images/weather/weatherTopBg.png"></image>
+    <view class="weather_address">阿坝藏族羌族自治州</view>
+    <view class="airQuality">
+        <image src="../../images/weather/you.png"></image>
+        <text>24</text>
+        <text>优</text>
+    </view>
+    <view class="weather_content">
+        <view class="weather_content_left">
+            <view class="weather_temperature">
+                12
+                <text class="temperature_unit">℃</text>
+            </view>
+            <view class="weather_detail">
+                阴天
+            </view>
+        </view>
+        <!--<view class="weather_content_right">
+            <image src="./../../images/weather/bigrain.png"></image>
+            <view class="airquality">24优</view>
+        </view>-->
+    </view>
+    <view class="weather_bottom">
+        <view class="weatherDetail">
+            <view>
+                <image src="../../images/weather/wd.png"></image>
+                <text>今日温度</text>
+            </view>
+            <view>7℃～15℃</view>
+        </view>
+        <view class="weatherDetail">
+            <view>
+                <image src="../../images/weather/fx.png"></image>
+                <text>西南风3级</text>
+            </view>
+            <view>3.0m/s</view>
+        </view>
+        <view class="weatherDetail">
+            <view>
+                <image src="../../images/weather/tw.png"></image>
+                <text>体感温度</text>
+            </view>
+            <view>16℃</view>
+        </view>
+        <view class="weatherDetail">
+            <view>
+                <image src="../../images/weather/sd.png"></image>
+                <text>湿度</text>
+            </view>
+            <view>60%</view>
+        </view>
+    </view>
+    <view class="weatherChart">
+        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+    </view>
+    <!--<view class="weather_bottom">
+        <view class="clothes_level">
+            穿衣指示数：
+            <text>较舒适</text>
+        </view>
+        <view class="clothes_command">建议穿薄外套或牛仔裤等服饰。</view>
+    </view>-->
+
+</view>
+
+<scroll-view scroll-x="true" class="weather_day">
+    <view scroll-x="true" class="weather_day_content">
+        <block wx:for="{{weatherDayList}}" wx:key="item.id">
+            <view class="weather_day_list">
+                <view>{{item.time}}</view>
+                <image src="{{item.img}}"></image>
+                <view>{{item.temperature}}</view>
+            </view>
+        </block>
+    </view>
+</scroll-view>
+
+<!--<scroll-view scroll-x="true" class="weather_middle">
+    <view scroll-x="true" class="weather_middle_content">
+        <block wx:for="{{weatherList}}">
+            <view class="weather_middle_per">
+                <image src="{{item.imageSrc}}" lazy-load="true"></image>
+                <view class="weather_">{{item.weather}}</view>
+                <view class="temperature_between">
+                    <text>{{item.lowTemperature}}</text>
+                    <text>℃~</text>
+                    <text>{{item.highTemperature}}</text>
+                    <text>℃</text>
+                </view>
+                <view class="">{{item.weatherTime}}</view>
+            </view>
+        </block>
+    </view>
+</scroll-view>-->
+<scroll-view scroll-x="true" class="weather_middle">
+    <view scroll-x="true" class="weather_middle_content">
+        <block wx:for="{{weatherList}}" wx:key="{{item.id}}">
+            <view class="weather_middle_list">
+                <view class="day">
+                    <view>{{item.weatherTime}}</view>
+                    <view class="{{item.airLevenBg}}">{{item.airLeven}}</view>
+                </view>
+                <view class="date">{{item.date}}</view>
+                <image src="{{item.imageSrc}}"></image>
+                <view class="weather_middle_temperature">
+                    <text>{{item.lowTemperature}}</text>℃～<text>{{item.highTemperature}}</text>℃
+                </view>
+                <view class="weathers">{{item.weather}}</view>
+            </view>
+        </block>
+    </view>
+</scroll-view>
+
+<!--<view class="livingIndex">生活指数</view>-->
+<block wx:for="{{livingList}}" wx:key="{{item.id}}">
+    <view class="living_content">
+        <view class="living_content_per">
+            <view class="image_view">
+                <image src="{{item.img}}"></image>
+            </view>
+            <view class="living_detail">
+                <view class="living_detail_title">
+                    {{item.livingDetail}}
+                    <text>{{item.feel}}</text>
+                </view>
+                <view class="living_advice">{{item.advice}}</view>
+            </view>
+        </view>
+    </view>
+</block>
+    <!--<view class="airquality_bottom">空气质量预报2019年12月20日15时发布</view>
+>>>>>>> ljj
+    <view class="airquality_bottom_content">
+        <view class="airquality_bottom_per">空气污染扩散条件：空气污染气象条件2级，较好，较有利于空气污染物稀释、扩散和清除。</view>
+        <view class="airquality_bottom_per">12月20日夜间（20时-06时）空气质量等级：优   AQI指数:40-60   首要污染物：无</view>
+        <view class="airquality_bottom_per">明天上午（06时-12时）空气质量等级：良   AQI指数:60-80 首要污染物：PM2.5</view>
+        <view class="airquality_bottom_per">明天下午（12时-20时）空气质量等级：良   AQI指数:60-80 首要污染物：PM2.5</view>
+    </view>
+<<<<<<< HEAD
+    <view class="airquality_bottom_address">四川省成都市环境监测中心 成都市气象台 联合发布</view>
+</view>
+=======
+    <view class="airquality_bottom_address">四川省成都市环境监测中心 成都市气象台 联合发布</view>-->

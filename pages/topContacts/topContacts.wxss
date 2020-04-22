@@ -1,0 +1,34 @@
+/* pages/topContacts/topContacts.wxss */
+.box{
+  border: 1rpx solid #ccc;
+  padding:0 20rpx;
+  font-size: 30rpx;
+}
+.active{
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #ccc
+}
+.site{
+  height: 100rpx;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.right{
+	display: flex
+}
+.right view{
+	height: 100rpx;
+	line-height: 100rpx;
+	font-size: 30rpx;
+}
+.del{
+  margin-left: 70rpx;
+}
+.fouter{
+  margin-top: 700rpx;
+  padding:0 20rpx;
+}

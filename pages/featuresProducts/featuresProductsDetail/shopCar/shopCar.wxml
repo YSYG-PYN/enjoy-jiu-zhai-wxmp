@@ -1,0 +1,36 @@
+<view class="cart">
+    <block wx:for="{{carts}}" wx:key="{{item.id}}">
+        <view class="carts-container">
+            <van-checkbox value="{{ checked }}" bind:change="onChange" >
+                <view class="shopName">
+                    <image src="http://bpic.588ku.com/element_origin_min_pic/01/35/55/98573bea60c0a81.jpg"></image>
+                    <text>{{item.shopName}}</text>
+                </view>
+            </van-checkbox>
+
+            <view class="commodityDetail">
+                <image src="{{item.goods.thumb[0].url}}"></image>
+                <view class="commoditySj">
+                    <view class="commodityName">{{item.goods.title}}</view>
+                    <view class="commodityType">{{item.goods.type}}</view>
+                    <view class="commodityMoney">
+                        <text>￥</text>
+                        <text>{{item.goods.price}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <van-submit-bar
+            price="{{ 3050 }}"
+            button-text="去结算"
+            bind:submit="onClickButton"
+            tip="{{ true }}"
+            bindtap="toPlaceOrder"
+    >
+        <van-checkbox value="{{ checked }}" bind:change="onChange">全选</van-checkbox>
+        <view slot="tip">
+            您的收货地址不支持同城送, <text>修改地址</text>
+        </view>
+    </van-submit-bar>
+</view>

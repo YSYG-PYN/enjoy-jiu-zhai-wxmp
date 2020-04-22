@@ -1,0 +1,205 @@
+
+page{
+  display: block;
+  background-color: #f5f5f5;
+  font-family: "微软雅黑";
+  font-size: 28rpx;
+}
+
+.chooseDoctor-container{
+  /* background: white; */
+
+}
+
+.scroll-container{
+  height: 100%;
+
+}
+.reservatiomDate-container{
+  background: white;
+  margin-top: 20rpx;
+
+}
+.blankbackground{
+  text-align:center; 
+  padding: 100rpx 20rpx 100rpx 20rpx;
+  color: gray;
+
+}
+.doctorTitleText{
+  /* background: white; */
+  /* padding: 20rpx 40rpx; */
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+}
+.doctorContent-container{ 
+   margin: 40rpx 0 40 rpx 6;
+   margin-top: 40rpx;  
+}
+.docDetail{
+   height: 280rpx;
+   margin-bottom: 40rpx;
+   flex-direction: column;
+   margin-left: 35rpx;
+   padding: 0  22rpx;
+   background: white;
+   border-radius: 10rpx;
+}
+.doctorList{
+    border-bottom: 1px solid #ccc;
+  
+}
+
+.doctorGrade{
+  margin-left: 10rpx;
+  font-size: 32rpx;
+  color: #939393;
+}
+.reserveCount{
+  float: right;
+  margin-right: 15rpx;
+  /* color: #0082D7; */
+  font-size: 32rpx;
+  color: #1b82d1;
+
+}
+
+.selectDate{
+  display: flex;
+  white-space: nowrap;  
+
+} 
+
+
+
+._left{
+  
+  height:100rpx;
+  width:128rpx;
+  text-align: center;
+  padding: 20rpx 0 0 0rpx;
+  /* border:1px solid #0082D7; */
+  display: inline-block; 
+  color:white;
+  background: #0082D7;
+
+}
+
+.left{
+  
+  height:100rpx;
+  padding: 20rpx 0 0 0rpx;
+  width:128rpx;
+  text-align: center;
+  /* border:1px solid #0082D7; */
+  display: inline-block; 
+
+}
+
+
+
+.appointment_container {
+  position: relative;
+  /* margin-top: 1rpx; */
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: #939393;
+  margin-top:90rpx;
+}
+
+
+
+
+
+.film{
+  padding-top:88rpx;
+}
+
+.wa-item-thumbnail-left .item-img { 
+  position: absolute;
+  border-radius: 140rpx;
+  top:17rpx; 
+  left: 10px;
+  width: 80px;
+  height: 80px;
+
+}
+
+.doctor-name {
+  color: #333;
+}
+
+.doc-level{
+  font-size:24rpx;
+color:#999;
+display:inline-block;
+margin:0 0 0 12rpx;
+}
+
+
+.hospitalName,.officeName{
+  color: #666;
+  margin: 6px 0 0 0
+}
+
+.doctor-icon{
+  width: 15px;
+  height: 16px;
+  position: relative;
+  top:2px;
+}
+
+.loading-tip {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #ccc;
+}
+.news-info {
+  
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+   white-space: nowrap;
+  min-height:60rpx;
+  color: #999;
+}
+
+.info-time {
+  margin-bottom: 5rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.doctorName {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;   
+   font-size: 36rpx;
+   margin-top: 30rpx;
+   min-height:60rpx;
+}
+
+
+
+
+
+.wa-item-thumbnail-left {
+padding-left:250rpx;
+min-height:200rpx;
+background: white;
+}
+.loading-tip {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #ccc;
+}
+.wa-item {
+  border: 0;
+  margin: 0;
+  border-top: 1px solid #dedede;
+}
