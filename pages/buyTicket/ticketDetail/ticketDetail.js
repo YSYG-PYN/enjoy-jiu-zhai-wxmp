@@ -6,6 +6,7 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
+		value: 3,
 		swiperImg: [],
 		indicatorDots: true,
 		circular: true, //是否衔接
@@ -43,7 +44,7 @@ Page({
 		})
 	},
 	// showList(){
-		
+
 	// },
 	/**
 	 * 生命周期函数--监听页面加载

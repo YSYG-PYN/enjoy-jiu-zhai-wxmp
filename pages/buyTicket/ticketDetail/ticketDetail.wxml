@@ -13,50 +13,93 @@
 			<image src="../../../images/ticketdetail/share.png"></image>
 		</view>
 	</view>
-	<block wx:for="{{contentObj}}" wx:key="{{item.id}}">
-			<view class="ticket_detail_tit">
+<!--	<block wx:for="{{contentObj}}" wx:key="{{item.id}}">-->
+		<view class="ticket_detail_tit">
 			<view class="ticket_tit_address">
-				<text>{{item.ticketAddress}}（{{item.addressLabel}}）</text>
-				<text>{{item.addressScore}}分</text>
+				九寨沟风景区 （5A）
 			</view>
 			<view class="ticket_detail_time">
 				<view>
-					<text>最晚{{lastestTime}}点入园</text>|
-					<text>购票须知</text>|
-					<text>游玩攻略></text>
+					<van-rate
+							value="{{ value }}"
+							allow-half
+							size="{{ 15 }}"
+							icon="star"
+							color="#FADB14"
+							void-color="#eee"
+							void-icon="star"
+							readonly
+					/>
+					<text class="rate">4.5 分</text>
 				</view>
-				<view bind:tap="toRecommend">{{item.recommendNum}}条评价></view>
-			</view>
-			<view class="ticket_detail_detail">
-				<text>{{item.addressRecommend}}</text>
-				<image src="../../../images/show.png"></image>
+				<view bind:tap="toRecommend">1429条评论 ></view>
 			</view>
 		</view>
 		<view class="title_detail_map">
-			<image src="../../../images/show.png"></image>
-			<view class="map_address">{{item.addressDeatil}}</view>
-			<view class="map" bindtap="toMap">地图></view>
+			<view class="time">
+				<image src="../../../images/ticketdetail/time.png"></image>
+				<text>营业时间：08:30-18:00 </text>
+				<text style="color: #ccc">｜</text>
+				<text> 最晚入园：16:00</text>
+			</view>
+			<view class="map" bindtap="toMap">
+				<view>
+					<image src="../../../images/ticketdetail/map.png"></image>
+					<text>四川省阿坝藏族自治区九寨沟县301省道扎如寺路</text>
+				</view>
+				<van-icon name="arrow" color="#C7C7CC" />
+			</view>
+		</view>
+<!--	</block>-->
+
+	<view class="title">购买门票</view>
+	<block wx:for="{{ticketContent}}" wx:key="item.cid">
+		<view class="ticketListContent">
+			<view class="ticketListContentTitle">
+				<view class="ticketListContentTitleTop">{{item.ticketSort}}</view>
+				<view class="ticketListContentTitleDown">
+					<text>{{item.num}} </text>
+					<text class="lines">｜</text>
+					<text>{{item.usage}}</text>
+				</view>
+			</view>
+			<block wx:for="{{item.ticketSortContent.length < 5?item.ticketSortContent:flag?[item.ticketSortContent[0]]:item.ticketSortContent}}" wx:key="item.scid">
+				<view class="ticketDetail">
+					<view class="ticketDetailLeft">
+						<view>{{item.ticketSortContentTitLabel}}</view>
+						<view>
+							<text>有条件退</text>
+							<text>可明日订</text>
+						</view>
+						<view>
+							<text>月售{{item.ticketSoldNum}}张</text>
+							<text class="lines">｜</text>
+							<text>无需换票</text>
+						</view>
+					</view>
+					<view class="ticketDetailRight">
+						<view>
+							<text>￥</text>
+							<text>{{item.ticketPrice}}</text>
+							<text> 起</text>
+						</view>
+						<view bindtap="toOrderTicket">预订</view>
+					</view>
+				</view>
+			</block>
+			<view class="btn" bindtap="closeList" >
+				<text>{{flag?'展开':'收起'}}更多</text>
+				<van-icon name="{{flag?'arrow-down':'arrow-up'}}" color="#4B9AED" />
+			</view>
 		</view>
 	</block>
 
-	<view class="ticket_list_content">
-		<view class="list_tit">购买门票</view>
-		<view class="list_btn" bindtap="consoleTit">
-			<view class="btn_order" style="background:#4B9AED">全部</view>
-			<view class="btn_order">成人票</view>
-			<view class="btn_order">儿童票</view>
-			<view class="btn_order">老人票</view>
-			<view class="btn_order">学生票</view>
-			<view class="btn_order">军人票</view>
-			<view class="btn_order">宗教人士</view>
-
-		</view>
-
+	<!--<view class="ticket_list_content">
 		<block wx:for="{{ticketContent}}" wx:key="{{item.cid}}">
 		<view class="title_list_car">
 			<view class="car_tit">{{item.ticketSort}}</view>
 			<block wx:for="{{item.ticketSortContent.length < 5?item.ticketSortContent:flag?[item.ticketSortContent[0]]:item.ticketSortContent}}" wx:key="{{item.scid}}">
-				<!-- flag?item.ticketSortContent[0]:item.ticketSortContent -->
+				&lt;!&ndash; flag?item.ticketSortContent[0]:item.ticketSortContent &ndash;&gt;
 				<block >
 					<view class="ticket_car_detail">
 						<view class="car_detail">
@@ -79,13 +122,13 @@
 					</view>
 				</block>
 			</block>
-			<button class="close" bindtap="closeList" hidden="{{item.ticketSortContent.length < 5}}" binttap="showList">{{flag?'展开':'收起'}}</button>
+			<button class="close" bindtap="closeList" hidden="{{item.ticketSortContent.length < 5}}">{{flag?'展开':'收起'}}</button>
 
 		</view>
 
 
 		</block>
-	</view>
+	</view>-->
 </view>
 
 

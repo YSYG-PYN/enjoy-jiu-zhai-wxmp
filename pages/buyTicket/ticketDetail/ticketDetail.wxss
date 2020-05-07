@@ -5,6 +5,7 @@
 	flex-direction: column;
 	/* align-items: center; */
 	justify-content: center;
+	background-color: #F3F7FA;
 }
 
 .ticket_position {
@@ -24,59 +25,94 @@
 	margin-right: 20rpx;
 }
 
-.ticket_list_content,
-.ticket_detail_tit,
-.title_detail_map {
+.ticket_detail_tit{
+	height: 134rpx;
+}
+
+.ticket_detail_tit{
 	width: 100%;
 	font-size: 28rpx;
 	box-sizing: border-box;
-	padding: 0 20rpx;
+	padding: 0 24rpx;
 	margin-top: 20rpx;
+	background-color: #fff;
 }
 
-.title_list_car,
-.ticket_detail_time,
-.ticket_tit_address,
-.ticket_detail_detail,
-.title_detail_map {
+.title_list_car{
 	font-weight: 600;
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
 }
+.ticket_tit_address {
+	font-size: 36rpx;
+	color: #333333;
+	font-weight: 600;
+	letter-spacing:1rpx;
+	margin-top: 20rpx;
+}
 
-.ticket_detail_time,
-.ticket_detail_detail {
+.ticket_detail_time {
 	font-weight: normal;
 	font-size: 24rpx;
 	color: #888;
 	margin-top: 10rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
 }
 
-.ticket_detail_detail image,
-.title_detail_map image {
-	width: 24rpx;
-	height: 24rpx;
+.ticket_detail_time view:nth-child(1){
+	display: flex;
+	align-items: center;
+	color:rgba(0,0,0,0.65);
 }
-
-.title_detail_map image {
-	margin-right: 10rpx;
+.rate{
+	margin-left: 14rpx;
+	font-size: 26rpx;
+}
+.ticket_detail_time view:nth-child(2){
+	color: #4B9AED;
 }
 
 .title_detail_map {
-	font-size: 28rpx;
-	font-weight: normal;
-	justify-content: space-around;
+	width: 100%;
+	margin-top: 20rpx;
+}
+.time, .map{
+	height: 88rpx;
+	background-color: #fff;
+	padding: 0 24rpx;
+	display: flex;
 	align-items: center;
-	border: 1px solid #ccc;
-	box-sizing: border-box;
-	padding-top: 20rpx;
-	padding-bottom: 10rpx;
+	font-size: 26rpx;
+	color: #666666;
+}
+.title_detail_map view image {
+	width: 28rpx;
+	height: 28rpx;
+	margin-right: 10rpx;
+}
+.time {
+	border-bottom: 1px solid #E5E5E5;
+}
+.map{
+	display: flex;
+	justify-content: space-between;
+}
+.map view{
+	display: flex;
+	align-items: center;
 }
 
-.map {
-	min-width: 40px;
-	color: #888;
+.title {
+	height: 105rpx;
+	padding: 0 24rpx;
+	line-height: 105rpx;
+	color: #333333;
+	font-weight:600;
+	font-size:32rpx;
 }
 
 .ticket_list_content .list_tit {
@@ -183,10 +219,106 @@
   }
   .swiperImgs{
 	position: relative;
-  
+
   }
   .swiperimg {
 	border-radius: 10rpx;
 	width: 100%;
 	height: 100%;
   }
+
+.ticketListContent{
+	background-color: #fff;
+	margin-bottom: 20rpx;
+}
+.ticketListContentTitle{
+	height: 140rpx;
+	padding: 40rpx 24rpx 0;
+	border-bottom: 1px solid #F4F4F4;
+}
+.ticketListContentTitleTop{
+	color: #333333;
+	display: inline-block;
+	font-size:28rpx;
+	font-weight:600;
+	background:linear-gradient(180deg,rgba(75,154,237,0) 0%,rgba(146,209,249,1) 100%);
+	border-radius:16rpx;
+	margin-bottom: 10rpx;
+}
+.ticketListContentTitleDown{
+	font-size:22rpx;
+	color: #666666;
+}
+.lines{
+	color: #cccccc !important;
+}
+.ticketDetail{
+	height: 162rpx;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 24rpx;
+	border-bottom: 1px solid #F4F4F4;
+}
+.ticketDetailLeft view:nth-child(1){
+	margin-top: 20rpx;
+	font-size:30rpx;
+	color: #333333;
+}
+.ticketDetailLeft view:nth-child(2){
+	margin-top: 9rpx;
+}
+.ticketDetailLeft view:nth-child(2) text{
+	width: 123rpx;
+	height: 34rpx;
+	display: inline-block;
+	font-size: 22rpx;
+	text-align: center;
+	line-height: 34rpx;
+}
+.ticketDetailLeft view:nth-child(2) text:nth-child(1){
+	color: #4B9AED;
+	background-color: #EDF4FD;
+	margin-right: 5rpx;
+}
+.ticketDetailLeft view:nth-child(2) text:nth-child(2){
+	color: #FD6C6B;
+	background-color: #FEF0F0;
+}
+.ticketDetailLeft view:nth-child(3){
+	margin-top: 10rpx;
+	font-size:22rpx;
+	color: #999999;
+}
+.ticketDetailRight view:first-child{
+	margin-top: 40rpx;
+}
+.ticketDetailRight view:first-child text:nth-child(1){
+	font-size:20rpx;
+	color: #E02020;
+}
+.ticketDetailRight view:first-child text:nth-child(2){
+	font-size:36rpx;
+	color: #E02020;
+}
+.ticketDetailRight view:first-child text:nth-child(3){
+	font-size:22rpx;
+	color: #CCCCCC;
+}
+.ticketDetailRight view:last-child{
+	margin-top: 13rpx;
+	width:108rpx;
+	height:54rpx;
+	background:rgba(75,154,237,1);
+	border-radius:27rpx;
+	font-size:24rpx;
+	line-height: 54rpx;
+	text-align: center;
+	color: #fff;
+}
+.btn{
+	height: 117rpx;
+	font-size:26rpx;
+	color: #4B9AED;
+	text-align: center;
+	line-height: 117rpx;
+}

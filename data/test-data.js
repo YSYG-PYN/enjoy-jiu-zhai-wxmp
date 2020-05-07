@@ -884,67 +884,87 @@ var ticketDetail=[{
 		{
 			cid:1,
 			ticketSort:'门票+观光车+羌藏晚会',
+			num: '月售742张',
+			usage: '可连续使用两天',
 			ticketSortContent:[
 				{
 					scid:1,
 					ticketSortContentTit:'门票+观光车+沟口酒店至景区转车',
 					ticketSortContentTitLabel:'成人票',
 					ticketSoldNum:1000,
-					ticketPrice:150,
+					ticketPrice:305,
 					ticketOriginalPrice:599
 				},
 				{
 					scid:2,
 					ticketSortContentTit:'门票+观光车+沟口酒店至景区转车',
-					ticketSortContentTitLabel:'儿童/学生/老人/宗教人士票',
+					ticketSortContentTitLabel:'儿童票',
 					ticketSoldNum:1000,
-					ticketPrice:150,
+					ticketPrice:100,
 					ticketOriginalPrice:599
 				},
 				{
 					scid:3,
 					ticketSortContentTit:'门票+观光车+沟口酒店至景区转车',
-					ticketSortContentTitLabel:'儿童/学生/老人/宗教人士票',
+					ticketSortContentTitLabel:'老人票',
 					ticketSoldNum:1000,
-					ticketPrice:150,
+					ticketPrice:160,
 					ticketOriginalPrice:599
 				},
 				{
 					scid:4,
 					ticketSortContentTit:'门票+观光车+沟口酒店至景区转车',
-					ticketSortContentTitLabel:'儿童/学生/老人/宗教人士票',
+					ticketSortContentTitLabel:'学生票',
 					ticketSoldNum:1000,
-					ticketPrice:150,
+					ticketPrice:120,
 					ticketOriginalPrice:599
 				},
 				{
 					scid:5,
 					ticketSortContentTit:'门票+观光车+沟口酒店至景区转车',
-					ticketSortContentTitLabel:'儿童/学生/老人/宗教人士票',
+					ticketSortContentTitLabel:'军人票',
+					ticketSoldNum:1000,
+					ticketPrice:120,
+					ticketOriginalPrice:599
+				},
+				{
+					scid:6,
+					ticketSortContentTit:'门票+观光车+沟口酒店至景区转车',
+					ticketSortContentTitLabel:'宗教人士',
 					ticketSoldNum:1000,
 					ticketPrice:150,
 					ticketOriginalPrice:599
-				}
+				},
 			]
 		},
 		{
-			cid:1,
+			cid:2,
 			ticketSort:'门票+观光车+直通车',
+			num: '月售742张',
+			usage: '可连续使用两天',
 			ticketSortContent:[
 				{
 					scid:1,
 					ticketSortContentTit:'门票+观光车+沟口酒店至景区转车',
 					ticketSortContentTitLabel:'成人票',
 					ticketSoldNum:1000,
-					ticketPrice:150,
+					ticketPrice:305,
 					ticketOriginalPrice:599
 				},
 				{
 					scid:2,
 					ticketSortContentTit:'门票+观光车+沟口酒店至景区转车',
-					ticketSortContentTitLabel:'儿童/学生/老人/宗教人士票',
+					ticketSortContentTitLabel:'儿童票',
 					ticketSoldNum:1000,
-					ticketPrice:150,
+					ticketPrice:100,
+					ticketOriginalPrice:599
+				},
+				{
+					scid:3,
+					ticketSortContentTit:'门票+观光车+沟口酒店至景区转车',
+					ticketSortContentTitLabel:'老人票',
+					ticketSoldNum:1000,
+					ticketPrice:160,
 					ticketOriginalPrice:599
 				}
 			]
