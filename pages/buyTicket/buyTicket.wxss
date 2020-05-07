@@ -6,16 +6,21 @@
 	font-size: 28rpx;
 }
 
-.index_searchIpt_content {
+.index_searchIpt_content{
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	border: 1px solid #ccc;
-	width: 95%;
-	font-size: 28rpx;
-	line-height: 48rpx;
-	border-radius: 50px;
 	background-color: #fff;
+	width: 100%;
+}
+
+.search{
+	width:90%;
+}
+
+.tip{
+	width: 48rpx;
+	height: 44rpx;
+	position: relative;
 }
 
 .ipt_search_icon {
@@ -58,24 +63,27 @@
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
-	margin-bottom: 20rpx;
-	border-bottom: 1px solid #eee;
+	margin-bottom: 60rpx;
+	/*border-bottom: 1px solid #eee;*/
 }
 .ticket_detail image{
-	width: 210rpx;
-	height: 210rpx;
+	width: 260rpx;
+	height: 260rpx;
 	border-radius: 5px;
 	margin-left: 20rpx;
 }
 .ticket_introduce {
-	padding-left: 20rpx;
+	padding: 0rpx 24rpx;
+	box-sizing: border-box;
 	overflow: hidden;
-	width: calc(100% - 230rpx);
+	width: calc(100% - 280rpx);
 	color: #333333;
 }
 .ticket_introduce_tit{
 	font-size: 30rpx;
-	font-weight: 600;
+	font-weight: bold;
+	font-family:PingFangSC-Medium,PingFang SC;
+	color: #333;
 }
 .ticket_address,.ticket_address view{
 	display: flex;
@@ -95,20 +103,15 @@
 	color: #aaa;
 }
 .ticket_price_content{
-	display: flex;
-	justify-content: space-between;
-	padding: 18rpx 0;
-	border-bottom: 1px solid #eee;
-	padding-right: 50rpx;
-	align-items: flex-end;
+	margin-top: 11rpx;
+	font-size:24rpx;
+	color: #999;
 }
 .ticket_introduce_con{
-	font-size: 24rpx;
-	color: #666;
-	padding: 12rpx 0;
-	padding-left: 6rpx;
-	padding-right: 50rpx;
-	padding-bottom: 20rpx;
+	margin-top: 40rpx;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 .score_content{
 	display: flex;
@@ -132,10 +135,39 @@
 	font-size: 28rpx;
 }
 
-
-
-
-
+.rates{
+	display: flex;
+	align-items: center;
+	margin-top: 12rpx;
+}
+.rates text{
+	margin-left: 10rpx;
+	font-size:26rpx;
+}
+.ticket_introduce_con_left{
+	color: #CCCCCC;
+	font-size: 22rpx;
+	display: flex;
+	align-items: center;
+}
+.ticket_introduce_con_right{
+	display: flex;
+	align-items: center;
+}
+.ticket_introduce_con_right text:nth-child(1){
+	font-size: 20rpx;
+	color: #E02020;
+}
+.ticket_introduce_con_right text:nth-child(2){
+	font-size: 36rpx;
+	color: #E02020;
+	font-weight: bold;
+	margin-right: 5rpx;
+}
+.ticket_introduce_con_right text:nth-child(3){
+	font-size: 22rpx;
+	color: #CCCCCC;
+}
 
 
 

@@ -42,7 +42,7 @@
 	<view class="ticket_list_content">
 		<view class="list_tit">购买门票</view>
 		<view class="list_btn" bindtap="consoleTit">
-			<view class="btn_order" style="background:#4B9AED">全部</view> 
+			<view class="btn_order" style="background:#4B9AED">全部</view>
 			<view class="btn_order">成人票</view>
 			<view class="btn_order">儿童票</view>
 			<view class="btn_order">老人票</view>
@@ -51,7 +51,7 @@
 			<view class="btn_order">宗教人士</view>
 
 		</view>
-		
+
 		<block wx:for="{{ticketContent}}" wx:key="{{item.cid}}">
 		<view class="title_list_car">
 			<view class="car_tit">{{item.ticketSort}}</view>
@@ -80,11 +80,12 @@
 				</block>
 			</block>
 			<button class="close" bindtap="closeList" hidden="{{item.ticketSortContent.length < 5}}" binttap="showList">{{flag?'展开':'收起'}}</button>
-		
+
 		</view>
-		
-		
+
+
 		</block>
 	</view>
-</view>	
+</view>
+
 

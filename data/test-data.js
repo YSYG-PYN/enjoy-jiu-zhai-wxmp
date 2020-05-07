@@ -133,7 +133,7 @@ var lineCommand = [{
 
 
 
-// 演绎门票活动推荐 
+// 演绎门票活动推荐
 var ticketCommand = [{
   "id": "1",
   "image": "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3465919251,1354762031&fm=26&gp=0.jpg",
@@ -617,46 +617,44 @@ var selectData = [{
 var ticketList=[
 	{
 		"id":1,
-		"ticketImage":[
-			{
-				"id":4,
-				"image":'http://img1.imgtn.bdimg.com/it/u=2697436101,3290950844&fm=26&gp=0.jpg'
-			},
-			{
-				"id":5,
-				"image":'http://img1.imgtn.bdimg.com/it/u=2697436101,3290950844&fm=26&gp=0.jpg'
-			}
-		],
-		"address":"九寨沟",
-		"ticketLabel":"5A景区",
-		"ticketPrice":"200",
-		"ticketDis":"4.1",
-		"ticketAddress":"沟口",
-		"ticketScore":"4.6",
-		"ticketNum":"1.5",
-		"ticketDetail":"介绍：骑行游船观花好选择哦，断桥、瀑布，相机卡咔咔咔响不停！"
+		"ticketImage": "../../images/ticket/scenic1.png",
+		"ticketTit": "[套票] 九寨沟景区成人门票+观光车",
+        "ticketScore":"4.5",
+        "ticketNum":"1.4",
+		"ticketAppraise":"1429",
+        "ticketPrice":"260",
+		"ticketTime":"7:00-19:00（旺季）"
 	},
 	{
-		"id":2,
-		"ticketImage":[
-			{
-				"imgid":4,
-				"image":'http://img1.imgtn.bdimg.com/it/u=2697436101,3290950844&fm=26&gp=0.jpg'
-			},
-			{
-				"imgid":5,
-				"image":'http://img1.imgtn.bdimg.com/it/u=2697436101,3290950844&fm=26&gp=0.jpg'
-			}
-		],
-		"address":"黄龙风景区",
-		"ticketLabel":"5A景区",
-		"ticketPrice":"100",
-		"ticketDis":"4.4",
-		"ticketAddress":"松潘县",
-		"ticketScore":"4.6",
-		"ticketNum":"1.5",
-		"ticketDetail":"九寨沟县地大物博，风景秀丽地大物博，风景秀丽地大物博"
-	}
+        "id":2,
+        "ticketImage": "../../images/ticket/scenic2.png",
+        "ticketTit": "达古冰川景区 单人门票+观光车票+索道",
+        "ticketScore":"4.5",
+        "ticketNum":"1.4",
+        "ticketAppraise":"1429",
+        "ticketPrice":"305",
+        "ticketTime":"08:30-18:00"
+	},
+    {
+        "id":3,
+        "ticketImage": "../../images/ticket/scenic3.png",
+        "ticketTit": "[成人票] 茂县叠溪松坪沟景区单人门票 ",
+        "ticketScore":"4.5",
+        "ticketNum":"1.4",
+        "ticketAppraise":"1429",
+        "ticketPrice":"35",
+        "ticketTime":"7:00-19:00（旺季）"
+    },
+    {
+        "id":4,
+        "ticketImage": "../../images/ticket/scenic4.png",
+        "ticketTit": "[门票]理县毕棚沟景区 单人门票+观光车票",
+        "ticketScore":"4.5",
+        "ticketNum":"1.4",
+        "ticketAppraise":"1429",
+        "ticketPrice":"305",
+        "ticketTime":"08:30-18:00"
+    },
 ]
 
 // 特色产品列表
@@ -951,7 +949,7 @@ var ticketDetail=[{
 				}
 			]
 		},
-		
+
 	]
 }]
 

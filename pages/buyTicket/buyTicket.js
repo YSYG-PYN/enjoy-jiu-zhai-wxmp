@@ -7,9 +7,12 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
+        values: '',
+        value: 4.5,
 		ticketList: [],
 		show: false,
-		actions: []
+		actions: [],
+
 	},
 	showAll() {
 		this.setData({
