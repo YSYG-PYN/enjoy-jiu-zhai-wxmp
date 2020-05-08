@@ -3,7 +3,7 @@ const app = getApp();
 var getHotelData = require("./../../data/test-data.js");
 var util = require("../../utils/util.js")
 Page({
-    //选择日期 
+    //选择日期
     bindDateChange1: function (e) {
         console.log(e.detail.value)
         this.setData({
@@ -88,6 +88,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        idx: 0,
         riqi: "",
         riqi1: "",
         swipers: [],
@@ -105,7 +106,36 @@ Page({
                 return `${value}月`;
             }
             return value;
-        }
+        },
+        dataArray: [
+            {
+                "id": '0',
+                "name": "全部",
+            },
+            {
+                "id": '1',
+                "name": "钟点房",
+            },
+            {
+                "id": '2',
+                "name": "特价酒店",
+            },
+            {
+                "id": '3',
+                "name": "民宿",
+            },
+            {
+                "id": '4',
+                "name": "特色酒店",
+            },
+        ],
+    },
+
+    selectDataTab(e) {
+        console.log(e.target.dataset);
+        this.setData({
+            idx:e.target.dataset.text.id
+        })
     },
 
     /**

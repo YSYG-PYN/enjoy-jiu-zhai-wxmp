@@ -1,20 +1,21 @@
-<view class="container">
+<!--<view class="container">-->
     <!-- 轮播开始 -->
-    <swiper class="swiper" indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="#dc5687"
+   <!-- <swiper class="swiper" indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="#dc5687"
         autoplay="{{true}}" circular="{{true}}">
         <swiper-item wx:for="{{swipers}}" wx:key="{{item.id}}">
             <image src="{{item.image}}"></image>
         </swiper-item>
-    </swiper>
+    </swiper>-->
     <!-- 轮播结束 -->
+    <view class="banner">
+        <image src="../../images/hotel/banner.png"></image>
+    </view>
     <view class="content">
         <!-- 滑块 -->
         <scroll-view scroll-x="true" class="scoll_view">
-            <button size="mini">国内酒店</button>
-            <button size="mini">钟点房</button>
-            <button size="mini">民宿</button>
-            <button size="mini">本地体验</button>
-            <button size="mini">特色</button>
+            <block wx:for="{{dataArray}}" wx:key="item.id">
+                <view class="{{index==idx?'_select':'select'}}"  bindtap="selectDataTab" data-index="{{index}}" data-text="{{item}}">{{item.name}} </view>
+            </block>
         </scroll-view>
         <!-- 滑块结束 -->
         <!-- 搜索 -->
@@ -141,4 +142,4 @@
     </view>
 
 
-</view>
+<!--</view>-->

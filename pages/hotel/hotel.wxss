@@ -7,22 +7,40 @@
     width:100%;
     height:370rpx;
   }
+  .banner, .banner image{
+    width: 100%;
+    height: 380rpx;
+  }
   .content{
-      width: 700rpx;
-      margin: 10px;
+      width: 100%;
+      /*margin: 10px;*/
+      padding: 0rpx 40rpx 0rpx 40rpx;
   }
   .scoll_view{
       width: 750rpx;
+      height: 133rpx;
       display: flex;
       white-space: nowrap;
       flex-direction: row;
       flex-wrap:nowrap;
   }
-  button{
-      margin-top: 20px;
-      margin-right: 10px;
-      background: #fff;
+  ._select, .select{
+      height: 53rpx;
+      line-height: 53rpx;
+      padding: 0 30rpx;
+      font-size: 24rpx;
+      display: inline-block;
+      margin-top: 40rpx;
+      margin-right: 50rpx;
+  }
+  ._select{
+      background-color: #4B9AED;
+      color: #fff;
+      border-radius:27rpx;
+  }
+  .select{
       box-shadow:0px 0px 4px 1px rgba(0,0,0,0.1);
+      color: #999999;
   }
   .inp{
       background-color: #f5f5f5;
