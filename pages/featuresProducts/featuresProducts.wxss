@@ -1,3 +1,20 @@
+.index_searchIpt_content{
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+}
+
+.search{
+  width:90%;
+}
+
+.tip{
+  width: 48rpx;
+  height: 44rpx;
+  position: relative;
+}
+
 .features_products{
   width: 100%;
   display: flex;
@@ -5,27 +22,6 @@
   justify-content: center;
   align-items: center;
   font-size: 28rpx;
-}
-
-.index_searchIpt_content {
-	width: 95%;
-	font-size: 28rpx;
-	line-height: 48rpx;
-	border-radius: 35rpx;
-	background:rgba(246,247,248,1);
-  padding-left: 17px;
-  box-sizing: border-box;
-}
-
-.ipt_search_icon {
-	margin-top: 18rpx;
-  float: left;
-}
-
-.index_searchIpt{
-  float: left;
-  margin-top: 10rpx;
-  margin-left: 12rpx;
 }
 
 .btn{

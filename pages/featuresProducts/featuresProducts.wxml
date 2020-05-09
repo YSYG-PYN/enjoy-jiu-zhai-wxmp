@@ -1,10 +1,12 @@
 <!--pages/featuresProducts/featuresProducts.wxml-->
 <view class="features_products">
-	<!-- 顶部输入框 -->
-	<view solt="ipt" class="index_searchIpt_content">
-		<icon type="search" size="16" class="ipt_search_icon" />
-		<input class="index_searchIpt" bindinput="bindHideKeyboard" placeholder="搜索您想要的商品" />
-	</view>
+    <!-- 顶部输入框 -->
+    <view solt="ipt" class="index_searchIpt_content">
+        <van-search value="{{ values }}" placeholder="请输入搜索关键词" use-action-slot bind:change="onChange" bind:search="onSearch"
+                    shape="round" class="search">
+        </van-search>
+        <image class="tip" src="../../images/ticket/leven.png"></image>
+    </view>
   <view class="btn">
     <button bindtap="showSome" class="px">智能排序</button>
 	<button bindtap="showAll" class="sx">筛选</button>
