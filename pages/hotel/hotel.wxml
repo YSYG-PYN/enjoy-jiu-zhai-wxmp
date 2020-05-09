@@ -21,33 +21,43 @@
         <!-- 搜索 -->
         <view class="inp">
             <view class="left">
-                <p class="city">成都</p>
-                <van-icon name="arrow" color="#d5d5d5" class="arrow"></van-icon>
-
+                <image src="../../images/hotel/search_city.png"></image>
             </view>
             <view class="right" bindtap="Search">
-                <van-icon name="search" color="#d5d5d5" class="search"></van-icon>
-                <input disabled="true" class="weui-input" auto-focus placeholder="酒店关键词/名称" />
+                <input disabled="true" class="weui-input" auto-focus placeholder="搜索城市名" />
             </view>
         </view>
         <!-- 日期 -->
         <view class="data">
-            <input type="text" class="ipt" value="{{riqi}}" readonly placeholder="2019-11-10" bindtap="shosedata" />
-            <span>-</span>
-            <input type="text" class="ipt1" value="{{riqi1}}" readonly placeholder="2019-11-10" bindtap="shosedata1" />
-            <view hidden="{{show}}">
-                <van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" min-date="{{ minDate }}"
-                    formatter="{{ formatter }}" bind:confirm="confirm" bind:cancel="cancel" />
-                <!-- <picker mode="date" value="{{startTime}}" bindchange="bindDateChange1">
-                    <view class="picker"> <text>开始日期</text> <text class="chosedate">{{startTime}}</text> </view>
-                </picker>
-                <picker mode="date" value="{{endTime}}" bindchange="bindDateChange2">
-                    <view class="picker"> <text>结束日期</text> <text class="chosedate">{{endTime}}</text> </view>
-                </picker> -->
+            <view class="left">
+                <image src="../../images/hotel/search_time.png"></image>
             </view>
-            <view hidden="{{show1}}">
-                <van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" min-date="{{ minDate }}"
-                    formatter="{{ formatter }}" bind:confirm="confirm1" bind:cancel="cancel1" />
+            <view class="right">
+                <input type="text" class="ipt" value="{{riqi}}" readonly placeholder="2019-11-10" bindtap="shosedata" />
+                <span>-</span>
+                <input type="text" class="ipt1" value="{{riqi1}}" readonly placeholder="2019-11-10" bindtap="shosedata1" />
+                <view hidden="{{show}}">
+                    <van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" min-date="{{ minDate }}"
+                                         formatter="{{ formatter }}" bind:confirm="confirm" bind:cancel="cancel" />
+                    <!-- <picker mode="date" value="{{startTime}}" bindchange="bindDateChange1">
+                        <view class="picker"> <text>开始日期</text> <text class="chosedate">{{startTime}}</text> </view>
+                    </picker>
+                    <picker mode="date" value="{{endTime}}" bindchange="bindDateChange2">
+                        <view class="picker"> <text>结束日期</text> <text class="chosedate">{{endTime}}</text> </view>
+                    </picker> -->
+                </view>
+                <view hidden="{{show1}}">
+                    <van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" min-date="{{ minDate }}"
+                                         formatter="{{ formatter }}" bind:confirm="confirm1" bind:cancel="cancel1" />
+                </view>
+            </view>
+        </view>
+        <view class="inp">
+            <view class="left">
+                <image src="../../images/hotel/search_hotel.png"></image>
+            </view>
+            <view class="right">
+                <input disabled="true" class="weui-input" auto-focus placeholder="酒店关键词/名称" />
             </view>
         </view>
         <!-- 搜索酒店 -->
@@ -55,12 +65,12 @@
         <!-- 历史和酒店订单 -->
         <view class="order">
             <view class="collect" bindtap="Collect">
-                <van-icon name="star-o"></van-icon>
+                <image src="../../images/hotel/collection.png"></image>
                 <span class="browse">浏览收藏</span>
             </view>
             <span class="xian">|</span>
             <view class="hotel" bindtap="Order">
-                <van-icon name="label-o"></van-icon>
+                <image src="../../images/hotel/order.png"></image>
                 <span class="hotel_order">酒店订单</span>
             </view>
         </view>
@@ -76,66 +86,25 @@
 
         <scroll-view scroll-x="true" enable-back-to-top="true" enable-flex="true">
             <view class="floor">
-                <view class="lists">
-                    <image
-                        src="https://z1.muscache.cn/im/pictures/144f64d5-d872-44dd-b540-03a4ccfc15d1.jpg?aki_policy=x_large">
-                    </image>
-                    <view class="distance">
-                        <text decode="{{true}}" space="{{true}}">距离火车站&nbsp;</text>
-                        <p>3km</p>
+                <block wx:for="{{hotelData}}" wx:key="item.id">
+                    <view class="lists">
+                        <image src="{{item.img}}"></image>
+                        <view class="distance">
+                            <text decode="{{true}}" space="{{true}}">距离火车站&nbsp;</text>
+                            <p>{{item.distance}}</p>
+                        </view>
+                        <view class="home">
+                            <p>{{item.name}}</p>
+                            <span class="middle">|</span>
+                            <p>{{item.type}}</p>
+                        </view>
+                        <view class="money">
+                            <text>￥</text>
+                            <text>{{item.price}}</text>
+                            <text>起</text>
+                        </view>
                     </view>
-                    <view class="home">
-                        <p>九寨沟名宿</p>
-                        <span class="middle">|</span>
-                        <p>豪华家庭房</p>
-                    </view>
-                    <p class="money">￥234/晚</p>
-                </view>
-                <view class="lists">
-                    <image
-                        src="https://z1.muscache.cn/im/pictures/144f64d5-d872-44dd-b540-03a4ccfc15d1.jpg?aki_policy=x_large">
-                    </image>
-                    <view class="distance">
-                        <text decode="{{true}}" space="{{true}}">距离火车站&nbsp;</text>
-                        <p>3km</p>
-                    </view>
-                    <view class="home">
-                        <p>九寨沟名宿</p>
-                        <span class="middle">|</span>
-                        <p>豪华家庭房</p>
-                    </view>
-                    <p class="money">￥234/晚</p>
-                </view>
-                <view class="lists">
-                    <image
-                        src="https://z1.muscache.cn/im/pictures/144f64d5-d872-44dd-b540-03a4ccfc15d1.jpg?aki_policy=x_large">
-                    </image>
-                    <view class="distance" decode="{{true}}" space="{{true}}">
-                        <text decode="{{true}}" space="{{true}}">距离火车站&nbsp;</text>
-                        <p>3km</p>
-                    </view>
-                    <view class="home">
-                        <p>九寨沟名宿</p>
-                        <span class="middle">|</span>
-                        <p>豪华家庭房</p>
-                    </view>
-                    <p class="money">￥234/晚</p>
-                </view>
-                <view class="lists">
-                    <image
-                        src="https://z1.muscache.cn/im/pictures/144f64d5-d872-44dd-b540-03a4ccfc15d1.jpg?aki_policy=x_large">
-                    </image>
-                    <view class="distance" decode="{{true}}" space="{{true}}">
-                        <text decode="{{true}}" space="{{true}}">距离火车站&nbsp;</text>
-                        <p>3km</p>
-                    </view>
-                    <view class="home">
-                        <p>九寨沟名宿</p>
-                        <span class="middle">|</span>
-                        <p>豪华家庭房</p>
-                    </view>
-                    <p class="money">￥234/晚</p>
-                </view>
+                </block>
             </view>
 
         </scroll-view>

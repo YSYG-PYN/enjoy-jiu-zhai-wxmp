@@ -144,6 +144,7 @@ Page({
     onLoad: function () {
         this.setData({
             swipers: JSON.parse(getHotelData.swiperData),
+            hotelData: JSON.parse(getHotelData.hotelList)
         })
     },
 

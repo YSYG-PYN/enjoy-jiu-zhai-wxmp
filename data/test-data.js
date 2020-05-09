@@ -1562,6 +1562,33 @@ var livingList = [
 	},
 ]
 
+var hotelData = [
+  {
+    id: 1,
+    img: '../../images/hotel/hotel1.png',
+    distance: '3km',
+    name: '九寨沟民宿',
+    type: '豪华庭房',
+    price: '305'
+  },
+  {
+    id: 2,
+    img: '../../images/hotel/hotel2.png',
+    distance: '3km',
+    name: '九寨沟民宿',
+    type: '豪华庭房',
+    price: '305'
+  },
+  {
+    id: 3,
+    img: '../../images/hotel/hotel3.png',
+    distance: '3km',
+    name: '九寨沟民宿',
+    type: '豪华庭房',
+    price: '305'
+  }
+]
+
 
 module.exports = {
 	"swiperData": JSON.stringify(swiper),
@@ -1585,5 +1612,6 @@ module.exports = {
 	"livingList":JSON.stringify(livingList),
 	"proDetailSwiperList":JSON.stringify(proDetailSwiperList),
 	"shopProductList":JSON.stringify(shopProductList),
-	"markActiveList":JSON.stringify(markActiveList)
+	"markActiveList":JSON.stringify(markActiveList),
+  "hotelList":JSON.stringify(hotelData),
 }
