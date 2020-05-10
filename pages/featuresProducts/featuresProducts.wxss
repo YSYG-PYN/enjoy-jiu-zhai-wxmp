@@ -22,81 +22,135 @@
   justify-content: center;
   align-items: center;
   font-size: 28rpx;
+  background-color: #F3F7FA;
 }
 
-.btn{
-  width: 95%;
-  margin-top: 48rpx;
+.banner, .banner image{
+  width: 100%;
+  height: 350rpx;
 }
-.px{
-  width:144rpx;
-  height:60rpx;
-  background:rgba(75,154,237,1);
-  border-radius:3px;
-  font-size: 24rpx;
-  line-height: 60rpx;
-  font-weight: bold;
-  color: #fff;
-  display: inline-block;
-  padding: 0rpx;
+
+.special {
+  width: 100%;
+  padding: 0 24rpx 23rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 20rpx;
 }
-.sx{
-  width:104rpx;
-  height:60rpx;
-  background:rgba(255,255,255,1);
-  box-shadow:0px 0px 4px 1px rgba(0,0,0,0.1);
-  border-radius:3px;
-  font-size: 24rpx;
-  line-height: 60rpx;
-  font-weight: bold;
-  color: #333333;
-  margin-left: 40rpx;
-  display: inline-block;
-  padding: 0rpx;
-}
-.productsList{
-  margin-top: 50rpx;
-  width: 95%;
+.header{
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-
+  height: 115rpx;
+  align-items: center;
 }
-.proDetail{
-  width: 344rpx;
-  height: 563rpx;
+.header h3{
+  font-size:32rpx;
+  font-weight:600;
+  color: #333333;
+}
+.header .van-icon-arrow{
+  color: #D3D3D3;
+}
+.floor{
+  display: flex;
+  white-space: nowrap;
+  flex-direction: row;
+  flex-wrap:nowrap;
+}
+.lists{
+  margin-right: 20rpx;
+}
+.lists image{
+  width: 320rpx;
+  height: 216rpx;
+  border-radius: 5px;
+}
+.distance{
+  font-size: 22rpx;
+  color: #333333;
+  margin-bottom: 8rpx;
+}
+.distance p,.distance text{
+  color: #696969;
+  font-size: 12px;
+}
+.aa{
+  margin-right: 4rpx;
+}
+.home{
+  width: 160px;
+  color: #333333;
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  word-wrap: break-spaces;
+  overflow: hidden;
+}
+.middle{
+  margin: 0 10rpx;
+}
+.money text:nth-child(1){
+  font-size: 22rpx;
+  color: #E02020;
+  margin-right: 5rpx;
+}
+.money text:nth-child(2){
+  font-size: 30rpx;
+  color: #E02020;
+  font-weight: 500;
+  margin-right: 5rpx;
+}
+.money text:nth-child(3){
+  font-size: 22rpx;
+  color: #CCCCCC;
+}
+.featureRecommendation{
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 40rpx;
-  box-shadow:0rpx 0rpx 8rpx 2rpx rgba(0,0,0,0.1);
-  border-radius:8rpx;
 }
-.proDetail image{
-  width: 100%;
-  height: 348rpx;
+.featureRecommendation image{
+  width: 260rpx;
+  height: 260rpx;
 }
 .productsDetail{
-  padding: 16rpx 12rpx 0rpx;
+  width: 62%;
+  padding-left: 20rpx;
 }
 .productsName{
-  font-size:28rpx;
-  font-family:PingFangSC-Regular,PingFang SC;
-  font-weight:bold;
-  color:rgba(51,51,51,1);
+  font-size: 30rpx;
+  color: #333333;
+  font-weight: bold;
+  margin-top: 15rpx;
 }
-.proIntroduce{
-  margin-top: 12rpx;
+.productsType{
   font-size:24rpx;
-  font-family:PingFangSC-Regular,PingFang SC;
-  color:rgba(102,102,102,1);
+  color: #666666;
+  margin-top: 10rpx;
 }
-.money{
-  font-size:20rpx;
-  font-family:PingFangSC-Regular,PingFang SC;
-  font-weight:bold;
-  color:rgba(255,60,60,1);
+.productsKeyword{
+  margin-top: 10rpx;
 }
-.amount{
-  font-size:32rpx;
-  font-family:PingFangSC-Medium,PingFang SC;
-  font-weight:bold;
-  color:rgba(255,60,60,1);
+.productsKeyword>view{
+  background:rgba(75,154,237,0.05);
+  border:1px solid rgba(75,154,237,0.2);
+  height:32rpx;
+  padding: 0 5rpx;
+  line-height: 32rpx;
+  margin-right: 10rpx;
+  font-size: 22rpx;
+  color: #4B9AED;
+  display: inline-block;
+}
+.productsSale{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+.sale{
+  font-size:22rpx;
+  color: #CCCCCC;
+}
+.lines{
+  padding: 0 8rpx;
 }

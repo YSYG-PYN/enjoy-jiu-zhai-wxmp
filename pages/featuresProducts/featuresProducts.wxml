@@ -2,29 +2,73 @@
 <view class="features_products">
     <!-- 顶部输入框 -->
     <view solt="ipt" class="index_searchIpt_content">
-        <van-search value="{{ values }}" placeholder="请输入搜索关键词" use-action-slot bind:change="onChange" bind:search="onSearch"
+        <van-search value="{{ values }}" placeholder="藏族特色耗牛肉干" use-action-slot bind:change="onChange" bind:search="onSearch"
                     shape="round" class="search">
         </van-search>
         <image class="tip" src="../../images/ticket/leven.png"></image>
     </view>
-  <view class="btn">
-    <button bindtap="showSome" class="px">智能排序</button>
-	<button bindtap="showAll" class="sx">筛选</button>
+  <view class="banner">
+    <image src="../../images/featuresProducts/banner.png"></image>
   </view>
-  <view class="productsList">
-    <block wx:for="{{productsList}}" wx:key="{{item.id}}">
-    <view class="proDetail" data-productsid="{{item.id}}" bindtap="toFeaturesProducts">
-        <image src="{{item.productImage}}"></image>
-        <view class="productsDetail">
-            <view class="productsName">{{item.productsName}}</view>
-            <view class="proIntroduce">
-                {{item.proIntroduce}}
-            </view>
-            <view style="margin-top: 26rpx"><text class="money">{{item.money}}</text><text class="amount">{{item.amount}}</text></view>
+
+    <view class="special">
+        <view class="header">
+            <h3>官方推荐</h3>
+            <van-icon name="arrow" bindtap="More"></van-icon>
         </view>
+
+        <scroll-view scroll-x="true" enable-back-to-top="true" enable-flex="true">
+            <view class="floor" bindtap="toFeaturesProducts">
+                <block wx:for="{{productsList}}" wx:key="item.id">
+                    <view class="lists">
+                        <image src="{{item.productImage}}"></image>
+                        <view class="home">{{item.proIntroduce}}</view>
+                        <view class="money">
+                            <text>￥</text>
+                            <text>{{item.amount}}</text>
+                            <text>起</text>
+                        </view>
+                    </view>
+                </block>
+            </view>
+
+        </scroll-view>
     </view>
-    </block>
-  </view>
-  <!-- 底部弹框 -->
-  <van-action-sheet show="{{ show }}" bind:click-overlay="clickMask" bind:select="onSelect" actions="{{actions}}" />
+
+    <view class="special">
+        <view class="header">
+            <h3>精选推荐</h3>
+            <van-icon name="arrow" bindtap="More"></van-icon>
+        </view>
+
+        <block wx:for="{{productsDetailList}}" wx:key="item.id">
+            <view class="featureRecommendation" bindtap="toFeaturesProducts">
+                <view class="productsImg">
+                    <image src="{{item.productsImg}}"></image>
+                </view>
+                <view class="productsDetail">
+                    <view class="productsName">{{item.productsName}}</view>
+                    <view class="productsType">{{item.productsType}}</view>
+                    <view class="productsKeyword">
+                        <block wx:for="{{item.keyword}}" wx:key="item.key">
+                            <view>{{item.value}}</view>
+                        </block>
+                    </view>
+                    <view class="productsSale">
+                        <view class="sale">
+                            <text>月售{{item.productsSale}}万</text>
+                            <text class="lines">|</text>
+                            <text>{{item.productsCommit}}条评论</text>
+                        </view>
+                        <view class="money">
+                            <text>￥</text>
+                            <text>{{item.productsPrice}}</text>
+                            <text>起</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+
 </view>

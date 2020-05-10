@@ -661,33 +661,87 @@ var ticketList=[
 var productsList = [
 	{
 		"id":1,
-		"productImage":"http://img3.imgtn.bdimg.com/it/u=1701139370,3795858641&fm=26&gp=0.jpg",
+		"productImage":"../../images/featuresProducts/official_recommendation1.png",
 		"productsName":"九寨特色当归片",
-		"proIntroduce":"当归 根圆柱状 分枝 有多数 肉质须根 黄棕色 有浓郁香气",
+		"proIntroduce":"四川阿坝九寨沟麻辣五香手 撕耗牛肉干",
 		"money":"￥",
-		"amount":"388"
+		"amount":"305"
 	},{
 		"id":2,
-		"productImage":"http://img3.imgtn.bdimg.com/it/u=1701139370,3795858641&fm=26&gp=0.jpg",
+		"productImage":"../../images/featuresProducts/official_recommendation2.png",
 		"productsName":"唐卡",
-		"proIntroduce":"唐卡也叫唐嘎 唐喀 系藏文音 译 指用彩缎装裱后悬挂供奉",
+		"proIntroduce":"四川川贝母川贝粉中药材贝 母非野生品质可保障的…",
 		"money":"￥",
-		"amount":"388"
+		"amount":"305"
 	},{
 		"id":3,
-		"productImage":"http://img3.imgtn.bdimg.com/it/u=1701139370,3795858641&fm=26&gp=0.jpg",
+		"productImage":"../../images/featuresProducts/official_recommendation3.png",
 		"productsName":"九寨特色虫草",
 		"proIntroduce":"性平味甘 具有补肺肾 止咳嗽 益虚损 养精气之功能",
 		"money":"￥",
-		"amount":"388"
-	},{
-		"id":4,
-		"productImage":"http://img3.imgtn.bdimg.com/it/u=1701139370,3795858641&fm=26&gp=0.jpg",
-		"productsName":"人参",
-		"proIntroduce":"人参不仅可以入药 还可以炖汤 汤美味鲜 具有滋补的效果",
-		"money":"￥",
-		"amount":"388"
+		"amount":"305"
 	}
+]
+
+//特色产品详情列表
+var productsDetailList = [
+	{
+		"id": 1,
+		"productsImg": "../../images/featuresProducts/feature_recommendation1.png",
+		"productsName": "九寨特色当归片，根圆柱状分枝 有多数",
+		"productsType": "净含量：500g ",
+		"keyword": [
+			{
+				"key": 1,
+				"value": "“黄棕色”"
+			},
+			{
+				"key": 2,
+				"value": "“有浓郁香气”"
+			},
+		],
+		"productsSale": 1.4,
+		"productsCommit": 1429,
+		"productsPrice": 260
+	},
+	{
+		"id": 2,
+		"productsImg": "../../images/featuresProducts/feature_recommendation2.png",
+		"productsName": "手编五色藏族五彩绳车挂件金刚结流苏吉祥挂饰",
+		"productsType": "棉线 | 手编",
+		"keyword": [
+			{
+				"key": 1,
+				"value": "“有特色”"
+			},
+			{
+				"key": 2,
+				"value": "“手信必选品”"
+			},
+		],
+		"productsSale": 1.4,
+		"productsCommit": 1429,
+		"productsPrice": 260
+	},
+	{
+		"id": 3,
+		"productsImg": "../../images/featuresProducts/feature_recommendation3.png",
+		"productsName": "藏族藏刀剑性价比高，价格实惠，性能强，迷你未开刃…",
+		"productsType": "材质：碳钢",
+		"keyword": [
+			{
+				"key": 1,
+				"value": "“有价值”"
+			},
+			{
+				"key": 2,
+				"value": "“厚重名贵”"
+			},
+		],
+		"productsSale": 1.4,
+		"productsCommit": 1429,
+		"productsPrice": 260
+	},
 ]
 
 // 特色产品详情页轮播图
@@ -1614,4 +1668,5 @@ module.exports = {
 	"shopProductList":JSON.stringify(shopProductList),
 	"markActiveList":JSON.stringify(markActiveList),
   "hotelList":JSON.stringify(hotelData),
+	"productsDetailList":JSON.stringify(productsDetailList)
 }

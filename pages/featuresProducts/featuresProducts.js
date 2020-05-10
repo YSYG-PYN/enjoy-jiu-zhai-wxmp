@@ -89,7 +89,8 @@ Page({
 	 */
   onLoad: function (options) {
     this.setData({
-        productsList: JSON.parse(getProductList.productsList)
+        productsList: JSON.parse(getProductList.productsList),
+        productsDetailList: JSON.parse(getProductList.productsDetailList)
     })
   },
 
