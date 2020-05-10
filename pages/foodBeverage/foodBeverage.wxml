@@ -1,13 +1,19 @@
 <!-- pages/foodBeverage/foodBeverage.wxml -->
 <view class="top_ipt">
-    <image src="./../../images/back.png" bind:tap="goBack" />
-    <view class="ipt_content">
-        <icon type="search" size="16" class="ipt_search_icon" />
-        <input placeholder-class="place_holder" type="text" placeholder="搜索"></input>
+    <image src="../../images/featuresProducts/banner.png" />
+    <view class="top_ipt_tit">藏族特色美食</view>
+    <view class="top_ipt_tits">བོད་རིགས་ཀྱི་ཁྱད་ཆོས་ལྡན་པའི་ཟས་མཆོག།</view>
+    <view class="meng"></view>
+    <!-- 顶部输入框 -->
+    <view solt="ipt" class="index_searchIpt_content">
+        <van-search value="{{ values }}" placeholder="藏族特色耗牛肉干" use-action-slot bind:change="onChange" bind:search="onSearch"
+                    shape="round" class="search" background="" color="#fff">
+        </van-search>
+        <image class="tip" src="../../images/ticket/leven.png"></image>
     </view>
 </view>
 <view class="food_beverage_content">
-<!-- 
+<!--
     <view class="" bind:tap="dia">弹框</view>
     <van-dialog id="van-dialog" /> -->
     <van-tabs bind:click="onClick" class="food_beverage_tit" color="#4B9AED" sticky="true">

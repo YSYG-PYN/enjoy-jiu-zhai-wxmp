@@ -1,5 +1,5 @@
 {
-  "navigationStyle": "custom",
-  "usingComponents": {},
-  "enablePullDownRefresh": true
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "餐饮美食",
+  "usingComponents": {}
 }
